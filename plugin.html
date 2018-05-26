@@ -175,7 +175,7 @@
             
   <div class="section" id="plugins">
 <h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
-<p>HPX is built in a way that makes it possible to step in and modify the way a functionality works or even add new ones with ease with plug-ins.</p>
+<p>HPX is built in a way that makes it possible to step in and modify the way a functionality works or even add new ones with ease with plugins.</p>
 <p>Plug-ins can be written in <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> up to``Python 3.6``.
 Note that you don’t need to be running HPX from source to develop a plugin.</p>
 <p>Here you will learn how to create a HPX plugin and use it to extend HPX.
@@ -232,7 +232,7 @@ Like an <strong>entry</strong>, it’s up to a command when and to what an <stro
 </pre></div>
 </div>
 <ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">id</span></code>: A UUID4 string. Unique across all plug-ins. This attribute is required to be present.</p>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">id</span></code>: A UUID4 string. Unique across all plugins. This attribute is required to be present.</p>
 </li>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Path to the entry python file. Path is relative to this folder and must exist. This attribute is required to be present.</p>
 </li>
@@ -256,10 +256,10 @@ Like an <strong>entry</strong>, it’s up to a command when and to what an <stro
 </li>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">website</span></code>: A url to a website for the plugin, author, etc. This attribute is optional.</p>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">require</span></code>: A list of strings defining other plug-ins as dependencies. This attribute is optional.</p>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">require</span></code>: A list of strings defining other plugins as dependencies. This attribute is optional.</p>
 <blockquote>
 <div><p>A requirement must conform <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0508"><strong>PEP 508</strong></a> with a few exceptions.</p>
-<p>Other plug-ins can be referred to by their id or shortname.</p>
+<p>Other plugins can be referred to by their id or shortname.</p>
 <p>Examples of requirements that conforms <span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0508"><strong>PEP 508</strong></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;otherplugin&quot;</span><span class="p">,</span>
 <span class="s2">&quot;5c17829a-eca3-46fc-9d5e-da5804fdcbf5 == 3&quot;</span><span class="p">,</span>
@@ -289,8 +289,8 @@ Markers can also be used freely like so:</p>
     <span class="o">-</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>And that’s it! We can now have HPX load our plugin. To do that, place the plugin folder into one of the locations where HPX looks for plug-ins.
-The default location is the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> folder that exists inside the HPX root folder. It is also possible to define an additional location where to also look for plug-ins
+<p>And that’s it! We can now have HPX load our plugin. To do that, place the plugin folder into one of the locations where HPX looks for plugins.
+The default location is the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> folder that exists inside the HPX root folder. It is also possible to define an additional location where to also look for plugins
 through the setting <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -312,7 +312,7 @@ You can also disable all loggers except the plugin logger by adding them to the 
 These are the different kind of states a plugin can be in: <a class="reference internal" href="api_general.html#happypanda.interface.enums.PluginState" title="happypanda.interface.enums.PluginState"><code class="xref py py-class docutils literal notranslate"><span class="pre">PluginState</span></code></a>.</p>
 <div class="section" id="interfacing-with-hpx">
 <h3>Interfacing with HPX<a class="headerlink" href="#interfacing-with-hpx" title="Permalink to this headline">¶</a></h3>
-<p>HPX plug-ins in a special environment with a special module named <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code> to interface with HPX.</p>
+<p>HPX plugins in a special environment with a special module named <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code> to interface with HPX.</p>
 <p>After a plugin has been registered, it can be installed. Installation has to be manually done by the user unless either of the two settings <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin</span></code> and <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin_dependency</span></code>
 are true.</p>
 <p>When a plugin has been installed, it will be initialized. The entry file the plugin has provided in its manifest will be run upon initialization.
@@ -343,7 +343,7 @@ The entry file will be run in a special plugin environment and will be run just 
 </pre></div>
 </div>
 <p>As you can see, we can write our code just like how we would write any regular Python program.
-HPX gives this flexibility and freedom to its plug-ins.</p>
+HPX gives this flexibility and freedom to its plugins.</p>
 <p>The contents of the <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code> module can be found at <a class="reference internal" href="api_plugin.html#module-happypanda.core.plugin_interface"><span class="std std-ref">Plugin API</span></a>, however, the most important methods from the module which we will cover here are
 <a class="reference internal" href="api_plugin.html#happypanda.core.plugin_interface.attach" title="happypanda.core.plugin_interface.attach"><code class="xref py py-meth docutils literal notranslate"><span class="pre">attach</span></code></a> and <a class="reference internal" href="api_plugin.html#happypanda.core.plugin_interface.subscribe" title="happypanda.core.plugin_interface.subscribe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subscribe</span></code></a>.</p>
 <p>The main point of a HPX plugin is to use these methods to extend what HPX is capable of.</p>
@@ -379,7 +379,7 @@ We can use these events to initialize/terminate our stuff:</p>
 </div>
 <div class="section" id="logging-and-errors">
 <h3>Logging and errors<a class="headerlink" href="#logging-and-errors" title="Permalink to this headline">¶</a></h3>
-<p>HPX provides a logging facility for its plug-ins.</p>
+<p>HPX provides a logging facility for its plugins.</p>
 <p>When a plugin has been registered, a folder called <code class="docutils literal notranslate"><span class="pre">logs</span></code> is created in the plugin’s folder. In this folder will reside <code class="docutils literal notranslate"><span class="pre">plugin.log</span></code> and <code class="docutils literal notranslate"><span class="pre">plugin_debug.log</span></code>.</p>
 <p>It is <strong>strongly</strong> recommended that you use this logging facility instead of rolling your own or using the <code class="docutils literal notranslate"><span class="pre">logging</span></code> module directly.
 The HPX logging facility has been set up very intricately to make sense of the logs produced.
@@ -389,7 +389,7 @@ This can produce logs that are very confusing and useless to others.</p>
 <code class="docutils literal notranslate"><span class="pre">plugin_debug.log</span></code> is a debug log produced only when the setting <a class="reference internal" href="settings.html#settings"><span class="std std-ref">debug</span></a> has been set to true. The log level is <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> (basically captures everything).
 The <code class="docutils literal notranslate"><span class="pre">plugin_debug.log</span></code> is also special in that its contents will be reset on every run.</p>
 <p>These two files contain logs pertaining to the plugin in question.
-HPX also has its own <code class="docutils literal notranslate"><span class="pre">plugin.log</span></code> found at <code class="docutils literal notranslate"><span class="pre">[HPX]/logs/plugin.log</span></code> that contain logs produced by all plug-ins (basically a combination of every plugin’s exclusive log).</p>
+HPX also has its own <code class="docutils literal notranslate"><span class="pre">plugin.log</span></code> found at <code class="docutils literal notranslate"><span class="pre">[HPX]/logs/plugin.log</span></code> that contain logs produced by all plugins (basically a combination of every plugin’s exclusive log).</p>
 </div>
 <div class="section" id="debugging">
 <h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
@@ -414,9 +414,9 @@ HPX also has its own <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="section" id="how-to-not-break-stuff">
 <h3>How to not break stuff<a class="headerlink" href="#how-to-not-break-stuff" title="Permalink to this headline">¶</a></h3>
-<p>While HPX provides plug-ins lots of freedom, this can sometimes lead to plug-ins being able to disrupt the flow of the program and/or create inexplicable bugs,
+<p>While HPX provides plugins lots of freedom, this can sometimes lead to plugins being able to disrupt the flow of the program and/or create inexplicable bugs,
 and generally make it so things are not working as intended.
-Which is why care must be taken when writing plug-ins.</p>
+Which is why care must be taken when writing plugins.</p>
 <p>Here are some <strong>DO</strong>’s and <strong>DON’T</strong>’s that should ensure that everything plays nicely together.</p>
 <ul class="simple">
 <li><strong>DON’T</strong> ever change the current working directory. Especially because of the issues explained in <a class="reference internal" href="#about-thread-safety"><span class="std std-ref">thread safety</span></a>.</li>
