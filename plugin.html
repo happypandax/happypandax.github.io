@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugins &#8212; HappyPanda X 0.0.14#127 documentation</title>
+    <title>Plugins &#8212; HappyPanda X 0.1.0#131 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -39,9 +39,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.0.14#127</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0#131</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -176,7 +176,7 @@
   <div class="section" id="plugins">
 <h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
 <p>HPX is built in a way that makes it possible to step in and modify the way a functionality works or even add new ones with ease with plugins.</p>
-<p>Plug-ins can be written in <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> up to``Python 3.6``.
+<p>Plugins can be written in <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> up to <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.6</span></code>.
 Note that you don’t need to be running HPX from source to develop a plugin.</p>
 <p>Here you will learn how to create a HPX plugin and use it to extend HPX.
 Before that though, here are some new terminologies to learn before diving in to help us better understand how everything is screwed together.</p>
@@ -203,7 +203,7 @@ Like an <strong>entry</strong>, it’s up to a command when and to what an <stro
 <h2>Defining a plugin<a class="headerlink" href="#defining-a-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Now that we understand some basic concepts it’s time to create a plugin.</p>
 <p>HPX makes it very easy to create and write a plugin.</p>
-<p>Plug-ins are contained in their own folder, so we start by creating one for our plugin:</p>
+<p>Plugins are contained in their own folder, so we start by creating one for our plugin:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-/..</span>
 <span class="o">-</span><span class="n">MyPlugin</span><span class="o">/</span>
 </pre></div>
@@ -312,7 +312,7 @@ You can also disable all loggers except the plugin logger by adding them to the 
 These are the different kind of states a plugin can be in: <a class="reference internal" href="api_general.html#happypanda.interface.enums.PluginState" title="happypanda.interface.enums.PluginState"><code class="xref py py-class docutils literal notranslate"><span class="pre">PluginState</span></code></a>.</p>
 <div class="section" id="interfacing-with-hpx">
 <h3>Interfacing with HPX<a class="headerlink" href="#interfacing-with-hpx" title="Permalink to this headline">¶</a></h3>
-<p>HPX plugins in a special environment with a special module named <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code> to interface with HPX.</p>
+<p>HPX plugins run in a special environment with a special module named <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code> to interface with HPX.</p>
 <p>After a plugin has been registered, it can be installed. Installation has to be manually done by the user unless either of the two settings <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin</span></code> and <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin_dependency</span></code>
 are true.</p>
 <p>When a plugin has been installed, it will be initialized. The entry file the plugin has provided in its manifest will be run upon initialization.
@@ -346,9 +346,9 @@ The entry file will be run in a special plugin environment and will be run just 
 HPX gives this flexibility and freedom to its plugins.</p>
 <p>The contents of the <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code> module can be found at <a class="reference internal" href="api_plugin.html#module-happypanda.core.plugin_interface"><span class="std std-ref">Plugin API</span></a>, however, the most important methods from the module which we will cover here are
 <a class="reference internal" href="api_plugin.html#happypanda.core.plugin_interface.attach" title="happypanda.core.plugin_interface.attach"><code class="xref py py-meth docutils literal notranslate"><span class="pre">attach</span></code></a> and <a class="reference internal" href="api_plugin.html#happypanda.core.plugin_interface.subscribe" title="happypanda.core.plugin_interface.subscribe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subscribe</span></code></a>.</p>
-<p>The main point of a HPX plugin is to use these methods to extend what HPX is capable of.</p>
-<p>Just like previously mentioned, HPX provides many <strong>commands</strong> that defines different entrypoints and events that we can use.
-The method <a class="reference internal" href="api_plugin.html#happypanda.core.plugin_interface.subscribe" title="happypanda.core.plugin_interface.subscribe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subscribe</span></code></a> subscribes a handler function that we define to a command event.
+<p>The main point of a HPX plugin is to use these methods to extend what HPX is capable of.
+Just like previously mentioned, HPX provides many <strong>commands</strong> that defines different entrypoints and events that we can use.</p>
+<p>The method <a class="reference internal" href="api_plugin.html#happypanda.core.plugin_interface.subscribe" title="happypanda.core.plugin_interface.subscribe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subscribe</span></code></a> subscribes a handler function that we define to a command event.
 HPX defines the plugin events <code class="docutils literal notranslate"><span class="pre">init</span></code> and <code class="docutils literal notranslate"><span class="pre">disable</span></code> that we can listen to.
 We can use these events to initialize/terminate our stuff:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">__hpx__</span> <span class="k">as</span> <span class="nn">hpx</span>
@@ -437,15 +437,16 @@ Which is why care must be taken when writing plugins.</p>
 <p><em>arrow==0.12.1</em></p>
 <p><em>asn1crypto==0.24.0</em></p>
 <p><em>async-timeout==3.0.0</em></p>
+<p><em>atomicwrites==1.1.5</em></p>
 <p><em>attrs==18.1.0</em></p>
-<p><em>autopep8==1.3.4</em></p>
+<p><em>autopep8==1.3.5</em></p>
 <p><em>Babel==2.5.3</em></p>
 <p><em>bcrypt==3.1.3</em></p>
 <p><em>bencodepy==0.9.5</em></p>
 <p><em>biplist==1.0.3</em></p>
 <p><em>bitarray==0.8.1</em></p>
 <p><em>CacheControl==0.12.4</em></p>
-<p><em>cachetools==2.0.1</em></p>
+<p><em>cachetools==2.1.0</em></p>
 <p><em>certifi==2018.4.16</em></p>
 <p><em>cffi==1.11.5</em></p>
 <p><em>chardet==3.0.4</em></p>
@@ -458,8 +459,8 @@ Which is why care must be taken when writing plugins.</p>
 <p><em>docutils==0.14</em></p>
 <p><em>ds-store==1.1.2</em></p>
 <p><em>flake8==3.5.0</em></p>
-<p><em>Flask==1.0.1</em></p>
-<p><em>Flask-SocketIO==3.0.0</em></p>
+<p><em>Flask==1.0.2</em></p>
+<p><em>Flask-SocketIO==3.0.1</em></p>
 <p><em>future==0.16.0</em></p>
 <p><em>gevent==1.2.2</em></p>
 <p><em>greenlet==0.4.13</em></p>
@@ -471,15 +472,20 @@ Which is why care must be taken when writing plugins.</p>
 <p><em>itsdangerous==0.24</em></p>
 <p><em>Jinja2==2.10</em></p>
 <p><em>karellen-geventws==1.0.2</em></p>
+<p><em>langcodes==1.4.1</em></p>
 <p><em>mac-alias==2.0.7</em></p>
 <p><em>macholib==1.9</em></p>
 <p><em>Mako==1.0.7</em></p>
+<p><em>marisa-trie==0.7.5</em></p>
 <p><em>MarkupSafe==1.0</em></p>
 <p><em>mccabe==0.6.1</em></p>
 <p><em>mock==2.0.0</em></p>
+<p><em>more-itertools==4.2.0</em></p>
 <p><em>msgpack-python==0.5.6</em></p>
 <p><em>multidict==4.3.1</em></p>
 <p><em>mypy==0.600</em></p>
+<p><em>natsort==5.3.2</em></p>
+<p><em>ordered-set==3.0.0</em></p>
 <p><em>packaging==17.1</em></p>
 <p><em>pbr==4.0.3</em></p>
 <p><em>pefile==2017.11.5</em></p>
@@ -493,12 +499,12 @@ Which is why care must be taken when writing plugins.</p>
 <p><em>pycparser==2.18</em></p>
 <p><em>pyflakes==1.6.0</em></p>
 <p><em>Pygments==2.2.0</em></p>
-<p><em>PyInstaller==3.3.1</em></p>
+<p><em>PyInstaller==3.4.dev0+gc06d853c</em></p>
 <p><em>pyOpenSSL==18.0.0</em></p>
 <p><em>pyparsing==2.2.0</em></p>
 <p><em>pypiwin32==223</em></p>
 <p><em>PyQt5==5.10.1</em></p>
-<p><em>pytest==3.3.2</em></p>
+<p><em>pytest==3.6.1</em></p>
 <p><em>pytest-cov==2.4.0</em></p>
 <p><em>python-dateutil==2.7.3</em></p>
 <p><em>python-editor==1.0.3</em></p>
@@ -506,12 +512,13 @@ Which is why care must be taken when writing plugins.</p>
 <p><em>python-socketio==1.9.0</em></p>
 <p><em>pytz==2018.4</em></p>
 <p><em>pywin32==223</em></p>
+<p><em>pywin32-ctypes==0.1.2</em></p>
 <p><em>PyYAML==3.12</em></p>
 <p><em>QtAwesome==0.4.4</em></p>
 <p><em>QtPy==1.4.2</em></p>
 <p><em>rarfile==3.0</em></p>
-<p><em>regex==2018.2.21</em></p>
-<p><em>requests==2.18.4</em></p>
+<p><em>regex==2018.6.6</em></p>
+<p><em>requests==2.19.1</em></p>
 <p><em>responses==0.9.0</em></p>
 <p><em>rollbar==0.14.0</em></p>
 <p><em>sadisplay==0.4.8</em></p>
@@ -519,15 +526,16 @@ Which is why care must be taken when writing plugins.</p>
 <p><em>sip==4.19.8</em></p>
 <p><em>six==1.11.0</em></p>
 <p><em>snowballstemmer==1.2.1</em></p>
-<p><em>Sphinx==1.7.4</em></p>
+<p><em>Sphinx==1.7.5</em></p>
 <p><em>sphinx-autodoc-napoleon-typehints==2.1.6</em></p>
 <p><em>sphinx-bootstrap-theme==0.6.4</em></p>
 <p><em>sphinxcontrib-autoprogram==0.1.4</em></p>
 <p><em>sphinxcontrib-documentedlist==0.6</em></p>
 <p><em>sphinxcontrib-napoleon==0.6.1</em></p>
 <p><em>sphinxcontrib-websupport==1.0.1</em></p>
-<p><em>SQLAlchemy==1.2.7</em></p>
+<p><em>SQLAlchemy==1.2.8</em></p>
 <p><em>SQLAlchemy-Utils==0.33.3</em></p>
+<p><em>tinydb==3.9.0.post1</em></p>
 <p><em>Transcrypt==3.6.101</em></p>
 <p><em>treelib==1.5.1</em></p>
 <p><em>typed-ast==1.1.0</em></p>
@@ -557,7 +565,7 @@ Which is why care must be taken when writing plugins.</p>
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
     </p>
   </div>
 </footer>

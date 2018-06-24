@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugin API &#8212; HappyPanda X 0.0.14#127 documentation</title>
+    <title>Plugin API &#8212; HappyPanda X 0.1.0#131 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -38,9 +38,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.0.14#127</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0#131</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -159,6 +159,7 @@
 <li><a class="reference internal" href="#download">.Download</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -171,7 +172,7 @@
 <span id="plugin-api"></span><h1>Plugin API<a class="headerlink" href="#module-happypanda.core.plugin_interface" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="interface">
 <h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
-<p>The plugin interface module named <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code>.
+<p>The plugin interface module is named <code class="docutils literal notranslate"><span class="pre">__hpx__</span></code>.
 Import it in your plugin to access the methods and classes defined by the module:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">__hpx__</span> <span class="k">as</span> <span class="nn">hpx</span>
 <span class="n">logger</span> <span class="o">=</span> <span class="n">hpx</span><span class="o">.</span><span class="n">get_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -219,8 +220,8 @@ and can be imported like so:</p>
 <li>current_dir: path to the plugin’s folder</li>
 </ul>
 <p><strong>current_dir</strong> : <em>str</em> =</p>
-<p><strong>database_version</strong> : <em>tuple</em> = (0, 0, 5)</p>
-<p><strong>debug</strong> : <em>bool</em> = True</p>
+<p><strong>database_version</strong> : <em>tuple</em> = (0, 1, 0)</p>
+<p><strong>debug</strong> : <em>bool</em> = False</p>
 <p><strong>dev</strong> : <em>bool</em> = False</p>
 <p><strong>download_path</strong> : <em>str</em> = downloads</p>
 <p><strong>is_frozen</strong> : <em>bool</em> = False</p>
@@ -230,8 +231,8 @@ and can be imported like so:</p>
 <p><strong>is_win</strong> : <em>bool</em> = True</p>
 <p><strong>thumbnail_path</strong> : <em>str</em> = staticthumbnails</p>
 <p><strong>translation_path</strong> : <em>str</em> = translations</p>
-<p><strong>version</strong> : <em>tuple</em> = (0, 0, 14)</p>
-<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 0, 13)</p>
+<p><strong>version</strong> : <em>tuple</em> = (0, 1, 0)</p>
+<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 1, 0)</p>
 </div></blockquote>
 <hr class="docutils" />
 <dl class="function">
@@ -407,16 +408,16 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="happypanda.core.commands.meta_cmd.InitApplication">
 <code class="descname">InitApplication</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.InitApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize the appplication</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.meta_cmd.init">
@@ -433,8 +434,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 <dt id="happypanda.core.commands.meta_cmd.RestartApplication">
 <code class="descname">RestartApplication</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.RestartApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart the appplication</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.meta_cmd.restart">
@@ -451,8 +452,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 <dt id="happypanda.core.commands.meta_cmd.ShutdownApplication">
 <code class="descname">ShutdownApplication</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.ShutdownApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shutdown the appplication</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.meta_cmd.shutdown">
@@ -489,8 +490,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.meta_cmd.update">
@@ -579,7 +580,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>Work with archive files</p>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.io_cmd.close">
@@ -712,7 +713,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 <li><dl class="function">
 <dt id="happypanda.core.commands.io_cmd.open">
 <code class="descname">open</code><span class="sig-paren">(</span><em>archive: object</em>, <em>filename: str</em>, <em>args: tuple</em>, <em>kwargs: dict</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#happypanda.core.commands.io_cmd.open" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called to open a file inside the archive.</p>
+<dd><p>Called to open a file inside the archive. Please note that mode=’r’ refers to binary mode</p>
 <p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">Archive.open</span></code></p>
 <p><strong>Capture:</strong> <code class="docutils literal notranslate"><span class="pre">str</span></code> – file extension</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -775,7 +776,34 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.core.commands.io_cmd.CacheCleaner">
+<code class="descname">CacheCleaner</code><span class="sig-paren">(</span><em>cache_path: Union[happypanda.core.commands.io_cmd.CoreFS, str], size: float = 0.0, silent: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.io_cmd.CacheCleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean the provided folder</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cache_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="#happypanda.core.commands.io_cmd.CoreFS" title="happypanda.core.commands.io_cmd.CoreFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoreFS</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – path to cache directory</li>
+<li><strong>size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – only clean if directory size exceeds this number in MB</li>
+<li><strong>silent</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – ignore any errors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">bool indicating whether the folder was cleaned or not</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -800,7 +828,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>Encapsulates path on the filesystem</p>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.io_cmd.archive_formats">
@@ -835,23 +863,84 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="happypanda.core.commands.io_cmd.GalleryFS">
-<code class="descname">GalleryFS</code><span class="sig-paren">(</span><em>path_or_dbitem: str</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.io_cmd.GalleryFS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GalleryFS</code><span class="sig-paren">(</span><em>path_or_dbitem: Union[happypanda.core.db.Gallery, str, happypanda.core.commands.io_cmd.CoreFS, pathlib.Path]</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.io_cmd.GalleryFS" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path_or_dbitem</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path to a valid gallery archive/folder or a <code class="xref py py-class docutils literal notranslate"><span class="pre">db.Gallery</span></code> database item</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path_or_dbitem</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Gallery</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="#happypanda.core.commands.io_cmd.CoreFS" title="happypanda.core.commands.io_cmd.CoreFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoreFS</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>]) – path to a valid gallery archive/folder or a <code class="xref py py-class docutils literal notranslate"><span class="pre">db.Gallery</span></code> database item</td>
 </tr>
 </tbody>
 </table>
 <p>Encapsulates an gallery object on the filesystem</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<ul>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.evaluate">
+<code class="descname">evaluate</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#happypanda.core.commands.io_cmd.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to evaluate if path is a valid gallery or not</p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">GalleryFS.evaluate</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path to gallery</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a bool indicating whether path is pointing to a valid gallery or not</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.filter_pages">
+<code class="descname">filter_pages</code><span class="sig-paren">(</span><em>pages: tuple</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.io_cmd.filter_pages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to filter out files not to be regarded as pages</p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">GalleryFS.filter_pages</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pages</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>) – a tuple of pages</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a tuple of strings of all the pages that should NOT be included in the gallery</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.parse_metadata_file">
+<code class="descname">parse_metadata_file</code><span class="sig-paren">(</span><em>path: str</em>, <em>gallery: happypanda.core.db.Gallery</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#happypanda.core.commands.io_cmd.parse_metadata_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to read and apply metadata from an identified metadata file accompanying a gallery</p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">GalleryFS.parse_metadata_file</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path to the gallery source, note that this can also be inside of an archive</li>
+<li><strong>gallery</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Gallery</span></code>) – gallery db item</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a bool indicating whether a file was identified and data was applied</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+</ul>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -877,15 +966,116 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="happypanda.core.commands.io_cmd.NameParser">
-<code class="descname">NameParser</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.io_cmd.NameParser" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<code class="descname">NameParser</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.io_cmd.NameParser" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the string to parse</td>
+</tr>
+</tbody>
+</table>
+<p>Extract several components from a gallery name (usually a filename)</p>
+<p class="rubric">Available entries:</p>
+<ul>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.extract_artist">
+<code class="descname">extract_artist</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.io_cmd.extract_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to extract the artist from <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">NameParser.extract_artist</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – gallery name, usually a gallery’s filename but with its extension removed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a tuple of strings of all the extracted artists</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.extract_circle">
+<code class="descname">extract_circle</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.io_cmd.extract_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to extract the circle from <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">NameParser.extract_circle</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – gallery name, usually a gallery’s filename but with its extension removed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a tuple of strings of all the extracted circles</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.extract_collection">
+<code class="descname">extract_collection</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.io_cmd.extract_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to extract the convention/magazine from <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">NameParser.extract_collection</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – gallery name, usually a gallery’s filename but with its extension removed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a tuple of (collection_name, category_name) of all the extracted convention/magazines</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.extract_language">
+<code class="descname">extract_language</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.io_cmd.extract_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to extract the language from <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">NameParser.extract_language</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – gallery name, usually a gallery’s filename but with its extension removed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a tuple of strings of all the extracted languages</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt id="happypanda.core.commands.io_cmd.extract_title">
+<code class="descname">extract_title</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.io_cmd.extract_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to extract the title from <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">NameParser.extract_title</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – gallery name, usually a gallery’s filename but with its extension removed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a tuple of strings of all the extracted titles</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+</ul>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <span class="target" id="module-happypanda.core.commands.database_cmd"></span><div class="section" id="database">
@@ -925,7 +1115,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.database_cmd.groupby">
@@ -1016,7 +1206,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -1035,8 +1225,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -1071,7 +1261,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.database_cmd.generate">
@@ -1140,7 +1330,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.database_cmd.cover">
@@ -1171,9 +1361,9 @@ that would still be lingering even after its folder has been deleted.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>model</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code>) – a database model item</li>
-<li><strong>ids</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code>]) – a set of item ids</li>
+<li><strong>ids</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code>]) – fetch items in this set of item ids or set <code class="docutils literal notranslate"><span class="pre">None</span></code> to fetch all</li>
 <li><strong>columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>) – a tuple of database item columns to fetch</li>
-<li><strong>limit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – amount to limit the results</li>
+<li><strong>limit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – amount to limit the results, set <code class="docutils literal notranslate"><span class="pre">None</span></code> for no limit</li>
 <li><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – amount to offset the results</li>
 <li><strong>count</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – only return the count of items</li>
 <li><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – either a textual SQL criterion or a database criterion expression (can also be a tuple)</li>
@@ -1191,8 +1381,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.database_cmd.count">
@@ -1251,8 +1441,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -1278,8 +1468,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <span class="target" id="module-happypanda.core.commands.gallery_cmd"></span><div class="section" id="gallery">
@@ -1287,10 +1477,18 @@ that would still be lingering even after its folder has been deleted.</dd>
 </div>
 <dl class="function">
 <dt id="happypanda.core.commands.gallery_cmd.AddGallery">
-<code class="descname">AddGallery</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.AddGallery" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddGallery</code><span class="sig-paren">(</span><em>galleries: List[Union[happypanda.core.db.Gallery, happypanda.core.commands.io_cmd.GalleryFS]], options: dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.AddGallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a gallery</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -1316,7 +1514,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.gallery_cmd.open">
@@ -1367,7 +1565,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.gallery_cmd.opened">
@@ -1395,6 +1593,48 @@ that would still be lingering even after its folder has been deleted.</dd>
 </dd></dl>
 
 <dl class="function">
+<dt id="happypanda.core.commands.gallery_cmd.ScanGallery">
+<code class="descname">ScanGallery</code><span class="sig-paren">(</span><em>path: Union[str, happypanda.core.commands.io_cmd.CoreFS], options: dict = {}, view_id: int = None, auto_add: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.ScanGallery" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#happypanda.core.commands.io_cmd.GalleryFS" title="happypanda.core.commands.io_cmd.GalleryFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GalleryFS</span></code></a>]</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Available entries:</p>
+<ul>
+<li><dl class="function">
+<dt id="happypanda.core.commands.gallery_cmd.discover">
+<code class="descname">discover</code><span class="sig-paren">(</span><em>path: str</em>, <em>options: dict</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#happypanda.core.commands.gallery_cmd.discover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to find any valid galleries in the given path</p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">ScanGallery.discover</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path to folder or archive</li>
+<li><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – a of options to be applied to the scan</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>a tuple of absolute paths or tuples to valid galleries found in the given directory/archive,</p>
+<p>related galleries are put in their own tuple</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</li>
+</ul>
+<p class="rubric">Available events:</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="happypanda.core.commands.gallery_cmd.SimilarGallery">
 <code class="descname">SimilarGallery</code><span class="sig-paren">(</span><em>gallery_or_id: happypanda.core.db.Gallery</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of similar galleries to given gallery</p>
@@ -1410,8 +1650,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <span class="target" id="module-happypanda.core.commands.search_cmd"></span><div class="section" id="search">
@@ -1447,7 +1687,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.search_cmd.empty">
@@ -1535,7 +1775,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.search_cmd.excluded">
@@ -1619,7 +1859,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.search_cmd.parse">
@@ -1642,7 +1882,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.search_cmd.parsed">
@@ -1685,7 +1925,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt>
@@ -1706,7 +1946,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt>
@@ -1769,7 +2009,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
-<p><strong>Available entries:</strong></p>
+<p class="rubric">Available entries:</p>
 <ul>
 <li><dl class="function">
 <dt id="happypanda.core.commands.search_cmd.match_model">
@@ -1814,7 +2054,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </li>
 </ul>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available events:</p>
 <ul>
 <li><dl class="function">
 <dt>
@@ -1996,8 +2236,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>A convenience wrapper around MultiRequest for GET requests</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -2019,8 +2259,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>A convenience wrapper around MultiRequest for POST requests</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -2042,16 +2282,16 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>Make multiple HTTP requests</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="happypanda.core.commands.network_cmd.Response">
 <code class="descname">Response</code><span class="sig-paren">(</span><em>_url</em>, <em>_request_method</em>, <em>_request_kwargs</em>, <em>_props</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.network_cmd.Response" title="Permalink to this definition">¶</a></dt>
 <dd><p>A request response. Not meant to be instanced publicly.</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -2073,8 +2313,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>A convenience wrapper around SimpleRequest for GET requests</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -2096,8 +2336,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>A convenience wrapper around SimpleRequest for POST requests</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <dl class="function">
@@ -2119,13 +2359,188 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tbody>
 </table>
 <p>Make a HTTP request</p>
-<p><strong>Available entries:</strong></p>
-<p><strong>Available events:</strong></p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
 </dd></dl>
 
 <span class="target" id="module-happypanda.core.commands.download_cmd"></span><div class="section" id="download">
 <h3>.Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
 </div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Meta</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.InitApplication" title="happypanda.core.commands.meta_cmd.InitApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InitApplication</span></code></a>([priority])</td>
+<td>Initialize the appplication</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.RestartApplication" title="happypanda.core.commands.meta_cmd.RestartApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RestartApplication</span></code></a>([priority])</td>
+<td>Restart the appplication</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.ShutdownApplication" title="happypanda.core.commands.meta_cmd.ShutdownApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ShutdownApplication</span></code></a>([priority])</td>
+<td>Shutdown the appplication</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.UpdateApplication" title="happypanda.core.commands.meta_cmd.UpdateApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateApplication</span></code></a>([service,&nbsp;priority])</td>
+<td>Check for new release and update the application</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">I/O</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.io_cmd.CacheCleaner" title="happypanda.core.commands.io_cmd.CacheCleaner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CacheCleaner</span></code></a>([priority])</td>
+<td>Clean the provided folder</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.io_cmd.CoreFS" title="happypanda.core.commands.io_cmd.CoreFS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoreFS</span></code></a>([path,&nbsp;archive])</td>
+<td>Encapsulates path on the filesystem</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.io_cmd.GalleryFS" title="happypanda.core.commands.io_cmd.GalleryFS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GalleryFS</span></code></a>(path_or_dbitem)</td>
+<td>Encapsulates an gallery object on the filesystem :type path_or_dbitem: <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Gallery</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="#happypanda.core.commands.io_cmd.CoreFS" title="happypanda.core.commands.io_cmd.CoreFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoreFS</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>] :param path_or_dbitem: path to a valid gallery archive/folder or a <code class="xref py py-class docutils literal notranslate"><span class="pre">db.Gallery</span></code> database item</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.io_cmd.ImageItem" title="happypanda.core.commands.io_cmd.ImageItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageItem</span></code></a>(filepath_or_bytes,&nbsp;properties[,&nbsp;…])</td>
+<td>Generate an image from source image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.io_cmd.ImageProperties" title="happypanda.core.commands.io_cmd.ImageProperties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageProperties</span></code></a>([size,&nbsp;height,&nbsp;radius,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.io_cmd.NameParser" title="happypanda.core.commands.io_cmd.NameParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NameParser</span></code></a>(name)</td>
+<td>Extract several components from a gallery name (usually a filename)</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Database</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelClass" title="happypanda.core.commands.database_cmd.GetModelClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelClass</span></code></a>()</td>
+<td>Get database model item by name</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelImage" title="happypanda.core.commands.database_cmd.GetModelImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelImage</span></code></a>([service])</td>
+<td>Fetch a database model item’s image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelItems" title="happypanda.core.commands.database_cmd.GetModelItems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelItems</span></code></a>()</td>
+<td>Fetch model items from the database</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetSession" title="happypanda.core.commands.database_cmd.GetSession"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSession</span></code></a>()</td>
+<td>Get a database session</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.MostCommonTags" title="happypanda.core.commands.database_cmd.MostCommonTags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MostCommonTags</span></code></a>([priority])</td>
+<td>Get the most common tags for item</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Gallery</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.OpenGallery" title="happypanda.core.commands.gallery_cmd.OpenGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenGallery</span></code></a>()</td>
+<td>Open a gallery in an external viewer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.ScanGallery" title="happypanda.core.commands.gallery_cmd.ScanGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScanGallery</span></code></a>([service,&nbsp;priority])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="happypanda.core.commands.gallery_cmd.SimilarGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimilarGallery</span></code></a>()</td>
+<td>Get a list of similar galleries to given gallery</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Search</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.search_cmd.ParseSearch" title="happypanda.core.commands.search_cmd.ParseSearch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParseSearch</span></code></a>()</td>
+<td>Parse a search query.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.search_cmd.ParseTerm" title="happypanda.core.commands.search_cmd.ParseTerm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParseTerm</span></code></a>()</td>
+<td>Parse a single term</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.search_cmd.PartialModelFilter" title="happypanda.core.commands.search_cmd.PartialModelFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PartialModelFilter</span></code></a>()</td>
+<td>Perform a partial search on database model with a single term</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.search_cmd.Term" title="happypanda.core.commands.search_cmd.Term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Term</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td><em>used to encapsulate a single term, e.g</em> – <code class="docutils literal notranslate"><span class="pre">pages::&gt;5</span></code> where <code class="docutils literal notranslate"><span class="pre">pages</span></code> is the namespace, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> is the operator and <code class="docutils literal notranslate"><span class="pre">5</span></code> is the tag</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_search_options</span></code>([options])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Network</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.MultiGETRequest" title="happypanda.core.commands.network_cmd.MultiGETRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiGETRequest</span></code></a>(urls[,&nbsp;properties,&nbsp;name,&nbsp;…])</td>
+<td>A convenience wrapper around MultiRequest for GET requests</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.MultiPOSTRequest" title="happypanda.core.commands.network_cmd.MultiPOSTRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiPOSTRequest</span></code></a>(urls[,&nbsp;properties,&nbsp;name,&nbsp;…])</td>
+<td>A convenience wrapper around MultiRequest for POST requests</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.MultiRequest" title="happypanda.core.commands.network_cmd.MultiRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiRequest</span></code></a>(urls,&nbsp;properties)</td>
+<td>Make multiple HTTP requests</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.RequestProperties" title="happypanda.core.commands.network_cmd.RequestProperties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RequestProperties</span></code></a>([method,&nbsp;name,&nbsp;session,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.Response" title="happypanda.core.commands.network_cmd.Response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Response</span></code></a>(_url,&nbsp;_request_method,&nbsp;…)</td>
+<td>A request response.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.SimpleGETRequest" title="happypanda.core.commands.network_cmd.SimpleGETRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimpleGETRequest</span></code></a>(url[,&nbsp;properties,&nbsp;name,&nbsp;…])</td>
+<td>A convenience wrapper around SimpleRequest for GET requests</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.SimplePOSTRequest" title="happypanda.core.commands.network_cmd.SimplePOSTRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimplePOSTRequest</span></code></a>(url[,&nbsp;properties,&nbsp;name,&nbsp;…])</td>
+<td>A convenience wrapper around SimpleRequest for POST requests</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.network_cmd.SimpleRequest" title="happypanda.core.commands.network_cmd.SimpleRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimpleRequest</span></code></a>(url,&nbsp;properties)</td>
+<td>Make a HTTP request</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Download</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
 </div>
 </div>
 
@@ -2147,7 +2562,7 @@ that would still be lingering even after its folder has been deleted.</dd>
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
     </p>
   </div>
 </footer>
