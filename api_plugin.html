@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugin API &#8212; HappyPanda X 0.1.1#132 documentation</title>
+    <title>Plugin API &#8212; HappyPanda X 0.2.0#134 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -40,7 +40,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.1.1#132</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.2.0#134</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -227,7 +227,7 @@ and can be imported like so:</p>
 <li>current_dir: path to the plugin’s folder</li>
 </ul>
 <p><strong>current_dir</strong> : <em>str</em> =</p>
-<p><strong>database_version</strong> : <em>tuple</em> = (0, 1, 0)</p>
+<p><strong>database_version</strong> : <em>tuple</em> = (0, 1, 1)</p>
 <p><strong>debug</strong> : <em>bool</em> = False</p>
 <p><strong>dev</strong> : <em>bool</em> = False</p>
 <p><strong>download_path</strong> : <em>str</em> = downloads</p>
@@ -238,8 +238,8 @@ and can be imported like so:</p>
 <p><strong>is_win</strong> : <em>bool</em> = True</p>
 <p><strong>thumbnail_path</strong> : <em>str</em> = staticthumbnails</p>
 <p><strong>translation_path</strong> : <em>str</em> = translations</p>
-<p><strong>version</strong> : <em>tuple</em> = (0, 1, 1)</p>
-<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 1, 0)</p>
+<p><strong>version</strong> : <em>tuple</em> = (0, 2, 0)</p>
+<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 2, 0)</p>
 </div></blockquote>
 <hr class="docutils" />
 <dl class="function">
@@ -1094,6 +1094,22 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 </div>
 <dl class="function">
+<dt id="happypanda.core.commands.database_cmd.AddItem">
+<code class="descname">AddItem</code><span class="sig-paren">(</span><em>items: List[Union[sqlalchemy.ext.declarative.api.Base, happypanda.core.commands.io_cmd.GalleryFS]], options: dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.database_cmd.AddItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a database item</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="happypanda.core.commands.database_cmd.GetDatabaseSort">
 <code class="descname">GetDatabaseSort</code><span class="sig-paren">(</span><em>model: sqlalchemy.ext.declarative.api.Base</em>, <em>sort_index: int = None</em>, <em>name: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.database_cmd.GetDatabaseSort" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a name or, a namedtuple(expr, joins) of a data sort expression and additional</p>
@@ -1482,22 +1498,6 @@ that would still be lingering even after its folder has been deleted.</dd>
 <span class="target" id="module-happypanda.core.commands.gallery_cmd"></span><div class="section" id="gallery">
 <h3>.Gallery<a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h3>
 </div>
-<dl class="function">
-<dt id="happypanda.core.commands.gallery_cmd.AddGallery">
-<code class="descname">AddGallery</code><span class="sig-paren">(</span><em>galleries: List[Union[happypanda.core.db.Gallery, happypanda.core.commands.io_cmd.GalleryFS]], options: dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.AddGallery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a gallery</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-</dd></dl>
-
 <dl class="function">
 <dt id="happypanda.core.commands.gallery_cmd.OpenGallery">
 <code class="descname">OpenGallery</code><span class="sig-paren">(</span><em>gallery_or_id: happypanda.core.db.Gallery = None</em>, <em>number: int = None</em>, <em>args=()</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.OpenGallery" title="Permalink to this definition">¶</a></dt>
@@ -2439,19 +2439,22 @@ that would still be lingering even after its folder has been deleted.</dd>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelClass" title="happypanda.core.commands.database_cmd.GetModelClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelClass</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetDatabaseSort" title="happypanda.core.commands.database_cmd.GetDatabaseSort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDatabaseSort</span></code></a>()</td>
+<td>Returns a name or, a namedtuple(expr, joins) of a data sort expression and additional tables to join, for a given sort index</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelClass" title="happypanda.core.commands.database_cmd.GetModelClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelClass</span></code></a>()</td>
 <td>Get database model item by name</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelImage" title="happypanda.core.commands.database_cmd.GetModelImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelImage</span></code></a>([service])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelImage" title="happypanda.core.commands.database_cmd.GetModelImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelImage</span></code></a>([service])</td>
 <td>Fetch a database model item’s image</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelItems" title="happypanda.core.commands.database_cmd.GetModelItems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelItems</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetModelItems" title="happypanda.core.commands.database_cmd.GetModelItems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelItems</span></code></a>()</td>
 <td>Fetch model items from the database</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetSession" title="happypanda.core.commands.database_cmd.GetSession"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSession</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.GetSession" title="happypanda.core.commands.database_cmd.GetSession"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSession</span></code></a>()</td>
 <td>Get a database session</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.MostCommonTags" title="happypanda.core.commands.database_cmd.MostCommonTags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MostCommonTags</span></code></a>([priority])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.MostCommonTags" title="happypanda.core.commands.database_cmd.MostCommonTags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MostCommonTags</span></code></a>([priority])</td>
 <td>Get the most common tags for item</td>
 </tr>
 </tbody>
@@ -2463,13 +2466,10 @@ that would still be lingering even after its folder has been deleted.</dd>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.OpenGallery" title="happypanda.core.commands.gallery_cmd.OpenGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenGallery</span></code></a>()</td>
-<td>Open a gallery in an external viewer</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.ScanGallery" title="happypanda.core.commands.gallery_cmd.ScanGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScanGallery</span></code></a>([service,&nbsp;priority])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.ScanGallery" title="happypanda.core.commands.gallery_cmd.ScanGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScanGallery</span></code></a>([service,&nbsp;priority])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="happypanda.core.commands.gallery_cmd.SimilarGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimilarGallery</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="happypanda.core.commands.gallery_cmd.SimilarGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimilarGallery</span></code></a>()</td>
 <td>Get a list of similar galleries to given gallery</td>
 </tr>
 </tbody>

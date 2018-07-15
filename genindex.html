@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Index &#8212; HappyPanda X 0.1.1#132 documentation</title>
+    <title>Index &#8212; HappyPanda X 0.2.0#134 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -40,7 +40,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.1.1#132</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.2.0#134</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -312,7 +312,9 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api_plugin.html#happypanda.core.commands.gallery_cmd.AddGallery">AddGallery() (in module happypanda.core.commands.gallery_cmd)</a>
+      <li><a href="api_plugin.html#happypanda.core.commands.database_cmd.AddItem">AddItem() (in module happypanda.core.commands.database_cmd)</a>
+</li>
+      <li><a href="api_general.html#happypanda.interface.enums.ViewType.All">All (ViewType attribute)</a>
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.APIError">APIError</a>
 </li>
@@ -330,10 +332,10 @@
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.ArchiveExistError">ArchiveExistError</a>
 </li>
-      <li><a href="api_general.html#happypanda.common.exceptions.ArchiveExtractError">ArchiveExtractError</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_general.html#happypanda.common.exceptions.ArchiveExtractError">ArchiveExtractError</a>
+</li>
       <li><a href="api_general.html#happypanda.common.exceptions.ArchiveFileNotFoundError">ArchiveFileNotFoundError</a>
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.ArchiveUnsupportedError">ArchiveUnsupportedError</a>
@@ -555,8 +557,6 @@
 </li>
       <li><a href="api.html#happypanda.interface.events.gallery_read_event">gallery_read_event() (in module happypanda.interface.events)</a>
 </li>
-      <li><a href="api_general.html#happypanda.interface.enums.ProgressType.GalleryAdd">GalleryAdd (ProgressType attribute)</a>
-</li>
       <li><a href="api_general.html#happypanda.interface.enums.TemporaryViewType.GalleryAddition">GalleryAddition (TemporaryViewType attribute)</a>
 </li>
       <li><a href="api_general.html#happypanda.interface.enums.ItemSort.GalleryArtist">GalleryArtist (ItemSort attribute)</a>
@@ -737,14 +737,14 @@
 </li>
       <li><a href="api_plugin.html#happypanda.core.commands.search_cmd.included">included() (in module happypanda.core.commands.search_cmd)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_plugin.html#happypanda.core.commands.io_cmd.init">init() (in module happypanda.core.commands.io_cmd)</a>
 
       <ul>
         <li><a href="api_plugin.html#happypanda.core.commands.meta_cmd.init">(in module happypanda.core.commands.meta_cmd)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_plugin.html#happypanda.core.commands.meta_cmd.InitApplication">InitApplication() (in module happypanda.core.commands.meta_cmd)</a>
 </li>
       <li><a href="api.html#happypanda.interface.plugin.install_plugin">install_plugin() (in module happypanda.interface.plugin)</a>
@@ -756,6 +756,10 @@
       <li><a href="api_general.html#happypanda.common.exceptions.InvalidMessage">InvalidMessage</a>
 </li>
       <li><a href="api_plugin.html#happypanda.core.commands.io_cmd.is_dir">is_dir() (in module happypanda.core.commands.io_cmd)</a>
+</li>
+      <li><a href="api_general.html#happypanda.interface.enums.ProgressType.ItemAdd">ItemAdd (ProgressType attribute)</a>
+</li>
+      <li><a href="api_general.html#happypanda.interface.enums.ProgressType.ItemRemove">ItemRemove (ProgressType attribute)</a>
 </li>
       <li><a href="api_general.html#happypanda.interface.enums.ItemSort">ItemSort (class in happypanda.interface.enums)</a>
 </li>
@@ -790,6 +794,8 @@
       <li><a href="api.html#happypanda.interface.ui.library_view">library_view() (in module happypanda.interface.ui)</a>
 </li>
       <li><a href="api.html#happypanda.interface.plugin.list_plugins">list_plugins() (in module happypanda.interface.plugin)</a>
+</li>
+      <li><a href="api.html#happypanda.interface.gallery.load_gallery_from_path">load_gallery_from_path() (in module happypanda.interface.gallery)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -846,6 +852,8 @@
       <li><a href="api_general.html#happypanda.interface.enums.ItemSort.NamespaceTagTag">NamespaceTagTag (ItemSort attribute)</a>
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.NetworkError">NetworkError</a>
+</li>
+      <li><a href="api.html#happypanda.interface.database.new_item">new_item() (in module happypanda.interface.database)</a>
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.NotAnArchiveError">NotAnArchiveError</a>
 </li>
@@ -1108,9 +1116,11 @@
 </li>
       <li><a href="api_plugin.html#happypanda.core.commands.meta_cmd.update">update() (in module happypanda.core.commands.meta_cmd)</a>
 </li>
+      <li><a href="api.html#happypanda.interface.meta.update_application">update_application() (in module happypanda.interface.meta)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#happypanda.interface.meta.update_application">update_application() (in module happypanda.interface.meta)</a>
+      <li><a href="api.html#happypanda.interface.database.update_metatags">update_metatags() (in module happypanda.interface.database)</a>
 </li>
       <li><a href="api_general.html#happypanda.interface.enums.ProgressType.UpdateApplication">UpdateApplication (ProgressType attribute)</a>
 </li>
