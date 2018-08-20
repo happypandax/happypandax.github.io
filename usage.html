@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Using HappyPanda X &#8212; HappyPanda X 0.2.0#134 documentation</title>
+    <title>Using HappyPanda X &#8212; HappyPanda X 0.3.0#135 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.2.0#134</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.3.0#135</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -253,14 +253,14 @@ If you’re interested in building a client to work with HPX, head over to <a cl
 <li><code class="docutils literal notranslate"><span class="pre">[HPX]/plugins</span></code> which exists in your HPX root folder</li>
 <li>a folder defined by the <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code> setting</li>
 </ul>
-<p>If you’re on OS X, your root HPX folder is at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code> which might be a bit bothersome, so I recommend that you
-define a new folder of your choosing where HPX can look for plugins in with the <cite>plugin.plugin_dir</cite> setting.</p>
-<p>Plugins are contained in their own folder. To register a plugin with HPX, just move the plugin’s folder into one of the locations above.
+<p>If you’re on OS X, your root HPX folder is inside the bundle at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code> which might be a bit bothersome, so I recommend that you
+define a new folder of your choosing where HPX can look for plugins in with the <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code> setting.</p>
+<p>Each plugin is contained in its own folder. To register a plugin with HPX, just move the plugin’s folder into one of the locations above.
 HPX will then discover and register it, <strong>but not install it</strong>.</p>
 <p>To install a plugin after it has been registered, open up a HPX client that supports showing registered plugins (<code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">-&gt;</span> <span class="pre">Plugins</span></code> in the default client).
 Here you can install a registered plugin manually. Once a plugin has been installed, it will also be automatically installed on the next HPX run unless disabled or removed.</p>
 <p>To automatically install plugins once discovered and registered, set the setting <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>, but <strong>this is not recommended</strong> for the reasons explained below.</p>
-<p>Some plugins may depend on other plugins which needs to be installed first before they can be installed. There’s the setting <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin_dependency</span></code> which is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> by default
+<p>A plugin may depend on other plugins that needs to be installed first before it can be installed. There’s the setting <code class="docutils literal notranslate"><span class="pre">plugin.auto_install_plugin_dependency</span></code> which is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> by default
 that controls if these plugin dependencies should be installed automatically when the plugin in question is being installed.</p>
 <div class="section" id="be-careful-about-plugins">
 <h2>Be careful about plugins<a class="headerlink" href="#be-careful-about-plugins" title="Permalink to this headline">¶</a></h2>
@@ -271,9 +271,9 @@ Know that, inherently, <strong>HappyPanda X does not need elevated privileges</s
 <p>Some plugins may also cause unwanted effects towards your system or database.
 That is why care should be taken when wanting to use a plugin. Only use those you trust, and also don’t just blindly trust a plugin.
 Backing up your HPX database before installing a plugin is recommended.</p>
-<p>With all that being said, HPX tries its best to minimize some of these issues. As long as plugin developers follow the guidelines and write safe code
+<p>This all sounds scary and you might even question why even use plugins. HPX tries its best to minimize some of these issues. As long as plugin developers follow the guidelines and write safe code
 then everything should be okay.</p>
-<p>The <a class="reference external" href="https://github.com/happypandax/plugins">HappyPanda X Plugin Repo</a> houses plugins that have been checked and are relatively safe to use.
+<p>The <a class="reference external" href="https://github.com/happypandax/plugins">HappyPanda X Plugin Repo</a> houses plugins that have been checked and are for the most part safe to use.
 If you’re a plugin developer and want your plugin in there, just submit a PR.</p>
 </div>
 </div>

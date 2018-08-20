@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugin API &#8212; HappyPanda X 0.2.0#134 documentation</title>
+    <title>Plugin API &#8212; HappyPanda X 0.3.0#135 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -40,7 +40,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.2.0#134</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.3.0#135</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -227,7 +227,7 @@ and can be imported like so:</p>
 <li>current_dir: path to the plugin’s folder</li>
 </ul>
 <p><strong>current_dir</strong> : <em>str</em> =</p>
-<p><strong>database_version</strong> : <em>tuple</em> = (0, 1, 1)</p>
+<p><strong>database_version</strong> : <em>tuple</em> = (0, 2, 0)</p>
 <p><strong>debug</strong> : <em>bool</em> = False</p>
 <p><strong>dev</strong> : <em>bool</em> = False</p>
 <p><strong>download_path</strong> : <em>str</em> = downloads</p>
@@ -238,8 +238,8 @@ and can be imported like so:</p>
 <p><strong>is_win</strong> : <em>bool</em> = True</p>
 <p><strong>thumbnail_path</strong> : <em>str</em> = staticthumbnails</p>
 <p><strong>translation_path</strong> : <em>str</em> = translations</p>
-<p><strong>version</strong> : <em>tuple</em> = (0, 2, 0)</p>
-<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 2, 0)</p>
+<p><strong>version</strong> : <em>tuple</em> = (0, 3, 0)</p>
+<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 3, 0)</p>
 </div></blockquote>
 <hr class="docutils" />
 <dl class="function">
@@ -1096,7 +1096,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 <dl class="function">
 <dt id="happypanda.core.commands.database_cmd.AddItem">
 <code class="descname">AddItem</code><span class="sig-paren">(</span><em>items: List[Union[sqlalchemy.ext.declarative.api.Base, happypanda.core.commands.io_cmd.GalleryFS]], options: dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.database_cmd.AddItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a database item</p>
+<dd><p>Add database items</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1376,7 +1376,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 <dl class="function">
 <dt id="happypanda.core.commands.database_cmd.GetModelItems">
-<code class="descname">GetModelItems</code><span class="sig-paren">(</span><em>model: sqlalchemy.ext.declarative.api.Base</em>, <em>ids: set = None</em>, <em>limit: int = 999</em>, <em>filter: str = None</em>, <em>order_by: str = None</em>, <em>group_by: str = None</em>, <em>offset: int = 0</em>, <em>columns: tuple = ()</em>, <em>join: str = None</em>, <em>count: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.database_cmd.GetModelItems" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetModelItems</code><span class="sig-paren">(</span><em>model: sqlalchemy.ext.declarative.api.Base</em>, <em>ids: set = None</em>, <em>limit: int = 999</em>, <em>filter: str = None</em>, <em>order_by: str = None</em>, <em>group_by: str = None</em>, <em>offset: int = 0</em>, <em>columns: tuple = ()</em>, <em>join: str = None</em>, <em>count: bool = False</em>, <em>cache=True</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.database_cmd.GetModelItems" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch model items from the database</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1393,6 +1393,8 @@ that would still be lingering even after its folder has been deleted.</dd>
 <li><strong>order_by</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – either a textual SQL criterion or a database model item attribute (can also be a tuple)</li>
 <li><strong>group_by</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – either a textual SQL criterion or a database model item attribute (can also be a tuple)</li>
 <li><strong>join</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – either a textual SQL criterion or a database model item attribute (can also be a tuple)</li>
+<li><strong>count</strong> – return count of items</li>
+<li><strong>cache</strong> – cache results</li>
 </ul>
 </td>
 </tr>
@@ -1488,6 +1490,22 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">NamespaceTags</span></code>]</p>
 </td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.core.commands.database_cmd.UpdateItem">
+<code class="descname">UpdateItem</code><span class="sig-paren">(</span><em>items: List[Union[sqlalchemy.ext.declarative.api.Base, happypanda.core.commands.io_cmd.GalleryFS]], options: dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.database_cmd.UpdateItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update database items</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -1634,6 +1652,27 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+</li>
+<li><dl class="function">
+<dt>
+<code class="descname">resolve</code><span class="sig-paren">(</span><em>path: str</em>, <em>options: dict</em><span class="sig-paren">)</span> &#x2192; tuple</dt>
+<dd><p>Called to resolve the user given scan component path</p>
+<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">ScanGallery.resolve</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path to folder or archive</li>
+<li><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – a of options to be applied to the scan</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
 </dd></dl>
 
 </li>
@@ -2456,6 +2495,9 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.MostCommonTags" title="happypanda.core.commands.database_cmd.MostCommonTags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MostCommonTags</span></code></a>([priority])</td>
 <td>Get the most common tags for item</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.database_cmd.UpdateItem" title="happypanda.core.commands.database_cmd.UpdateItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateItem</span></code></a>([service,&nbsp;priority])</td>
+<td>Update database items</td>
 </tr>
 </tbody>
 </table>
