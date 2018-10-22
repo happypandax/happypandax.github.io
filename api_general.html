@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>General &#8212; HappyPanda X 0.3.0#135 documentation</title>
+    <title>General &#8212; HappyPanda X 0.4.0#136 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.3.0#135</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.4.0#136</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -523,6 +523,48 @@ Enum member names may change sometime in the future. It is not likely to happen 
 </dd></dl>
 
 <dl class="class">
+<dt id="happypanda.interface.enums.ItemsKind">
+<em class="property">class </em><code class="descname">ItemsKind</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemsKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemsKind.all_items">
+<code class="descname">all_items</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.all_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add all items</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemsKind.inbox_items">
+<code class="descname">inbox_items</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.inbox_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items from inbox</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemsKind.library_items">
+<code class="descname">library_items</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.library_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items from library</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemsKind.tags_missing_inbox_items">
+<code class="descname">tags_missing_inbox_items</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_inbox_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items with missing tags from inbox</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemsKind.tags_missing_items">
+<code class="descname">tags_missing_items</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items with missing tags</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemsKind.tags_missing_library_items">
+<code class="descname">tags_missing_library_items</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_library_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items with missing tags from library</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="happypanda.interface.enums.PluginState">
 <em class="property">class </em><code class="descname">PluginState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.PluginState" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
@@ -560,6 +602,30 @@ Enum member names may change sometime in the future. It is not likely to happen 
 <dt id="happypanda.interface.enums.PluginState.Unloaded">
 <code class="descname">Unloaded</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Unloaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unloaded because of dependencies, etc.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="happypanda.interface.enums.Priority">
+<em class="property">class </em><code class="descname">Priority</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.Priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="attribute">
+<dt id="happypanda.interface.enums.Priority.High">
+<code class="descname">High</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.Priority.High" title="Permalink to this definition">¶</a></dt>
+<dd><p>a high priority</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.Priority.Low">
+<code class="descname">Low</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.Priority.Low" title="Permalink to this definition">¶</a></dt>
+<dd><p>a low priority</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.Priority.Medium">
+<code class="descname">Medium</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.Priority.Medium" title="Permalink to this definition">¶</a></dt>
+<dd><p>a medium priority</p>
 </dd></dl>
 
 </dd></dl>
@@ -608,6 +674,18 @@ Enum member names may change sometime in the future. It is not likely to happen 
 <dt id="happypanda.interface.enums.ProgressType.UpdateApplication">
 <code class="descname">UpdateApplication</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdateApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updating application</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="happypanda.interface.enums.QueueType">
+<em class="property">class </em><code class="descname">QueueType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.QueueType" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="attribute">
+<dt id="happypanda.interface.enums.QueueType.Metadata">
+<code class="descname">Metadata</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>a queue for fetching metadata</p>
 </dd></dl>
 
 </dd></dl>
@@ -1120,7 +1198,7 @@ search filter you’re tired of always typing in.</p>
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
     </p>
   </div>
 </footer>
