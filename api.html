@@ -159,6 +159,7 @@
 <li><a class="reference internal" href="#ui">UI</a></li>
 <li><a class="reference internal" href="#events">Events</a></li>
 <li><a class="reference internal" href="#gallery">Gallery</a></li>
+<li><a class="reference internal" href="#general">General</a></li>
 <li><a class="reference internal" href="#tags">Tags</a></li>
 <li><a class="reference internal" href="#database">Database</a></li>
 <li><a class="reference internal" href="#plugin">Plugin</a></li>
@@ -936,6 +937,225 @@ Use the returned <code class="docutils literal notranslate"><span class="pre">vi
 </dd></dl>
 
 </div>
+<span class="target" id="module-happypanda.interface.general"></span><div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="happypanda.interface.general.add_item_to_queue">
+<code class="descname">add_item_to_queue</code><span class="sig-paren">(</span><em>item_id=0</em>, <em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>options={}</em>, <em>queue_type=&lt;QueueType.Metadata: 1&gt;</em>, <em>priority=&lt;Priority.Medium: 2&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.add_item_to_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item to a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of item</li>
+<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – type of item to get, note that each queue type has its own list of item types it supports</li>
+<li><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – queue options</li>
+<li><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</li>
+<li><strong>priority</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.Priority" title="happypanda.interface.enums.Priority"><code class="xref py py-class docutils literal notranslate"><span class="pre">Priority</span></code></a>) – priority of item in queue</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool indicating whether the addition was succesful</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.add_items_to_metadata_queue">
+<code class="descname">add_items_to_metadata_queue</code><span class="sig-paren">(</span><em>items_kind=&lt;ItemsKind.tags_missing_items: 4&gt;</em>, <em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>options={}</em>, <em>priority=&lt;Priority.Medium: 2&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.add_items_to_metadata_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items to the metadata queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>items_kind</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemsKind" title="happypanda.interface.enums.ItemsKind"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemsKind</span></code></a>) – kind of items to add</li>
+<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – type of items to add</li>
+<li><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – queue options</li>
+<li><strong>priority</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.Priority" title="happypanda.interface.enums.Priority"><code class="xref py py-class docutils literal notranslate"><span class="pre">Priority</span></code></a>) – priority of item in queue</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool indicating whether the addition was succesful</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.clear_queue">
+<code class="descname">clear_queue</code><span class="sig-paren">(</span><em>queue_type=&lt;QueueType.Metadata: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.clear_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool indicating whether the action was succesful</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.get_login_info">
+<code class="descname">get_login_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.get_login_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of logins</p>
+<p>Args:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of logins</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.get_metadata_info">
+<code class="descname">get_metadata_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.get_metadata_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of metadata handlers</p>
+<p>Args:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of metadata handlers</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.get_queue_items">
+<code class="descname">get_queue_items</code><span class="sig-paren">(</span><em>limit=100</em>, <em>queue_type=&lt;QueueType.Metadata: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.get_queue_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current state of a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>limit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – limit the amount of items returned</li>
+<li><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
+]
+</pre></div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.get_queue_state">
+<code class="descname">get_queue_state</code><span class="sig-paren">(</span><em>queue_type=&lt;QueueType.Metadata: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.get_queue_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current state of a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
+}
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.remove_item_from_queue">
+<code class="descname">remove_item_from_queue</code><span class="sig-paren">(</span><em>item_id=0</em>, <em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>queue_type=&lt;QueueType.Metadata: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.remove_item_from_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item to a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of item</li>
+<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – type of item to get, note that each queue type has its own list of item types it supports</li>
+<li><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool indicating whether the removal was succesful</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.start_queue">
+<code class="descname">start_queue</code><span class="sig-paren">(</span><em>queue_type=&lt;QueueType.Metadata: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.start_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool indicating whether the action was succesful</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.stop_queue">
+<code class="descname">stop_queue</code><span class="sig-paren">(</span><em>queue_type=&lt;QueueType.Metadata: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.stop_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop a queue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool indicating whether the action was succesful</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.general.submit_login">
+<code class="descname">submit_login</code><span class="sig-paren">(</span><em>identifier</em>, <em>credentials</em>, <em>options={}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.general.submit_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit login credentials</p>
+<p>Args:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
+    &#39;status&#39;: text,
+    &#39;logged_in&#39;: bool
+}
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
+</dd></dl>
+
+</div>
 <span class="target" id="module-happypanda.interface.tag"></span><div class="section" id="tags">
 <h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
@@ -1674,6 +1894,45 @@ These configuration keys will appear in the server’s <code class="docutils lit
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.source_exists" title="happypanda.interface.gallery.source_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_exists</span></code></a>([item_type,&nbsp;item_id,&nbsp;check_all])</td>
 <td>Check if gallery/page source exists on disk</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">General</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.general.add_items_to_metadata_queue" title="happypanda.interface.general.add_items_to_metadata_queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_items_to_metadata_queue</span></code></a>([items_kind,&nbsp;…])</td>
+<td>Add items to the metadata queue</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.general.clear_queue" title="happypanda.interface.general.clear_queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_queue</span></code></a>([queue_type])</td>
+<td>Clear a queue</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.general.get_login_info" title="happypanda.interface.general.get_login_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_login_info</span></code></a>()</td>
+<td>Get a list of logins</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.general.get_metadata_info" title="happypanda.interface.general.get_metadata_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_metadata_info</span></code></a>()</td>
+<td>Get a list of metadata handlers</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.general.get_queue_items" title="happypanda.interface.general.get_queue_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_queue_items</span></code></a>([limit,&nbsp;queue_type])</td>
+<td>Get current state of a queue</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.general.get_queue_state" title="happypanda.interface.general.get_queue_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_queue_state</span></code></a>([queue_type])</td>
+<td>Get current state of a queue</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.general.remove_item_from_queue" title="happypanda.interface.general.remove_item_from_queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_item_from_queue</span></code></a>([item_id,&nbsp;item_type,&nbsp;…])</td>
+<td>Add an item to a queue</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.general.start_queue" title="happypanda.interface.general.start_queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_queue</span></code></a>([queue_type])</td>
+<td>Start a queue</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.general.stop_queue" title="happypanda.interface.general.stop_queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_queue</span></code></a>([queue_type])</td>
+<td>Stop a queue</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.general.submit_login" title="happypanda.interface.general.submit_login"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_login</span></code></a>(identifier,&nbsp;credentials[,&nbsp;options])</td>
+<td>Submit login credentials</td>
 </tr>
 </tbody>
 </table>
