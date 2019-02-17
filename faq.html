@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>FAQ &#8212; HappyPanda X 0.7.0#142 documentation</title>
+    <title>FAQ &#8212; HappyPanda X 0.8.0#143 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.7.0#142</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.8.0#143</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -185,11 +185,12 @@
 <li>PNG = <code class="docutils literal notranslate"><span class="pre">.png</span></code></li>
 <li>GIF = <code class="docutils literal notranslate"><span class="pre">.gif</span></code></li>
 </ul>
-<p>It is possible to add additional file extensions with plugins</p>
+<p>It is possible to add support for additional file extensions with plugins</p>
 </div>
 <div class="section" id="scanning-for-galleries">
 <h2>Scanning for galleries<a class="headerlink" href="#scanning-for-galleries" title="Permalink to this headline">¶</a></h2>
-<p>In addition to regular paths to folders, the scanner also accepts paths with the following tokens inside it:</p>
+<p>In addition to regular paths to folders, the scanner also supports some special syntax for more fine-grained control of the import process.</p>
+<p>The following tokens can be used in a path, these shall be called component-tokens:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">{collection}</span></code> - to specify that this part in the path is a collection</li>
 <li><code class="docutils literal notranslate"><span class="pre">{grouping}</span></code> or <code class="docutils literal notranslate"><span class="pre">{series}</span></code> - to specify that this part in the path is a grouping</li>
@@ -198,10 +199,10 @@
 </ul>
 <p>For regex, these tokens are available:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">{re:&quot;&lt;regex</span> <span class="pre">here&gt;&quot;}</span></code> - to match a part in the path that satisfies the given expression</li>
-<li><code class="docutils literal notranslate"><span class="pre">{re:'&lt;regex</span> <span class="pre">here&gt;'</span> <span class="pre">&lt;omponent&gt;}</span></code> - where <code class="docutils literal notranslate"><span class="pre">&lt;omponent&gt;</span></code> is one of the above <code class="docutils literal notranslate"><span class="pre">collection</span></code>, <code class="docutils literal notranslate"><span class="pre">grouping</span></code>/<code class="docutils literal notranslate"><span class="pre">series</span></code>, <code class="docutils literal notranslate"><span class="pre">artist</span></code> or <code class="docutils literal notranslate"><span class="pre">gallery</span></code>. This is basically a combination of the tokens above.</li>
+<li><code class="docutils literal notranslate"><span class="pre">{re:&quot;&lt;regex</span> <span class="pre">here&gt;&quot;}</span></code> - to match a part in the path that satisfies the given expression <em>(replace ``&lt;regex here&gt;`` with the actual expression)</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">{re:'&lt;regex</span> <span class="pre">here&gt;'</span> <span class="pre">&lt;omponent&gt;}</span></code> - where <code class="docutils literal notranslate"><span class="pre">&lt;component&gt;</span></code> is one of the component-tokens above. This token is basically a combination of the regex token and a component-token.</li>
 </ul>
-<p>For glob patterns, or general name matching, this token is available:</p>
+<p>For glob patterns, or more general name matching, this token is available:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">{&quot;&lt;pattern</span> <span class="pre">here&gt;&quot;}</span></code> - to match a part in the path that satisfies the given glob pattern or name</li>
 </ul>
@@ -209,8 +210,8 @@
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">*</span></code> - to match anything</li>
 </ul>
-<p>These tokens make the scanner pretty flexible and able to work on most, if not all, possible directory structures.
-Learn best by example:</p>
+<p>These tokens make the scanner pretty flexible and able to work on most, if not all, possible directory structures.</p>
+<p>Learn best by example:</p>
 <p>Suppose our collection is structured like this:</p>
 <blockquote>
 <div><dl class="docutils">

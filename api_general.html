@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>General &#8212; HappyPanda X 0.7.0#142 documentation</title>
+    <title>General &#8212; HappyPanda X 0.8.0#143 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.7.0#142</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.8.0#143</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -359,9 +359,21 @@ Enum member names may change sometime in the future. It is not likely to happen 
 </dd></dl>
 
 <dl class="attribute">
+<dt id="happypanda.interface.enums.ItemSort.FilterName">
+<code class="descname">FilterName</code><em class="property"> = 35</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.FilterName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tag</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryArtist">
 <code class="descname">GalleryArtist</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryArtist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Artist Name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ItemSort.GalleryCircle">
+<code class="descname">GalleryCircle</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryCircle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gallery Circle</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -821,6 +833,13 @@ message: explanation of error</dd>
 <em class="property">exception </em><code class="descname">CommandAlreadyRunningError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CommandAlreadyRunningError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">121</span></code></p>
 <p>Command is already running</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.ScanError">
+<em class="property">exception </em><code class="descname">ScanError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ScanError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">130</span></code></p>
+<p>Item scan error</p>
 </dd></dl>
 
 <dl class="exception">

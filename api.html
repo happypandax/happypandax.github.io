@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Server API &#8212; HappyPanda X 0.7.0#142 documentation</title>
+    <title>Server API &#8212; HappyPanda X 0.8.0#143 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.7.0#142</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.8.0#143</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -502,6 +502,42 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </div>
 <span class="target" id="module-happypanda.interface.ui"></span><div class="section" id="ui">
 <h3>UI<a class="headerlink" href="#ui" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="happypanda.interface.ui.get_image_from_path">
+<code class="descname">get_image_from_path</code><span class="sig-paren">(</span><em>path</em>, <em>size=&lt;ImageSize.Medium: 3&gt;</em>, <em>url=False</em>, <em>uri=False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.ui.get_image_from_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get image from given path or url.
+Image content is base64 encoded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a supported path (note that the path must exist on this system if path points to a file/directory)</li>
+<li><strong>size</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ImageSize" title="happypanda.interface.enums.ImageSize"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageSize</span></code></a>) – size of image</li>
+<li><strong>url</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – replace image content with http url to image file</li>
+<li><strong>uri</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – turn raw base64 string into an URI</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
+    item_id : command_id
+}
+</pre></div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#happypanda.interface.database.get_image" title="happypanda.interface.database.get_image"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_image()</span></code></a></p>
+</div>
+</dd></dl>
+
 <dl class="function">
 <dt id="happypanda.interface.ui.get_sort_indexes">
 <code class="descname">get_sort_indexes</code><span class="sig-paren">(</span><em>item_type=None</em>, <em>translate=True</em>, <em>locale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.ui.get_sort_indexes" title="Permalink to this definition">¶</a></dt>
@@ -1027,6 +1063,25 @@ Use the returned <code class="docutils literal notranslate"><span class="pre">vi
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="happypanda.interface.gallery.update_filters">
+<code class="descname">update_filters</code><span class="sig-paren">(</span><em>item_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.gallery.update_filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update filters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_ids</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – list of specific filters to update</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">status</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
+</dd></dl>
+
 </div>
 <span class="target" id="module-happypanda.interface.general"></span><div class="section" id="general">
 <h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
@@ -1415,7 +1470,7 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <dl class="function">
 <dt id="happypanda.interface.database.delete_item">
 <code class="descname">delete_item</code><span class="sig-paren">(</span><em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>item_id=0</em>, <em>options={}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.database.delete_item" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove an item from the database PERMANENTLY</p>
+<dd><p>Remove an item from the database <strong>PERMANENTLY</strong></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1492,9 +1547,12 @@ Image content is base64 encoded.</p>
 </tr>
 </tbody>
 </table>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_image_from_path()</span></code></p>
+<p class="last"><a class="reference internal" href="#happypanda.interface.ui.get_image_from_path" title="happypanda.interface.ui.get_image_from_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_image_from_path()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -1643,7 +1701,7 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – all of <code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType</span></code> except <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Page" title="happypanda.interface.enums.ItemType.Page"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Page</span></code></a> and <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.GalleryFilter" title="happypanda.interface.enums.ItemType.GalleryFilter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.GalleryFilter</span></code></a></li>
+<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – all of <code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType</span></code> except <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Page" title="happypanda.interface.enums.ItemType.Page"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Page</span></code></a></li>
 <li><strong>search_query</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – filter item by search terms</li>
 <li><strong>search_options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – options to apply when filtering, see <a class="reference internal" href="settings.html#settings"><span class="std std-ref">Settings</span></a> for available search options</li>
 <li><strong>sort_by</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemSort" title="happypanda.interface.enums.ItemSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemSort</span></code></a>]) – either a <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemSort" title="happypanda.interface.enums.ItemSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemSort</span></code></a> or a sort index</li>
@@ -1969,22 +2027,25 @@ These configuration keys will appear in the server’s <code class="docutils lit
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.get_translations" title="happypanda.interface.ui.get_translations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_translations</span></code></a>([locale])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.get_sort_indexes" title="happypanda.interface.ui.get_sort_indexes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_sort_indexes</span></code></a>([item_type,&nbsp;translate,&nbsp;locale])</td>
+<td>Get a list of available sort item indexes and names</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.get_translations" title="happypanda.interface.ui.get_translations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_translations</span></code></a>([locale])</td>
 <td>Get all translations for given locale</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.get_view_count" title="happypanda.interface.ui.get_view_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_view_count</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.get_view_count" title="happypanda.interface.ui.get_view_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_view_count</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
 <td>Get count of items in view</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.library_view" title="happypanda.interface.ui.library_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">library_view</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.library_view" title="happypanda.interface.ui.library_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">library_view</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
 <td>Fetch items from the database.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.submit_temporary_view" title="happypanda.interface.ui.submit_temporary_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_temporary_view</span></code></a>([view_type,&nbsp;view_id])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.submit_temporary_view" title="happypanda.interface.ui.submit_temporary_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_temporary_view</span></code></a>([view_type,&nbsp;view_id])</td>
 <td>not ready yet…</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.temporary_view" title="happypanda.interface.ui.temporary_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporary_view</span></code></a>([view_type,&nbsp;view_id,&nbsp;limit,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.temporary_view" title="happypanda.interface.ui.temporary_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporary_view</span></code></a>([view_type,&nbsp;view_id,&nbsp;limit,&nbsp;…])</td>
 <td>not ready yet…</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.translate" title="happypanda.interface.ui.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(t_id[,&nbsp;locale,&nbsp;default,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.translate" title="happypanda.interface.ui.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(t_id[,&nbsp;locale,&nbsp;default,&nbsp;…])</td>
 <td>Get a translation by translation id.</td>
 </tr>
 </tbody>
@@ -2037,6 +2098,9 @@ These configuration keys will appear in the server’s <code class="docutils lit
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.source_exists" title="happypanda.interface.gallery.source_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_exists</span></code></a>([item_type,&nbsp;item_id,&nbsp;check_all])</td>
 <td>Check if gallery/page source exists on disk</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.update_filters" title="happypanda.interface.gallery.update_filters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_filters</span></code></a>([item_ids])</td>
+<td>Update filters</td>
 </tr>
 </tbody>
 </table>
