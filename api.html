@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Server API &#8212; HappyPanda X 0.8.0#143 documentation</title>
+    <title>Server API &#8212; HappyPanda X 0.9.0#146 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.8.0#143</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.9.0#146</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -375,6 +375,20 @@ The changelog returned is for the current release or a new update</p>
 <dt id="happypanda.interface.meta.get_notification">
 <code class="descname">get_notification</code><span class="sig-paren">(</span><em>scope=None</em>, <em>msg_id=None</em>, <em>expired=False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.meta.get_notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Not ready yet…</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.meta.get_properties">
+<code class="descname">get_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.meta.get_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get various server properties</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a Properties message object</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -758,19 +772,61 @@ Raises error if a default value was not provided and no translation was found.</
 <span class="target" id="module-happypanda.interface.events"></span><div class="section" id="events">
 <h3>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
-<dt id="happypanda.interface.events.gallery_read_event">
-<code class="descname">gallery_read_event</code><span class="sig-paren">(</span><em>item_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.events.gallery_read_event" title="Permalink to this definition">¶</a></dt>
-<dd><p>An event for when a gallery is being read</p>
+<dt id="happypanda.interface.events.gallery_open_event">
+<code class="descname">gallery_open_event</code><span class="sig-paren">(</span><em>item_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.events.gallery_open_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>An event for when a gallery is opened</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of gallery item</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool indicating whether the event was succesful</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool indicating whether the event was successful</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.events.gallery_read_event">
+<code class="descname">gallery_read_event</code><span class="sig-paren">(</span><em>item_id=0</em>, <em>update_to_last_page=True</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.events.gallery_read_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>An event for when a gallery has been read</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of gallery item</li>
+<li><strong>update_to_last_page</strong> – update progress to last page</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool indicating whether the event was successful</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.events.page_read_event">
+<code class="descname">page_read_event</code><span class="sig-paren">(</span><em>item_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.events.page_read_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>An event for when a page has been read</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of page item</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool indicating whether the event was successful</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Remarks:</dt>
+<dd>note that there is no need to call <a class="reference internal" href="#happypanda.interface.events.gallery_read_event" title="happypanda.interface.events.gallery_read_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">gallery_read_event()</span></code></a> after a complete read
+if using this event (unless you want to force a complete read)</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -836,6 +892,35 @@ Raises error if a default value was not provided and no translation was found.</
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool whether gallery was added to grouping or not</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.gallery.get_last_read_page">
+<code class="descname">get_last_read_page</code><span class="sig-paren">(</span><em>item_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.gallery.get_last_read_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the last page that was read for given gallery.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of existing gallery</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
+    &#39;page&#39;: page message object,
+    &#39;end&#39;: bool, # if the gallery has been considered read, use this to determine if should continue reading
+    &#39;percent&#39;: float, # progress of how far this page is in the total amount of pages,
+    &#39;count&#39;: int, # total amount of pages,
+    &#39;timestamp&#39;: int # time when page was read
+}
+
+if such thing exists, else
+
+{}
+</pre></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -1061,6 +1146,37 @@ Use the returned <code class="docutils literal notranslate"><span class="pre">vi
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.gallery.sync_with_source">
+<code class="descname">sync_with_source</code><span class="sig-paren">(</span><em>item_id=0</em>, <em>delete_existing=False</em>, <em>true_to_source=True</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.gallery.sync_with_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synchronise the gallery source with the database, meaning
+if the source is a path on the filesystem, it will rescan the source for
+any possibly new items for given item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of existing gallery</li>
+<li><strong>delete_existing</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – delete all existing items before synchronizing</li>
+<li><strong>true_to_source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – delete items not found in source</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">status</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only galleries with the <code class="docutils literal notranslate"><span class="pre">single_source=True</span></code> property are supported</p>
+</div>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
 </dd></dl>
 
 <dl class="function">
@@ -1997,25 +2113,28 @@ These configuration keys will appear in the server’s <code class="docutils lit
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.get_notification" title="happypanda.interface.meta.get_notification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_notification</span></code></a>([scope,&nbsp;msg_id,&nbsp;expired])</td>
 <td>Not ready yet…</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.get_version" title="happypanda.interface.meta.get_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_version</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.get_properties" title="happypanda.interface.meta.get_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_properties</span></code></a>()</td>
+<td>Get various server properties</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.get_version" title="happypanda.interface.meta.get_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_version</span></code></a>()</td>
 <td>Get version of components: ‘core’, ‘db’ and ‘torrent’</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.reply_notification" title="happypanda.interface.meta.reply_notification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reply_notification</span></code></a>(msg_id,&nbsp;action_values)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.reply_notification" title="happypanda.interface.meta.reply_notification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reply_notification</span></code></a>(msg_id,&nbsp;action_values)</td>
 <td>Not ready yet…</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.restart_application" title="happypanda.interface.meta.restart_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restart_application</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.restart_application" title="happypanda.interface.meta.restart_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restart_application</span></code></a>()</td>
 <td>Restart the application</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.shutdown_application" title="happypanda.interface.meta.shutdown_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shutdown_application</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.shutdown_application" title="happypanda.interface.meta.shutdown_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shutdown_application</span></code></a>()</td>
 <td>Shutdown the application</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.start_command" title="happypanda.interface.meta.start_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_command</span></code></a>(command_ids)</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.start_command" title="happypanda.interface.meta.start_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_command</span></code></a>(command_ids)</td>
 <td>Start running a command</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.stop_command" title="happypanda.interface.meta.stop_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_command</span></code></a>(command_ids)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.stop_command" title="happypanda.interface.meta.stop_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_command</span></code></a>(command_ids)</td>
 <td>Stop command from running</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.meta.update_application" title="happypanda.interface.meta.update_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_application</span></code></a>([download_url,&nbsp;restart])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.meta.update_application" title="happypanda.interface.meta.update_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_application</span></code></a>([download_url,&nbsp;restart])</td>
 <td>Update the application with a new release.</td>
 </tr>
 </tbody>
@@ -2057,6 +2176,12 @@ These configuration keys will appear in the server’s <code class="docutils lit
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.events.gallery_read_event" title="happypanda.interface.events.gallery_read_event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gallery_read_event</span></code></a>([item_id,&nbsp;…])</td>
+<td>An event for when a gallery has been read</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.events.page_read_event" title="happypanda.interface.events.page_read_event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">page_read_event</span></code></a>([item_id])</td>
+<td>An event for when a page has been read</td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Gallery</p>
@@ -2072,32 +2197,38 @@ These configuration keys will appear in the server’s <code class="docutils lit
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.add_to_grouping" title="happypanda.interface.gallery.add_to_grouping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_to_grouping</span></code></a>([gallery_id,&nbsp;item_id,&nbsp;item])</td>
 <td>Add a gallery to a grouping</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.get_page" title="happypanda.interface.gallery.get_page"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_page</span></code></a>([page_id,&nbsp;gallery_id,&nbsp;number,&nbsp;prev])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.get_last_read_page" title="happypanda.interface.gallery.get_last_read_page"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_last_read_page</span></code></a>([item_id])</td>
+<td>Get the last page that was read for given gallery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.get_page" title="happypanda.interface.gallery.get_page"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_page</span></code></a>([page_id,&nbsp;gallery_id,&nbsp;number,&nbsp;prev])</td>
 <td>Get next/prev page by either gallery or page id</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.get_similar" title="happypanda.interface.gallery.get_similar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_similar</span></code></a>([item_type,&nbsp;item_id,&nbsp;limit])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.get_similar" title="happypanda.interface.gallery.get_similar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_similar</span></code></a>([item_type,&nbsp;item_id,&nbsp;limit])</td>
 <td>Get similar items</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.load_gallery_from_path" title="happypanda.interface.gallery.load_gallery_from_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_gallery_from_path</span></code></a>([path])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.load_gallery_from_path" title="happypanda.interface.gallery.load_gallery_from_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_gallery_from_path</span></code></a>([path])</td>
 <td>Load gallery data from a path</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.open_gallery" title="happypanda.interface.gallery.open_gallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_gallery</span></code></a>([item_id,&nbsp;item_type,&nbsp;viewer_args])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.open_gallery" title="happypanda.interface.gallery.open_gallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_gallery</span></code></a>([item_id,&nbsp;item_type,&nbsp;viewer_args])</td>
 <td>Open a gallery or page in an external viewer</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_collection" title="happypanda.interface.gallery.remove_from_collection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_collection</span></code></a>([gallery_id,&nbsp;item_id])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_collection" title="happypanda.interface.gallery.remove_from_collection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_collection</span></code></a>([gallery_id,&nbsp;item_id])</td>
 <td>Remove a gallery from a collection</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_filter" title="happypanda.interface.gallery.remove_from_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_filter</span></code></a>([gallery_id,&nbsp;item_id])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_filter" title="happypanda.interface.gallery.remove_from_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_filter</span></code></a>([gallery_id,&nbsp;item_id])</td>
 <td>Remove a gallery from a galleryfilter</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_grouping" title="happypanda.interface.gallery.remove_from_grouping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_grouping</span></code></a>([gallery_id,&nbsp;item_id])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_grouping" title="happypanda.interface.gallery.remove_from_grouping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_grouping</span></code></a>([gallery_id,&nbsp;item_id])</td>
 <td>Remove a gallery from a grouping</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.scan_galleries" title="happypanda.interface.gallery.scan_galleries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_galleries</span></code></a>(path[,&nbsp;scan_options])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.scan_galleries" title="happypanda.interface.gallery.scan_galleries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_galleries</span></code></a>(path[,&nbsp;scan_options])</td>
 <td>Scan for galleries in the given directory/archive</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.source_exists" title="happypanda.interface.gallery.source_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_exists</span></code></a>([item_type,&nbsp;item_id,&nbsp;check_all])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.source_exists" title="happypanda.interface.gallery.source_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_exists</span></code></a>([item_type,&nbsp;item_id,&nbsp;check_all])</td>
 <td>Check if gallery/page source exists on disk</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.sync_with_source" title="happypanda.interface.gallery.sync_with_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sync_with_source</span></code></a>([item_id,&nbsp;delete_existing,&nbsp;…])</td>
+<td>Synchronise the gallery source with the database, meaning if the source is a path on the filesystem, it will rescan the source for any possibly new items for given item.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.update_filters" title="happypanda.interface.gallery.update_filters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_filters</span></code></a>([item_ids])</td>
 <td>Update filters</td>

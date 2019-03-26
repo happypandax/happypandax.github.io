@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Index &#8212; HappyPanda X 0.8.0#143 documentation</title>
+    <title>Index &#8212; HappyPanda X 0.9.0#146 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -40,7 +40,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.8.0#143</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.9.0#146</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -573,6 +573,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_general.html#happypanda.interface.enums.ItemType.Gallery">Gallery (ItemType attribute)</a>
 </li>
+      <li><a href="api.html#happypanda.interface.events.gallery_open_event">gallery_open_event() (in module happypanda.interface.events)</a>
+</li>
       <li><a href="api.html#happypanda.interface.events.gallery_read_event">gallery_read_event() (in module happypanda.interface.events)</a>
 </li>
       <li><a href="api_general.html#happypanda.interface.enums.TemporaryViewType.GalleryAddition">GalleryAddition (TemporaryViewType attribute)</a>
@@ -627,11 +629,13 @@
 </li>
       <li><a href="api.html#happypanda.interface.ui.get_image_from_path">get_image_from_path() (in module happypanda.interface.ui)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api.html#happypanda.interface.database.get_item">get_item() (in module happypanda.interface.database)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api.html#happypanda.interface.database.get_items">get_items() (in module happypanda.interface.database)</a>
+</li>
+      <li><a href="api.html#happypanda.interface.gallery.get_last_read_page">get_last_read_page() (in module happypanda.interface.gallery)</a>
 </li>
       <li><a href="api.html#happypanda.interface.meta.get_locales">get_locales() (in module happypanda.interface.meta)</a>
 </li>
@@ -653,6 +657,8 @@
         <li><a href="api.html#happypanda.interface.plugin.get_plugin_config">(in module happypanda.interface.plugin)</a>
 </li>
       </ul></li>
+      <li><a href="api.html#happypanda.interface.meta.get_properties">get_properties() (in module happypanda.interface.meta)</a>
+</li>
       <li><a href="api.html#happypanda.interface.general.get_queue_items">get_queue_items() (in module happypanda.interface.general)</a>
 </li>
       <li><a href="api.html#happypanda.interface.general.get_queue_state">get_queue_state() (in module happypanda.interface.general)</a>
@@ -931,6 +937,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_general.html#happypanda.interface.enums.ItemType.Page">Page (ItemType attribute)</a>
 </li>
+      <li><a href="api.html#happypanda.interface.events.page_read_event">page_read_event() (in module happypanda.interface.events)</a>
+</li>
       <li><a href="api_plugin.html#happypanda.core.commands.network_cmd.RequestProperties.params">params (RequestProperties attribute)</a>
 </li>
       <li><a href="api_general.html#happypanda.interface.enums.ItemType.Parody">Parody (ItemType attribute)</a>
@@ -957,10 +965,10 @@
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.PluginCommandError">PluginCommandError</a>
 </li>
-      <li><a href="api_general.html#happypanda.common.exceptions.PluginCommandNotFoundError">PluginCommandNotFoundError</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_general.html#happypanda.common.exceptions.PluginCommandNotFoundError">PluginCommandNotFoundError</a>
+</li>
       <li><a href="api_general.html#happypanda.common.exceptions.PluginError">PluginError</a>
 </li>
       <li><a href="api_general.html#happypanda.common.exceptions.PluginHandlerError">PluginHandlerError</a>
@@ -1090,10 +1098,10 @@
 </li>
       <li><a href="api.html#happypanda.interface.meta.shutdown_application">shutdown_application() (in module happypanda.interface.meta)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_plugin.html#happypanda.core.commands.meta_cmd.ShutdownApplication">ShutdownApplication() (in module happypanda.core.commands.meta_cmd)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_plugin.html#happypanda.core.commands.gallery_cmd.SimilarGallery">SimilarGallery() (in module happypanda.core.commands.gallery_cmd)</a>
 </li>
       <li><a href="api_plugin.html#happypanda.core.commands.network_cmd.SingleGETRequest">SingleGETRequest() (in module happypanda.core.commands.network_cmd)</a>
@@ -1133,6 +1141,10 @@
       <li><a href="api.html#happypanda.interface.ui.submit_temporary_view">submit_temporary_view() (in module happypanda.interface.ui)</a>
 </li>
       <li><a href="api_plugin.html#happypanda.core.plugin_interface.subscribe">subscribe() (in module happypanda.core.plugin_interface)</a>
+</li>
+      <li><a href="api.html#happypanda.interface.gallery.sync_with_source">sync_with_source() (in module happypanda.interface.gallery)</a>
+</li>
+      <li><a href="api_plugin.html#happypanda.core.commands.gallery_cmd.SyncWithSource">SyncWithSource() (in module happypanda.core.commands.gallery_cmd)</a>
 </li>
   </ul></td>
 </tr></table>

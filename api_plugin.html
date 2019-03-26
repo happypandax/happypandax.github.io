@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugin API &#8212; HappyPanda X 0.8.0#143 documentation</title>
+    <title>Plugin API &#8212; HappyPanda X 0.9.0#146 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -40,7 +40,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.8.0#143</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.9.0#146</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -227,7 +227,7 @@ and can be imported like so:</p>
 <li>current_dir: path to the plugin’s folder</li>
 </ul>
 <p><strong>current_dir</strong> : <em>str</em> =</p>
-<p><strong>database_version</strong> : <em>tuple</em> = (0, 5, 0)</p>
+<p><strong>database_version</strong> : <em>tuple</em> = (0, 6, 0)</p>
 <p><strong>debug</strong> : <em>bool</em> = False</p>
 <p><strong>dev</strong> : <em>bool</em> = False</p>
 <p><strong>download_path</strong> : <em>str</em> = downloads</p>
@@ -238,8 +238,8 @@ and can be imported like so:</p>
 <p><strong>is_win</strong> : <em>bool</em> = True</p>
 <p><strong>thumbnail_path</strong> : <em>str</em> = staticthumbnails</p>
 <p><strong>translation_path</strong> : <em>str</em> = translations</p>
-<p><strong>version</strong> : <em>tuple</em> = (0, 8, 0)</p>
-<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 8, 0)</p>
+<p><strong>version</strong> : <em>tuple</em> = (0, 9, 0)</p>
+<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 9, 0)</p>
 </div></blockquote>
 <hr class="docutils" />
 <dl class="function">
@@ -1543,6 +1543,36 @@ that would still be lingering even after its folder has been deleted.</dd>
 <p class="rubric">Available events:</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="happypanda.core.commands.gallery_cmd.SyncWithSource">
+<code class="descname">SyncWithSource</code><span class="sig-paren">(</span><em>item_or_id: happypanda.core.db.Gallery = None</em>, <em>delete_existing: bool = False</em>, <em>true_to_source: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.SyncWithSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>if the source is a path on the filesystem, it will rescan the source for</p>
+<p>any possibly new items for given item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_or_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Gallery</span></code>]) – a <code class="xref py py-class docutils literal notranslate"><span class="pre">db.Gallery</span></code> database item or an item id thereof</li>
+<li><strong>delete_existing</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – delete all existing items before synchronizing</li>
+<li><strong>true_to_source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – delete items not found in source</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">status</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only galleries with the <code class="docutils literal notranslate"><span class="pre">single_source=True</span></code> property are supported</p>
+</div>
+<p>Synchronise the gallery source with the database, meaning</p>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
+</dd></dl>
+
 <span class="target" id="module-happypanda.core.commands.search_cmd"></span><div class="section" id="search">
 <h3>.Search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
 <dl class="data">
@@ -2331,6 +2361,9 @@ that would still be lingering even after its folder has been deleted.</dd>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="happypanda.core.commands.gallery_cmd.SimilarGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimilarGallery</span></code></a>()</td>
 <td>Get a list of similar galleries to given gallery</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SyncWithSource" title="happypanda.core.commands.gallery_cmd.SyncWithSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SyncWithSource</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Synchronise the gallery source with the database, meaning if the source is a path on the filesystem, it will rescan the source for any possibly new items for given item.</td>
 </tr>
 </tbody>
 </table>
