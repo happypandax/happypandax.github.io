@@ -7,6 +7,70 @@ Server API
     only documented in the release changelogs, so make sure to read them. Things should stabilize once
     HPX enters beta status.
 
+Summary
+----------------------------------------
+
+.. rubric:: Meta
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.meta")
+
+.. rubric:: UI
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.ui")
+
+.. rubric:: Events
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.events")
+
+.. rubric:: Item
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.gallery")
+
+.. rubric:: Gallery
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.gallery")
+
+.. rubric:: General
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.general")
+
+.. rubric:: Tags
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.tag")
+
+.. rubric:: Database
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.database")
+
+.. rubric:: Plugin
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.plugin")
+
+.. rubric:: Configuration
+
+.. exec::
+
+    autosummary_doc("happypanda.interface.settings")
+
+
 Functions
 ----------------------------------------
 
@@ -17,6 +81,9 @@ Functions
    :members:
 
 .. automodule:: happypanda.interface.events
+   :members:
+
+.. automodule:: happypanda.interface.item
    :members:
 
 .. automodule:: happypanda.interface.gallery
@@ -36,60 +103,3 @@ Functions
 
 .. automodule:: happypanda.interface.settings
    :members:
-
-Summary
-----------------------------------------
-
-.. rubric:: Meta
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.meta")
-
-.. rubric:: UI
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.ui")
-
-.. rubric:: Events
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.events")
-
-.. rubric:: Gallery
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.gallery")
-
-.. rubric:: General
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.general")
-
-.. rubric:: Tags
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.tag")
-
-.. rubric:: Database
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.database")
-
-.. rubric:: Plugin
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.plugin")
-
-.. rubric:: Configuration
-
-.. exec::
-    
-    autosummary_doc("happypanda.interface.settings")

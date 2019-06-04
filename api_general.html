@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>General &#8212; HappyPanda X 0.9.0#146 documentation</title>
+    <title>General &#8212; HappyPanda X 0.10.0#152 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.9.0#146</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.10.0#152</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -479,15 +479,15 @@ Enum member names may change sometime in the future. It is not likely to happen 
 </dd></dl>
 
 <dl class="attribute">
-<dt id="happypanda.interface.enums.ItemType.Gallery">
-<code class="descname">Gallery</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Gallery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gallery</p>
+<dt id="happypanda.interface.enums.ItemType.Filter">
+<code class="descname">Filter</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="happypanda.interface.enums.ItemType.GalleryFilter">
-<code class="descname">GalleryFilter</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.GalleryFilter" title="Permalink to this definition">¶</a></dt>
-<dd><p>GalleryFilter</p>
+<dt id="happypanda.interface.enums.ItemType.Gallery">
+<code class="descname">Gallery</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Gallery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gallery</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -577,6 +577,42 @@ Enum member names may change sometime in the future. It is not likely to happen 
 </dd></dl>
 
 <dl class="class">
+<dt id="happypanda.interface.enums.LogLevel">
+<em class="property">class </em><code class="descname">LogLevel</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.LogLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogLevel.CRITICAL">
+<code class="descname">CRITICAL</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Critical</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogLevel.DEBUG">
+<code class="descname">DEBUG</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.DEBUG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Debug</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogLevel.ERROR">
+<code class="descname">ERROR</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogLevel.INFO">
+<code class="descname">INFO</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.INFO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Info</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogLevel.WARNING">
+<code class="descname">WARNING</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Warning</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="happypanda.interface.enums.PluginState">
 <em class="property">class </em><code class="descname">PluginState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.PluginState" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
@@ -647,6 +683,12 @@ Enum member names may change sometime in the future. It is not likely to happen 
 <em class="property">class </em><code class="descname">ProgressType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ProgressType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
 <dl class="attribute">
+<dt id="happypanda.interface.enums.ProgressType.CheckPluginUpdate">
+<code class="descname">CheckPluginUpdate</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.CheckPluginUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>A check for plugin update</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="happypanda.interface.enums.ProgressType.CheckUpdate">
 <code class="descname">CheckUpdate</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.CheckUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A check for new update</p>
@@ -686,6 +728,12 @@ Enum member names may change sometime in the future. It is not likely to happen 
 <dt id="happypanda.interface.enums.ProgressType.UpdateApplication">
 <code class="descname">UpdateApplication</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdateApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updating application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.ProgressType.UpdatePlugin">
+<code class="descname">UpdatePlugin</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdatePlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upldating plugin</p>
 </dd></dl>
 
 </dd></dl>
@@ -822,6 +870,20 @@ message: explanation of error</dd>
 </dd></dl>
 
 <dl class="exception">
+<dt id="happypanda.common.exceptions.SettingsNoExistError">
+<em class="property">exception </em><code class="descname">SettingsNoExistError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SettingsNoExistError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">111</span></code></p>
+<p>Settings doesn’t exist error</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.InvalidSettingError">
+<em class="property">exception </em><code class="descname">InvalidSettingError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.InvalidSettingError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">112</span></code></p>
+<p>Invalid setting error</p>
+</dd></dl>
+
+<dl class="exception">
 <dt id="happypanda.common.exceptions.CommandError">
 <em class="property">exception </em><code class="descname">CommandError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CommandError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">120</span></code></p>
@@ -906,6 +968,48 @@ message: explanation of error</dd>
 </dd></dl>
 
 <dl class="exception">
+<dt id="happypanda.common.exceptions.PluginInstallError">
+<em class="property">exception </em><code class="descname">PluginInstallError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginInstallError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">208</span></code></p>
+<p>Plugin Install Error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.PluginUpdateError">
+<em class="property">exception </em><code class="descname">PluginUpdateError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">210</span></code></p>
+<p>Plugin Update No HPlugin Error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.PluginUpdateHPluginError">
+<em class="property">exception </em><code class="descname">PluginUpdateHPluginError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateHPluginError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">211</span></code></p>
+<p>Plugin Update HPlugin Error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.PluginUpdateInvalidURLError">
+<em class="property">exception </em><code class="descname">PluginUpdateInvalidURLError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateInvalidURLError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">212</span></code></p>
+<p>Plugin Update Invalid Url Error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.PluginUpdateCheckError">
+<em class="property">exception </em><code class="descname">PluginUpdateCheckError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateCheckError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">213</span></code></p>
+<p>Plugin Update Check Error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.PluginUpdateDownloadError">
+<em class="property">exception </em><code class="descname">PluginUpdateDownloadError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateDownloadError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">214</span></code></p>
+<p>Plugin Update Down Error.</p>
+</dd></dl>
+
+<dl class="exception">
 <dt id="happypanda.common.exceptions.DatabaseError">
 <em class="property">exception </em><code class="descname">DatabaseError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">300</span></code></p>
@@ -931,6 +1035,20 @@ message: explanation of error</dd>
 <em class="property">exception </em><code class="descname">DatabaseItemNotFoundError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseItemNotFoundError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">303</span></code></p>
 <p>Database item not found error</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.DatabaseDataError">
+<em class="property">exception </em><code class="descname">DatabaseDataError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseDataError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">304</span></code></p>
+<p>Database data error</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.EmptyNameError">
+<em class="property">exception </em><code class="descname">EmptyNameError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.EmptyNameError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">305</span></code></p>
+<p>Database empty name error</p>
 </dd></dl>
 
 <dl class="exception">
@@ -1102,6 +1220,20 @@ msg: error message</dd>
 <em class="property">exception </em><code class="descname">NetworkError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.NetworkError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">700</span></code></p>
 <p>Base network exception, all network exceptions will derive from this</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.ItemError">
+<em class="property">exception </em><code class="descname">ItemError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em>, <em>item=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ItemError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">800</span></code></p>
+<p>Base item exception, all item exceptions will derive from this</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.FailedToMoveError">
+<em class="property">exception </em><code class="descname">FailedToMoveError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em>, <em>item=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.FailedToMoveError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">801</span></code></p>
+<p>Failed to move item source error</p>
 </dd></dl>
 
 <dl class="exception">
