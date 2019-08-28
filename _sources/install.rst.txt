@@ -46,7 +46,7 @@ Finally, copy your edit of commands over to a command-line and execute them.
 
 ------------
 
-.. code-block::
+::
 
     HPX_PORT=7007
     HPX_WEBPORT=7008
@@ -60,9 +60,9 @@ Finally, copy your edit of commands over to a command-line and execute them.
 
 ------------
 
-**NOTE**: This is intended for `cmd.exe` not PowerShell
+**NOTE**: This is intended for ``cmd.exe`` not PowerShell
 
-.. code-block::
+::
 
     set HPX_PORT=7007
     set HPX_WEBPORT=7008
@@ -77,7 +77,7 @@ The configuration file
 
 The default configuration file is set to:
 
-.. code-block::
+::
 
     import:
         skip_existing_galleries: true
@@ -90,48 +90,48 @@ The default configuration file is set to:
           ${HPX_CONTENT}:
             import.scan_on_startup: true
 
-The config file supports environment variables, so `${HPX_CONTENT}` will automatically expand to your specified content folder *inside docker*.
-Another useful variable is `${HPX_DATA}` pointing to the data folder *inside docker*.
+The config file supports environment variables, so ``${HPX_CONTENT}`` will automatically expand to your specified content folder *inside docker*.
+Another useful variable is ``${HPX_DATA}`` pointing to the data folder *inside docker*.
 Note that these environment variables are pre-defined by the image inside docker. This means you can't just define new variables from outside and expect the docker instance to see them.
 
-To modify this configuration, create a file named `config.yaml` inside your `HPX_DATA` folder with these contents as a starting point.
+To modify this configuration, create a file named ``config.yaml`` inside your ``HPX_DATA`` folder with these contents as a starting point.
 
 About the commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:`HPX_PORT` & `HPX_WEBPORT` & `HPX_TORRENTPORT`:
+:``HPX_PORT`` & ``HPX_WEBPORT`` & ``HPX_TORRENTPORT``:
     Your desired ports to connect to the HPX servers and clients with on your machine
 
-:`HPX_DATA`:
+:``HPX_DATA``:
     A folder on your machine where HPX should save its data, this includes config files, databases, backups, etc.
 
-:`HPX_CONTENT`:
+:``HPX_CONTENT``:
     A folder for where manga and doujins are stored, you usually set this to your pre-existing folder where those things are stored.
 
-:`RUN_IN_BACKGROUND`:
-    If `false` the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.
+:``RUN_IN_BACKGROUND``:
+    If ``false`` the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.
 
-:`docker run ...`:
+:``docker run ...``:
     You can read more about what the different docker flags means `here. <https://docs.docker.com/engine/reference/run/>`_
 
-The docker image is set so that subsequent arguments after the docker image name in the `docker run` command are passed to happypandax,
+The docker image is set so that subsequent arguments after the docker image name in the ``docker run`` command are passed to happypandax,
 meaning this:
 
-`docker run <yadda.. yadda..> happypandax --help`
+``docker run <yadda.. yadda..> happypandax --help``
 
-is the same as running the happypandax executable directly with `happypanda.exe --help` (the `<yadda.. yadda..>` is passed to docker, not hpx).
+is the same as running the happypandax executable directly with ``happypanda.exe --help`` (the ``<yadda.. yadda..>`` is passed to docker, not hpx).
 
-The `<yadda.. yadda..>` part are all those arguments from the command above just shortened for brevity. Make sure to include those arguments, or else... **or else Docker wouldn't know where to store data and IT WILL BE LOST**.
+The ``<yadda.. yadda..>`` part are all those arguments from the command above just shortened for brevity. Make sure to include those arguments, or else... **or else Docker wouldn't know where to store data and IT WILL BE LOST**.
 
 This means that you could generate an example config file like this:
 
-`docker run <yadda.. yadda..> happypandax --gen-config`
+``docker run <yadda.. yadda..> happypandax --gen-config``
 
-The config file will be generated into the folder you specified with `HPX_DATA`.
+The config file will be generated into the folder you specified with ``HPX_DATA``.
 
 You can also make user accounts this way:
 
-`docker run <yadda.. yadda..> happypandax user create -t "admin" -u "twiddly" -p "twiddly123"`
+``docker run <yadda.. yadda..> happypandax user create -t "admin" -u "twiddly" -p "twiddly123"``
 
 Now, continue to :ref:`Using HappyPanda X` or read on if you intend to use Docker Compose.
 
@@ -141,25 +141,25 @@ Using with Docker Compose
 Using HPX with Docker Compose lets us avoid those complicated-looking commands.
 And while we are at it, we might as well set up HPX to use postgresql with docker as well.
 
-Start by creating a folder for where you want your HPX config and data to be. You can just name this folder `HappyPanda X`.
+Start by creating a folder for where you want your HPX config and data to be. You can just name this folder ``HappyPanda X``.
 
-In that folder, create a folder named `data` and a file named `docker-compose.yml` with these contents:
+In that folder, create a folder named ``data`` and a file named ``docker-compose.yml`` with these contents:
 
-.. code-block::
+::
 
     hello
 
-Change the ports and folder mappings as desired. In particular you should change `./content:/content` to `<where your manga folder is located>:/content`,
-or else the expected content folder will be a folder named `content` in the `HappyPanda X` folder.
+Change the ports and folder mappings as desired. In particular you should change ``./content:/content`` to ``<where your manga folder is located>:/content``,
+or else the expected content folder will be a folder named ``content`` in the ``HappyPanda X`` folder.
 
-You can also change the ports, if you wish to do so, do it like this: `<your custom port>:7008`
+You can also change the ports, if you wish to do so, do it like this: ``<your custom port>:7008``
 
-**Notice that the port to postgres is set to 7005:5432**, meaning unless you change it, you will have to use port `7005` to connect to it with.
+**Notice that the port to postgres is set to 7005:5432**, meaning unless you change it, you will have to use port ``7005`` to connect to it with.
 
-Now, create a `config.yaml` file with these contents and save it inside the `data` folder
-(unless you changed it then this folder is expected to be named `data` inside the `HappyPanda X` folder, create it if it doesn't exist):
+Now, create a ``config.yaml`` file with these contents and save it inside the ``data`` folder
+(unless you changed it then this folder is expected to be named ``data`` inside the ``HappyPanda X`` folder, create it if it doesn't exist):
 
-.. code-block::
+::
 
     import:
         skip_existing_galleries: true
@@ -181,17 +181,17 @@ Now, create a `config.yaml` file with these contents and save it inside the `dat
         name: happypanda
 
 
-The config file supports environment variables, so `${HPX_CONTENT}` will automatically expand to your specified content folder *inside docker*.
-Another useful variable is `${HPX_DATA}` pointing to the data folder *inside dicker*.
+The config file supports environment variables, so ``${HPX_CONTENT}`` will automatically expand to your specified content folder *inside docker*.
+Another useful variable is ``${HPX_DATA}`` pointing to the data folder *inside dicker*.
 Note that these environment variables are pre-defined by the image inside docker. This means you can't just define new variables from outside and expect the docker instance to see them.
 
-Notice that the postgres host is the name of the database service as defined in `docker-compose.yml` to be named `db`.
+Notice that the postgres host is the name of the database service as defined in ``docker-compose.yml`` to be named ``db``.
 
 This config does a few things. It sets HPX to use the dockerized postgres service and also puts the content folder under watch so that new items in it will be added to HPX automatically.
 
-Lastly, if you don't wish to use a postgres backend with docker, just remove this part from `docker-compose.yml`:
+Lastly, if you don't wish to use a postgres backend with docker, just remove this part from ``docker-compose.yml``:
 
-.. code-block::
+::
 
         links:
             - db
@@ -213,26 +213,26 @@ Lastly, if you don't wish to use a postgres backend with docker, just remove thi
       happypandax_database:
         driver: local
 
-Make sure to edit your `config.yaml` to reflect this change.
+Make sure to edit your ``config.yaml`` to reflect this change.
 
 With all that done, we can now start up everything. Run this command to start everything:
 
-`docker-compose up`
+``docker-compose up``
 
-If everything was successful, you should be able to open your browser and access HPX on `localhost:7008` (replace `7008` with whatever you set that port mapping to).
+If everything was successful, you should be able to open your browser and access HPX on ``localhost:7008`` (replace ``7008`` with whatever you set that port mapping to).
 
 You can stop everything with:
 
-`docker-compose down`
+``docker-compose down``
 
-Read more about what commands are available `here. <`here. <https://docs.docker.com/compose/reference/>`_
+Read more about what commands are available `here. <https://docs.docker.com/compose/reference/>`_
 
-In the same vein as with `docker run`, you can also pass commands to HPX in the same way, like:
+In the same vein as with ``docker run``, you can also pass commands to HPX in the same way, like:
 
-`docker-compose run happypandax --help`
+``docker-compose run happypandax --help``
 
 To create a new user:
 
-`docker-compose run happypandax user create -t "admin" -u "twiddly" -p "twiddly123"`
+``docker-compose run happypandax user create -t "admin" -u "twiddly" -p "twiddly123"``
 
 Now, continue to :ref:`Using HappyPanda X`

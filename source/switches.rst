@@ -4,7 +4,7 @@
 
 To use these command-line switches, open a terminal or command-prompt inside the installation folder of HPX and execute:
 
-`happypandax.exe --help` (omit the `.exe` suffix if you're not on Windows).
+``happypandax.exe --help`` (omit the `.exe` suffix if you're not on Windows).
 
 
 .. autoprogram:: happypanda.main:parser

@@ -121,17 +121,17 @@
         <strong>Quick links</strong>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
+        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @twiddli on GitHub">Follow @twiddli</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
+        <a class="github-button" href="https://github.com/happypandax/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue happypandax/happypandax on GitHub">Issue</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/happypandax/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star happypandax/happypandax on GitHub">Star</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+        <a class="github-button" href="https://github.com/happypandax/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork happypandax/happypandax on GitHub">Fork</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
@@ -139,7 +139,7 @@
            class="twitter-follow-button" data-width="145px"
            data-link-color="#0069D6" data-show-count="false">
             Follow
-            @pewspew
+            @twiddly_
         </a>
     </li>
     <li class="quick-link">
@@ -209,16 +209,46 @@ Then edit the variables so that they point to the appropriate folders and ports.
 <p>Finally, copy your edit of commands over to a command-line and execute them.</p>
 <p><strong>Linux &amp; Mac OS:</strong></p>
 <hr class="docutils" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>HPX_PORT=7007
+HPX_WEBPORT=7008
+HPX_TORRENTPORT=7006
+HPX_DATA=&quot;/path/to/desired/hpx/datadir&quot;
+HPX_CONTENT=&quot;/path/to/desired/hpx/contentdir&quot;
+RUN_IN_BACKGROUND=true
+docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND happypandax
+</pre></div>
+</div>
 <p><strong>Windows:</strong></p>
 <hr class="docutils" />
-<p><strong>NOTE</strong>: This is intended for <cite>cmd.exe</cite> not PowerShell</p>
+<p><strong>NOTE</strong>: This is intended for <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> not PowerShell</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">HPX_PORT</span><span class="o">=</span><span class="mi">7007</span>
+<span class="nb">set</span> <span class="n">HPX_WEBPORT</span><span class="o">=</span><span class="mi">7008</span>
+<span class="nb">set</span> <span class="n">HPX_TORRENTPORT</span><span class="o">=</span><span class="mi">7006</span>
+<span class="nb">set</span> <span class="n">HPX_DATA</span><span class="o">=</span><span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\desired\hpx\datadir&quot;</span>
+<span class="nb">set</span> <span class="n">HPX_CONTENT</span><span class="o">=</span><span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\desired\hpx\content&quot;</span>
+<span class="nb">set</span> <span class="n">RUN_IN_BACKGROUND</span><span class="o">=</span><span class="n">false</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_PORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7007</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_WEBPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7008</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_TORRENTPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7006</span> <span class="o">--</span><span class="n">name</span> <span class="n">happypandax</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_DATA</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_CONTENT</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">d</span><span class="o">=%</span><span class="n">RUN_IN_BACKGROUND</span><span class="o">%</span> <span class="n">happypandax</span>
+</pre></div>
+</div>
 <div class="section" id="the-configuration-file">
 <h4>The configuration file<a class="headerlink" href="#the-configuration-file" title="Permalink to this headline">¶</a></h4>
 <p>The default configuration file is set to:</p>
-<p>The config file supports environment variables, so <cite>${HPX_CONTENT}</cite> will automatically expand to your specified content folder <em>inside docker</em>.
-Another useful variable is <cite>${HPX_DATA}</cite> pointing to the data folder <em>inside docker</em>.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import:
+    skip_existing_galleries: true
+    transparent_nested_folders: true
+watch:
+    enable: true
+    dirs:
+      - ${HPX_CONTENT}
+    options:
+      ${HPX_CONTENT}:
+        import.scan_on_startup: true
+</pre></div>
+</div>
+<p>The config file supports environment variables, so <code class="docutils literal notranslate"><span class="pre">${HPX_CONTENT}</span></code> will automatically expand to your specified content folder <em>inside docker</em>.
+Another useful variable is <code class="docutils literal notranslate"><span class="pre">${HPX_DATA}</span></code> pointing to the data folder <em>inside docker</em>.
 Note that these environment variables are pre-defined by the image inside docker. This means you can’t just define new variables from outside and expect the docker instance to see them.</p>
-<p>To modify this configuration, create a file named <cite>config.yaml</cite> inside your <cite>HPX_DATA</cite> folder with these contents as a starting point.</p>
+<p>To modify this configuration, create a file named <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> inside your <code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code> folder with these contents as a starting point.</p>
 </div>
 <div class="section" id="about-the-commands">
 <h4>About the commands<a class="headerlink" href="#about-the-commands" title="Permalink to this headline">¶</a></h4>
@@ -226,30 +256,30 @@ Note that these environment variables are pre-defined by the image inside docker
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2"><cite>HPX_PORT</cite> &amp; <cite>HPX_WEBPORT</cite> &amp; <cite>HPX_TORRENTPORT</cite>:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">HPX_PORT</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">HPX_WEBPORT</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">HPX_TORRENTPORT</span></code>:</th></tr>
 <tr class="field-odd field"><td>&#160;</td><td class="field-body">Your desired ports to connect to the HPX servers and clients with on your machine</td>
 </tr>
-<tr class="field-even field"><th class="field-name"><cite>HPX_DATA</cite>:</th><td class="field-body">A folder on your machine where HPX should save its data, this includes config files, databases, backups, etc.</td>
+<tr class="field-even field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code>:</th><td class="field-body">A folder on your machine where HPX should save its data, this includes config files, databases, backups, etc.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name"><cite>HPX_CONTENT</cite>:</th><td class="field-body">A folder for where manga and doujins are stored, you usually set this to your pre-existing folder where those things are stored.</td>
+<tr class="field-odd field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">HPX_CONTENT</span></code>:</th><td class="field-body">A folder for where manga and doujins are stored, you usually set this to your pre-existing folder where those things are stored.</td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2"><cite>RUN_IN_BACKGROUND</cite>:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">If <cite>false</cite> the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.</td>
+<tr class="field-even field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">RUN_IN_BACKGROUND</span></code>:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">If <code class="docutils literal notranslate"><span class="pre">false</span></code> the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name"><cite>docker run …</cite>:</th><td class="field-body">You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></td>
+<tr class="field-odd field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code>:</th><td class="field-body">You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></td>
 </tr>
 </tbody>
 </table>
-<p>The docker image is set so that subsequent arguments after the docker image name in the <cite>docker run</cite> command are passed to happypandax,
+<p>The docker image is set so that subsequent arguments after the docker image name in the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command are passed to happypandax,
 meaning this:</p>
-<p><cite>docker run &lt;yadda.. yadda..&gt; happypandax –help</cite></p>
-<p>is the same as running the happypandax executable directly with <cite>happypanda.exe –help</cite> (the <cite>&lt;yadda.. yadda..&gt;</cite> is passed to docker, not hpx).</p>
-<p>The <cite>&lt;yadda.. yadda..&gt;</cite> part are all those arguments from the command above just shortened for brevity. Make sure to include those arguments, or else… <strong>or else Docker wouldn’t know where to store data and IT WILL BE LOST</strong>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">--help</span></code></p>
+<p>is the same as running the happypandax executable directly with <code class="docutils literal notranslate"><span class="pre">happypanda.exe</span> <span class="pre">--help</span></code> (the <code class="docutils literal notranslate"><span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span></code> is passed to docker, not hpx).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span></code> part are all those arguments from the command above just shortened for brevity. Make sure to include those arguments, or else… <strong>or else Docker wouldn’t know where to store data and IT WILL BE LOST</strong>.</p>
 <p>This means that you could generate an example config file like this:</p>
-<p><cite>docker run &lt;yadda.. yadda..&gt; happypandax –gen-config</cite></p>
-<p>The config file will be generated into the folder you specified with <cite>HPX_DATA</cite>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">--gen-config</span></code></p>
+<p>The config file will be generated into the folder you specified with <code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code>.</p>
 <p>You can also make user accounts this way:</p>
-<p><cite>docker run &lt;yadda.. yadda..&gt; happypandax user create -t “admin” -u “twiddly” -p “twiddly123”</cite></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
 <p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a> or read on if you intend to use Docker Compose.</p>
 </div>
 </div>
@@ -257,31 +287,75 @@ meaning this:</p>
 <h3>Using with Docker Compose<a class="headerlink" href="#using-with-docker-compose" title="Permalink to this headline">¶</a></h3>
 <p>Using HPX with Docker Compose lets us avoid those complicated-looking commands.
 And while we are at it, we might as well set up HPX to use postgresql with docker as well.</p>
-<p>Start by creating a folder for where you want your HPX config and data to be. You can just name this folder <cite>HappyPanda X</cite>.</p>
-<p>In that folder, create a folder named <cite>data</cite> and a file named <cite>docker-compose.yml</cite> with these contents:</p>
-<p>Change the ports and folder mappings as desired. In particular you should change <cite>./content:/content</cite> to <cite>&lt;where your manga folder is located&gt;:/content</cite>,
-or else the expected content folder will be a folder named <cite>content</cite> in the <cite>HappyPanda X</cite> folder.</p>
-<p>You can also change the ports, if you wish to do so, do it like this: <cite>&lt;your custom port&gt;:7008</cite></p>
-<p><strong>Notice that the port to postgres is set to 7005:5432</strong>, meaning unless you change it, you will have to use port <cite>7005</cite> to connect to it with.</p>
-<p>Now, create a <cite>config.yaml</cite> file with these contents and save it inside the <cite>data</cite> folder
-(unless you changed it then this folder is expected to be named <cite>data</cite> inside the <cite>HappyPanda X</cite> folder, create it if it doesn’t exist):</p>
-<p>The config file supports environment variables, so <cite>${HPX_CONTENT}</cite> will automatically expand to your specified content folder <em>inside docker</em>.
-Another useful variable is <cite>${HPX_DATA}</cite> pointing to the data folder <em>inside dicker</em>.
+<p>Start by creating a folder for where you want your HPX config and data to be. You can just name this folder <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code>.</p>
+<p>In that folder, create a folder named <code class="docutils literal notranslate"><span class="pre">data</span></code> and a file named <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> with these contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span>
+</pre></div>
+</div>
+<p>Change the ports and folder mappings as desired. In particular you should change <code class="docutils literal notranslate"><span class="pre">./content:/content</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;where</span> <span class="pre">your</span> <span class="pre">manga</span> <span class="pre">folder</span> <span class="pre">is</span> <span class="pre">located&gt;:/content</span></code>,
+or else the expected content folder will be a folder named <code class="docutils literal notranslate"><span class="pre">content</span></code> in the <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> folder.</p>
+<p>You can also change the ports, if you wish to do so, do it like this: <code class="docutils literal notranslate"><span class="pre">&lt;your</span> <span class="pre">custom</span> <span class="pre">port&gt;:7008</span></code></p>
+<p><strong>Notice that the port to postgres is set to 7005:5432</strong>, meaning unless you change it, you will have to use port <code class="docutils literal notranslate"><span class="pre">7005</span></code> to connect to it with.</p>
+<p>Now, create a <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file with these contents and save it inside the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder
+(unless you changed it then this folder is expected to be named <code class="docutils literal notranslate"><span class="pre">data</span></code> inside the <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> folder, create it if it doesn’t exist):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import:
+    skip_existing_galleries: true
+    transparent_nested_folders: true
+watch:
+    enable: true
+    dirs:
+      - ${HPX_CONTENT}
+    options:
+      ${HPX_CONTENT}:
+        import.scan_on_startup: true
+
+db:
+    dialect: postgres
+    username: happypandax
+    password: postgres
+    host: db
+    port: 7005
+    name: happypanda
+</pre></div>
+</div>
+<p>The config file supports environment variables, so <code class="docutils literal notranslate"><span class="pre">${HPX_CONTENT}</span></code> will automatically expand to your specified content folder <em>inside docker</em>.
+Another useful variable is <code class="docutils literal notranslate"><span class="pre">${HPX_DATA}</span></code> pointing to the data folder <em>inside dicker</em>.
 Note that these environment variables are pre-defined by the image inside docker. This means you can’t just define new variables from outside and expect the docker instance to see them.</p>
-<p>Notice that the postgres host is the name of the database service as defined in <cite>docker-compose.yml</cite> to be named <cite>db</cite>.</p>
+<p>Notice that the postgres host is the name of the database service as defined in <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> to be named <code class="docutils literal notranslate"><span class="pre">db</span></code>.</p>
 <p>This config does a few things. It sets HPX to use the dockerized postgres service and also puts the content folder under watch so that new items in it will be added to HPX automatically.</p>
-<p>Lastly, if you don’t wish to use a postgres backend with docker, just remove this part from <cite>docker-compose.yml</cite>:</p>
-<p>Make sure to edit your <cite>config.yaml</cite> to reflect this change.</p>
+<p>Lastly, if you don’t wish to use a postgres backend with docker, just remove this part from <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">links</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">db</span>
+
+  <span class="n">db</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">postgres</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="mi">7005</span><span class="p">:</span><span class="mi">5432</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="n">POSTGRES_DB</span><span class="p">:</span> <span class="s1">&#39;happypandax&#39;</span>
+      <span class="n">POSTGRES_USER</span><span class="p">:</span> <span class="s1">&#39;happypandax&#39;</span>
+      <span class="n">POSTGRES_PASSWORD</span><span class="p">:</span> <span class="s1">&#39;postgres&#39;</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">happypandax_database</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span>
+
+
+<span class="n">volumes</span><span class="p">:</span>
+  <span class="n">happypandax_database</span><span class="p">:</span>
+    <span class="n">driver</span><span class="p">:</span> <span class="n">local</span>
+</pre></div>
+</div>
+<p>Make sure to edit your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> to reflect this change.</p>
 <p>With all that done, we can now start up everything. Run this command to start everything:</p>
-<p><cite>docker-compose up</cite></p>
-<p>If everything was successful, you should be able to open your browser and access HPX on <cite>localhost:7008</cite> (replace <cite>7008</cite> with whatever you set that port mapping to).</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code></p>
+<p>If everything was successful, you should be able to open your browser and access HPX on <code class="docutils literal notranslate"><span class="pre">localhost:7008</span></code> (replace <code class="docutils literal notranslate"><span class="pre">7008</span></code> with whatever you set that port mapping to).</p>
 <p>You can stop everything with:</p>
-<p><cite>docker-compose down</cite></p>
-<p>Read more about what commands are available <a class="reference external" href="https://docs.docker.com/compose/reference/">here. &lt;`here.</a></p>
-<p>In the same vein as with <cite>docker run</cite>, you can also pass commands to HPX in the same way, like:</p>
-<p><cite>docker-compose run happypandax –help</cite></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">down</span></code></p>
+<p>Read more about what commands are available <a class="reference external" href="https://docs.docker.com/compose/reference/">here.</a></p>
+<p>In the same vein as with <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>, you can also pass commands to HPX in the same way, like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">happypandax</span> <span class="pre">--help</span></code></p>
 <p>To create a new user:</p>
-<p><cite>docker-compose run happypandax user create -t “admin” -u “twiddly” -p “twiddly123”</cite></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
 <p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a></p>
 </div>
 </div>

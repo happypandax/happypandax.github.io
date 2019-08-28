@@ -210,3 +210,57 @@ Exposing HPX to the public network will allow you to access HPX from *any device
 .. todo::
 
     expose HPX
+
+Reverse Proxy
+-------------------------------------
+
+You might wanna use a reverse proxy such as NGINX in front of HPX.
+
+NGINX
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Make sure your NGINX version is atleast version 1.4, earlier versions are not supported.
+
+Here is an example config you can use to get HPX to work with NGINX:
+
+::
+
+    server {
+        listen 80;
+        listen [::]:80;
+        server_name example.me www.example.me;
+        charset	utf-8;
+
+        # for websocket
+        location /websocket {
+            proxy_pass http://localhost:7008/websocket;
+            proxy_redirect off;
+            proxy_buffering off;
+
+        proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+        }
+
+        location / {
+            proxy_pass http://localhost:7008;
+        proxy_redirect off;
+            gzip off;
+
+            proxy_read_timeout	300;
+        proxy_connect_timeout   300;
+
+        proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+        }
+
+    }

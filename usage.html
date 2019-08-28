@@ -121,17 +121,17 @@
         <strong>Quick links</strong>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
+        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @twiddli on GitHub">Follow @twiddli</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
+        <a class="github-button" href="https://github.com/happypandax/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue happypandax/happypandax on GitHub">Issue</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/happypandax/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star happypandax/happypandax on GitHub">Star</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/twiddli/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+        <a class="github-button" href="https://github.com/happypandax/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork happypandax/happypandax on GitHub">Fork</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
@@ -139,7 +139,7 @@
            class="twitter-follow-button" data-width="145px"
            data-link-color="#0069D6" data-show-count="false">
             Follow
-            @pewspew
+            @twiddly_
         </a>
     </li>
     <li class="quick-link">
@@ -180,6 +180,10 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#public-network">Public network</a></li>
+<li><a class="reference internal" href="#reverse-proxy">Reverse Proxy</a><ul>
+<li><a class="reference internal" href="#nginx">NGINX</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -358,6 +362,56 @@ We can also set the ports with the settings <code class="docutils literal notran
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">expose HPX</p>
+</div>
+</div>
+<div class="section" id="reverse-proxy">
+<h2>Reverse Proxy<a class="headerlink" href="#reverse-proxy" title="Permalink to this headline">¶</a></h2>
+<p>You might wanna use a reverse proxy such as NGINX in front of HPX.</p>
+<div class="section" id="nginx">
+<h3>NGINX<a class="headerlink" href="#nginx" title="Permalink to this headline">¶</a></h3>
+<p>Make sure your NGINX version is atleast version 1.4, earlier versions are not supported.</p>
+<p>Here is an example config you can use to get HPX to work with NGINX:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
+    listen 80;
+    listen [::]:80;
+    server_name example.me www.example.me;
+    charset utf-8;
+
+    # for websocket
+    location /websocket {
+        proxy_pass http://localhost:7008/websocket;
+        proxy_redirect off;
+        proxy_buffering off;
+
+    proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;Upgrade&quot;;
+    }
+
+    location / {
+        proxy_pass http://localhost:7008;
+    proxy_redirect off;
+        gzip off;
+
+        proxy_read_timeout  300;
+    proxy_connect_timeout   300;
+
+    proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;Upgrade&quot;;
+    }
+
+}
+</pre></div>
+</div>
 </div>
 </div>
 </div>
