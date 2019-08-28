@@ -5,20 +5,16 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Settings &#8212; HappyPanda X 0.10.0#152 documentation</title>
+    <title>Settings &#8212; HappyPanda X 0.11.0#156 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="_static/script.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Command-Line Arguments" href="switches.html" />
@@ -27,6 +23,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
   </head><body>
 
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.10.0#152</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.0#156</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -121,21 +121,21 @@
         <strong>Quick links</strong>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
+        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
-    </li>
-    <li class="divider">&middot;</li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
-    </li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+        <a class="github-button" href="https://github.com/twiddli/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
-        <a href="https://twitter.com/pewspew"
+        <a class="github-button" href="https://github.com/twiddli/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
+    </li>
+    <li class="quick-link">
+        <a class="github-button" href="https://github.com/twiddli/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+    </li>
+    <li class="divider">&middot;</li>
+    <li class="quick-link">
+        <a href="https://twitter.com/twiddly_"
            class="twitter-follow-button" data-width="145px"
            data-link-color="#0069D6" data-show-count="false">
             Follow
@@ -146,7 +146,7 @@
         <a href="https://twitter.com/share" class="twitter-share-button"
            data-url="" data-count="horizontal"
            data-via="twbootstrap"
-           data-related="pewpews:Creator of HappyPanda X">Tweet</a>
+           data-related="twiddly_:Creator of HappyPanda X">Tweet</a>
     </li>
 </ul>
 <div class="container">
@@ -162,6 +162,10 @@
             
   <div class="section" id="settings">
 <h1>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
+<p>To use these settings, create a configuration file named <cite>config.yaml</cite>.</p>
+<p>Most of these settings should also be configurable from a client.</p>
+<p>The configuration file supports the expansion of environment variables in the form of <cite>${NAME}</cite>.
+This means, for example, <cite>key: ${PATH}</cite> is read by HPX as <cite>key: /your/actual/path</cite>.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="25%" />
@@ -189,9 +193,29 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-odd"><td>enabled_loggers</td>
+<tr class="row-odd"><td>crop_thumbnail_alignment</td>
+<td>0</td>
+<td>server</td>
+<td>An number between 0 (left) to 1 (right)</td>
+</tr>
+<tr class="row-even"><td>crop_wide_thumbnails</td>
+<td>True</td>
+<td>server</td>
+<td>Whether to crop wide thumbnails</td>
+</tr>
+<tr class="row-odd"><td>enable_cache</td>
+<td>True</td>
+<td>server</td>
+<td>Enable the cache</td>
+</tr>
+<tr class="row-even"><td>enabled_loggers</td>
 <td>server</td>
 <td colspan="2">Loggers to enable. Available loggers: client,command,core,database,gui,network,plugin,search,server,misc</td>
+</tr>
+<tr class="row-odd"><td>image_sizes</td>
+<td>{‘big’: (300, 416), ‘medium’: (200, 276), ‘small’: (100, 136), ‘x2400’: (2400, 0), ‘x1600’: (1600, 0), ‘x1280’: (1280, 0), ‘x960’: (960, 0), ‘x768’: (768, 0)}</td>
+<td>server</td>
+<td>Image sizes, provided as key:value where value is a list [width, height]and key is one of big, medium, small, x2400, x1600, x1200, x960, x768</td>
 </tr>
 </tbody>
 <colgroup>
@@ -242,103 +266,108 @@
 <td>server</td>
 <td>Automatically download, install and restart when a new update is found</td>
 </tr>
-<tr class="row-odd"><td>auto_temp_clean_size</td>
-<td>500</td>
+<tr class="row-odd"><td>auto_pages_clean_size</td>
+<td>800</td>
+<td>server</td>
+<td>Maximum size in megabytes to which the pages cache folder will automatically get emptied when exceeded</td>
+</tr>
+<tr class="row-even"><td>auto_temp_clean_size</td>
+<td>800</td>
 <td>server</td>
 <td>Maximum size in megabytes to which the temp folder will automatically get emptied when exceeded</td>
 </tr>
-<tr class="row-even"><td>auto_thumb_clean_size</td>
-<td>400</td>
+<tr class="row-odd"><td>auto_thumb_clean_size</td>
+<td>500</td>
 <td>server</td>
-<td>Maximum size in megabytes to which the thumbnail folder will automatically get emptied when exceeded</td>
+<td>Maximum size in megabytes to which the thumbnail cache folder will automatically get emptied when exceeded</td>
 </tr>
-<tr class="row-odd"><td>backup_dir</td>
+<tr class="row-even"><td>backup_dir</td>
 <td>backups</td>
 <td>server</td>
 <td>Directory where to create backups</td>
 </tr>
-<tr class="row-even"><td>backup_on_update</td>
+<tr class="row-odd"><td>backup_on_update</td>
 <td>True</td>
 <td>server</td>
 <td>Create a backup before applying a new update</td>
 </tr>
-<tr class="row-odd"><td>cache_expiration_time</td>
+<tr class="row-even"><td>cache_expiration_time</td>
 <td>43200</td>
 <td>client</td>
 <td>How much time in seconds items are to be cached for before they expire (default: 12 hours)</td>
 </tr>
-<tr class="row-even"><td>check_new_releases</td>
+<tr class="row-odd"><td>check_new_releases</td>
 <td>True</td>
 <td>server</td>
 <td>Regularly check for updates</td>
 </tr>
-<tr class="row-odd"><td>check_release_interval</td>
+<tr class="row-even"><td>check_release_interval</td>
 <td>30</td>
 <td>server</td>
 <td>Interval in minutes between checking for a new update, set 0 to only check once every startup</td>
 </tr>
-<tr class="row-even"><td>concurrent_image_tasks</td>
+<tr class="row-odd"><td>concurrent_image_tasks</td>
 <td>10</td>
 <td>server</td>
 <td>Amount of image service tasks allowed to run at the same time (higher count does not necessarily mean faster generation)</td>
 </tr>
-<tr class="row-odd"><td>concurrent_network_tasks</td>
+<tr class="row-even"><td>concurrent_network_tasks</td>
 <td>50</td>
 <td>server</td>
 <td>Amount of network service tasks allowed to run at the same time (higher count does not necessarily mean faster network speed)</td>
 </tr>
-<tr class="row-even"><td>debug</td>
+<tr class="row-odd"><td>debug</td>
 <td>False</td>
 <td>server</td>
 <td>Run in debug mode</td>
 </tr>
-<tr class="row-odd"><td>interface_cache_time</td>
+<tr class="row-even"><td>interface_cache_time</td>
 <td>21600</td>
 <td>server</td>
 <td>How many seconds to hold on to cached values from client functions (default: 6 hour)</td>
 </tr>
-<tr class="row-even"><td>message_cache_time</td>
+<tr class="row-odd"><td>message_cache_time</td>
 <td>3600</td>
 <td>server</td>
 <td>How many seconds to hold on to cached server messages (default: 1 hour)</td>
 </tr>
-<tr class="row-odd"><td>pg_dump_tool_path</td>
-<td>bin\win32\pg_dump.exe</td>
+<tr class="row-even"><td>pg_dump_tool_path</td>
+<td>pg_dump</td>
 <td>server</td>
 <td>Path to pg_dump tool. On Windows the default path is ‘bin/win32/pg_dump.exe’. On Unix the default path is ‘pg_dump’ which assumes the tool is available in PATH</td>
 </tr>
-<tr class="row-even"><td>pg_restore_tool_path</td>
-<td>bin\win32\pg_restore.exe</td>
+<tr class="row-odd"><td>pg_restore_tool_path</td>
+<td>pg_restore</td>
 <td>server</td>
 <td>Path to pg_restore tool. On Windows the default path is ‘bin/win32/pg_restore.exe’. On Unix the default path is ‘pg_restore’ which assumes the tool is available in PATH</td>
 </tr>
-<tr class="row-odd"><td>report_critical_errors</td>
+<tr class="row-even"><td>report_critical_errors</td>
 <td>True</td>
 <td>server</td>
 <td>Send occurring critical errors to me (creator) so I can fix them faster</td>
 </tr>
-<tr class="row-even"><td>send_to_systemtrash</td>
+<tr class="row-odd"><td>send_to_systemtrash</td>
 <td>True</td>
 <td>client</td>
 <td>Send deleted files to the os recycle bin</td>
 </tr>
-<tr class="row-odd"><td>trash_item_delete_files</td>
+<tr class="row-even"><td>trash_item_delete_files</td>
 <td>True</td>
 <td>server</td>
 <td>Whether to also delete the files on the filesystem when an item gets removed by the periodic trash sweeper</td>
 </tr>
-<tr class="row-even"><td>trash_item_duration</td>
+<tr class="row-odd"><td>trash_item_duration</td>
 <td>168.0</td>
 <td>server</td>
 <td>How many hours an item can stay in the trash before getting deleted PERMANENTLY (default is 7 days)</td>
 </tr>
-<tr class="row-odd"><td>trash_send_to_systemtrash</td>
+<tr class="row-even"><td>trash_send_to_systemtrash</td>
 <td>True</td>
 <td>server</td>
 <td>Whether to to send deleted files to the os recycle bin when an item gets removed by the periodic trash sweeper</td>
 </tr>
-<tr class="row-even"><td>unrar_tool_path</td>
-<td>bin\win32\unrar.exe</td>
+<tr class="row-odd"><td>unrar_tool_path</td>
+<td>unrar</td>
 <td>server</td>
 <td>Path to unrar tool. On Windows the default path is ‘bin/win32/unrar.exe’. On Unix the default path is ‘unrar’ which assumes the tool is available in PATH</td>
 </tr>
@@ -350,56 +379,56 @@
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="4">db</th>
+<tr class="row-even"><th class="head" colspan="4">db</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>dialect</td>
+<tr class="row-odd"><td>dialect</td>
 <td>sqlite</td>
 <td>server</td>
 <td>Which SQL dialect to use between ‘sqlite’ and ‘postgres’. Note that HPX will not transfer data from one dialect to another once chosen. It is therefore advised that you choose a dialect early and stick to it throughout. Only Postgres version 9.4 and up is supported</td>
 </tr>
-<tr class="row-odd"><td>host</td>
+<tr class="row-even"><td>host</td>
 <td></td>
 <td>server</td>
 <td>Database host. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-even"><td>name</td>
+<tr class="row-odd"><td>name</td>
 <td>happypanda</td>
 <td>server</td>
 <td>Database name. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-odd"><td>password</td>
+<tr class="row-even"><td>password</td>
 <td></td>
 <td>server</td>
 <td>Database password. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-even"><td>pool_size</td>
+<tr class="row-odd"><td>pool_size</td>
 <td>15</td>
 <td>server</td>
 <td>The size of the pool to be maintained. This is the largest number of connections that will be kept persistently in the pool. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-odd"><td>pool_timeout</td>
+<tr class="row-even"><td>pool_timeout</td>
 <td>45</td>
 <td>server</td>
 <td>The number of seconds to wait before giving up on returning a connection. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-even"><td>port</td>
+<tr class="row-odd"><td>port</td>
 <td></td>
 <td>server</td>
 <td>Database port. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-odd"><td>query</td>
+<tr class="row-even"><td>query</td>
 <td>{}</td>
 <td>server</td>
 <td>A mapping of options to be passed to the database upon connect</td>
 </tr>
-<tr class="row-even"><td>sqlite_database_timeout</td>
+<tr class="row-odd"><td>sqlite_database_timeout</td>
 <td>30</td>
 <td>server</td>
 <td>Amount of seconds to wait for the database to be writeable</td>
 </tr>
-<tr class="row-odd"><td>username</td>
+<tr class="row-even"><td>username</td>
 <td></td>
 <td>server</td>
 <td>Database user name. This setting does not apply when the SQLite dialect is used</td>
@@ -412,39 +441,44 @@
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-even"><th class="head" colspan="4">gallery</th>
+<tr class="row-odd"><th class="head" colspan="4">gallery</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-odd"><td>auto_rate_on_favorite</td>
+<tr class="row-even"><td>auto_rate_on_favorite</td>
 <td>True</td>
 <td>client</td>
 <td>Automatically set unrated galley rating to highest on favorite</td>
 </tr>
-<tr class="row-even"><td>auto_remove_readlater</td>
+<tr class="row-odd"><td>auto_remove_readlater</td>
 <td>True</td>
 <td>client</td>
 <td>Automatically remove a gallery from ReadLater when it has been read</td>
 </tr>
-<tr class="row-odd"><td>delete_files</td>
+<tr class="row-even"><td>delete_files</td>
 <td>True</td>
 <td>client</td>
 <td>Delete gallery files on the filesystem when removing a gallery from the database</td>
 </tr>
-<tr class="row-even"><td>external_image_viewer</td>
+<tr class="row-odd"><td>external_image_viewer</td>
 <td></td>
 <td>server</td>
 <td>Path to external image viewer executable</td>
 </tr>
-<tr class="row-odd"><td>external_image_viewer_args</td>
+<tr class="row-even"><td>external_image_viewer_args</td>
 <td></td>
 <td>server</td>
 <td>Command arguments to supply the image viewer executable</td>
 </tr>
-<tr class="row-even"><td>pages_to_read</td>
+<tr class="row-odd"><td>pages_to_read</td>
 <td>80.0</td>
 <td>server</td>
 <td>How many pages (in percent) has to be read before the gallery is considered read</td>
+</tr>
+<tr class="row-even"><td>send_extracted_archive</td>
+<td>False</td>
+<td>server</td>
+<td>Extract archive before sending path to external viewer</td>
 </tr>
 <tr class="row-odd"><td>send_path_to_first_file</td>
 <td>False</td>
@@ -804,7 +838,7 @@
 <td>Path to a certificate and the corresponding private key. If keyfile is not set, the private key will be taken from certfile. Note that if SSL is enabled and no cert files are provided, a self-signed certificate will be created and used instead. The self-signed certificate can be found at data/certs/</td>
 </tr>
 <tr class="row-odd"><td>server_name</td>
-<td>naoka_momo_yumiko</td>
+<td>naoka_momo_orihime</td>
 <td>server</td>
 <td>Specifiy name of the server</td>
 </tr>
@@ -894,7 +928,7 @@
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
     </p>
   </div>
 </footer>

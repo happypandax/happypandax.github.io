@@ -5,20 +5,16 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Server API &#8212; HappyPanda X 0.10.0#152 documentation</title>
+    <title>Server API &#8212; HappyPanda X 0.11.0#156 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="_static/script.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Plugin API" href="api_plugin.html" />
@@ -27,6 +23,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
   </head><body>
 
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.10.0#152</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.0#156</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -121,21 +121,21 @@
         <strong>Quick links</strong>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
+        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
-    </li>
-    <li class="divider">&middot;</li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
-    </li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+        <a class="github-button" href="https://github.com/twiddli/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
-        <a href="https://twitter.com/pewspew"
+        <a class="github-button" href="https://github.com/twiddli/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
+    </li>
+    <li class="quick-link">
+        <a class="github-button" href="https://github.com/twiddli/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+    </li>
+    <li class="divider">&middot;</li>
+    <li class="quick-link">
+        <a href="https://twitter.com/twiddly_"
            class="twitter-follow-button" data-width="145px"
            data-link-color="#0069D6" data-show-count="false">
             Follow
@@ -146,7 +146,7 @@
         <a href="https://twitter.com/share" class="twitter-share-button"
            data-url="" data-count="horizontal"
            data-via="twbootstrap"
-           data-related="pewpews:Creator of HappyPanda X">Tweet</a>
+           data-related="twiddly_:Creator of HappyPanda X">Tweet</a>
     </li>
 </ul>
 <div class="container">
@@ -267,6 +267,9 @@ HPX enters beta status.</p>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.ui.translate" title="happypanda.interface.ui.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(t_id[,&nbsp;locale,&nbsp;default,&nbsp;…])</td>
 <td>Get a translation by translation id.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.ui.update_metatags_for_view" title="happypanda.interface.ui.update_metatags_for_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_metatags_for_view</span></code></a>([item_type,&nbsp;…])</td>
+<td>Update metatags for items  in view</td>
 </tr>
 </tbody>
 </table>
@@ -457,34 +460,37 @@ HPX enters beta status.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.get_count" title="happypanda.interface.database.get_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_count</span></code></a>([item_type])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.delete_items" title="happypanda.interface.database.delete_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_items</span></code></a>([item_type,&nbsp;item_ids,&nbsp;options])</td>
+<td>Remove an item from the database <strong>PERMANENTLY</strong></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.get_count" title="happypanda.interface.database.get_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_count</span></code></a>([item_type])</td>
 <td>Get count of items in the database</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.get_image" title="happypanda.interface.database.get_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image</span></code></a>([item_type,&nbsp;item_ids,&nbsp;size,&nbsp;url,&nbsp;uri])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.get_image" title="happypanda.interface.database.get_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image</span></code></a>([item_type,&nbsp;item_ids,&nbsp;size,&nbsp;url,&nbsp;uri])</td>
 <td>Get image for item.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.get_item" title="happypanda.interface.database.get_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_item</span></code></a>([item_type,&nbsp;item_id])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.get_item" title="happypanda.interface.database.get_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_item</span></code></a>([item_type,&nbsp;item_id])</td>
 <td>Get item</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.get_items" title="happypanda.interface.database.get_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_items</span></code></a>([item_type,&nbsp;limit,&nbsp;offset])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.get_items" title="happypanda.interface.database.get_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_items</span></code></a>([item_type,&nbsp;limit,&nbsp;offset])</td>
 <td>Get a list of items</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.get_related_count" title="happypanda.interface.database.get_related_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_related_count</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.get_related_count" title="happypanda.interface.database.get_related_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_related_count</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
 <td>Get count of items related to given item</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.get_related_items" title="happypanda.interface.database.get_related_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_related_items</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.get_related_items" title="happypanda.interface.database.get_related_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_related_items</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
 <td>Get item related to given item and count</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.new_item" title="happypanda.interface.database.new_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_item</span></code></a>([item_type,&nbsp;item,&nbsp;options])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.new_item" title="happypanda.interface.database.new_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_item</span></code></a>([item_type,&nbsp;item,&nbsp;options])</td>
 <td>Create a new item and add it to the database</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.search_items" title="happypanda.interface.database.search_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search_items</span></code></a>([item_type,&nbsp;search_query,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.search_items" title="happypanda.interface.database.search_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search_items</span></code></a>([item_type,&nbsp;search_query,&nbsp;…])</td>
 <td>Search for items</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.update_item" title="happypanda.interface.database.update_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_item</span></code></a>([item_type,&nbsp;item,&nbsp;options])</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.update_item" title="happypanda.interface.database.update_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_item</span></code></a>([item_type,&nbsp;item,&nbsp;options])</td>
 <td>Update an existing item</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.database.update_metatags" title="happypanda.interface.database.update_metatags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_metatags</span></code></a>([item_type,&nbsp;item_id,&nbsp;metatags])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.database.update_metatags" title="happypanda.interface.database.update_metatags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_metatags</span></code></a>([item_type,&nbsp;item_id,&nbsp;…])</td>
 <td>Update metatags for an item</td>
 </tr>
 </tbody>
@@ -561,11 +567,11 @@ HPX enters beta status.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>push</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – whether to push out notifications if an update is found</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;url&#39; : str,
-    &#39;tag&#39; : str
-    &#39;changes&#39; : str,
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;url&#39;</span> <span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+    <span class="s1">&#39;tag&#39;</span> <span class="p">:</span> <span class="n">str</span>
+    <span class="s1">&#39;changes&#39;</span> <span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 <p>or <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
@@ -592,10 +598,10 @@ The changelog returned is for the current release or a new update</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;version&#39;: str,
-    &#39;changes&#39;: str
-}
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+    <span class="s1">&#39;changes&#39;</span><span class="p">:</span> <span class="n">str</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -620,41 +626,41 @@ The changelog returned is for the current release or a new update</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command_ids</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – list of command ids or None to retrieve progress of all occurring commands</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    command_id : {  &#39;title&#39;: str,
-                    &#39;value&#39;: float,
-                    &#39;subtitle&#39;: str,
-                    &#39;subtype&#39;: :py:class:`.ProgressType`,
-                    &#39;max&#39;: float,
-                    &#39;percent&#39;: float,
-                    &#39;type&#39;: :py:class:`.ProgressType`,
-                    &#39;text&#39;: str,
-                    &#39;timestamp&#39;:int,
-                    &#39;state&#39;: :py:class:`.CommandState`
-                    }
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">command_id</span> <span class="p">:</span> <span class="err">{</span>  <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+                    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                    <span class="s1">&#39;subtitle&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+                    <span class="s1">&#39;subtype&#39;</span><span class="p">:</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">ProgressType</span><span class="o">`</span><span class="p">,</span>
+                    <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                    <span class="s1">&#39;percent&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">ProgressType</span><span class="o">`</span><span class="p">,</span>
+                    <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+                    <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span>
+                    <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">CommandState</span><span class="o">`</span>
+                    <span class="err">}</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    command_id : None
-}
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">command_id</span> <span class="p">:</span> <span class="k">None</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 <p>or, if <code class="docutils literal notranslate"><span class="pre">command_ids</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-    {   &#39;title&#39;: str,
-        &#39;value&#39;: float,
-        &#39;subtitle&#39;: str,
-        &#39;subtype&#39;: :py:class:`.ProgressType`,
-        &#39;max&#39;: float,
-        &#39;percent&#39;: float,
-        &#39;type&#39;: :py:class:`.ProgressType`,
-        &#39;text&#39;: str,
-        &#39;timestamp&#39;:int
-        },
-    ...
-]
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="err">{</span>   <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="s1">&#39;subtitle&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+        <span class="s1">&#39;subtype&#39;</span><span class="p">:</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">ProgressType</span><span class="o">`</span><span class="p">,</span>
+        <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="s1">&#39;percent&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">ProgressType</span><span class="o">`</span><span class="p">,</span>
+        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+        <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span><span class="nb">int</span>
+        <span class="err">}</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </td>
@@ -673,9 +679,9 @@ The changelog returned is for the current release or a new update</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command_ids</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – list of command ids</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    command_id : :py:class:`.CommandState`
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">command_id</span> <span class="p">:</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">CommandState</span><span class="o">`</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -698,9 +704,9 @@ The changelog returned is for the current release or a new update</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    command_id : value
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">command_id</span> <span class="p">:</span> <span class="n">value</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -718,12 +724,12 @@ The changelog returned is for the current release or a new update</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    str : {
-                &#39;locale&#39; : str
-                &#39;namespaces&#39;: [str, ...]
-            }
-}
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">str</span> <span class="p">:</span> <span class="err">{</span>
+                <span class="s1">&#39;locale&#39;</span> <span class="p">:</span> <span class="n">str</span>
+                <span class="s1">&#39;namespaces&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="p">...]</span>
+            <span class="err">}</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -764,11 +770,11 @@ The changelog returned is for the current release or a new update</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;core&#39; : [int, int, int],
-    &#39;db&#39; : [int, int, int],
-    &#39;torrent&#39; : [int, int, int],
-}
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;core&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+    <span class="s1">&#39;db&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+    <span class="s1">&#39;torrent&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -793,9 +799,9 @@ The changelog returned is for the current release or a new update</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>delay</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – delay in seconds before restarting</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;status&#39;: A ``bool`` indicating whether a restart was scheduled
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">A</span> <span class="ss">``</span><span class="kt">bool</span><span class="ss">``</span> <span class="n">indicating</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">restart</span> <span class="n">was</span> <span class="n">scheduled</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -814,9 +820,9 @@ The changelog returned is for the current release or a new update</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>delay</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – delay in seconds before shutting down</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;status&#39;: A ``bool`` indicating whether a shutdown was scheduled
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">A</span> <span class="ss">``</span><span class="kt">bool</span><span class="ss">``</span> <span class="n">indicating</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">shutdown</span> <span class="n">was</span> <span class="n">scheduled</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -835,9 +841,9 @@ The changelog returned is for the current release or a new update</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command_ids</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – list of command ids</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    command_id : state
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">command_id</span> <span class="p">:</span> <span class="k">state</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -856,9 +862,9 @@ The changelog returned is for the current release or a new update</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command_ids</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – list of command ids</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    command_id : state
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">command_id</span> <span class="p">:</span> <span class="k">state</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -906,9 +912,9 @@ If download_url is not provided, a check for a new release will occur</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;status&#39;: A ``bool`` indicating whether the install was successful or not
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">A</span> <span class="ss">``</span><span class="kt">bool</span><span class="ss">``</span> <span class="n">indicating</span> <span class="n">whether</span> <span class="n">the</span> <span class="n">install</span> <span class="n">was</span> <span class="n">successful</span> <span class="k">or</span> <span class="k">not</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -945,9 +951,9 @@ Image content is base64 encoded.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    item_id : command_id
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">item_id</span> <span class="p">:</span> <span class="n">command_id</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -979,14 +985,14 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-    {
-        &#39;index&#39; : int,
-        &#39;name&#39;: str,
-        &#39;item_type&#39;: int value of :py:class:`.ItemType`
-    },
-    ...
-]
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="err">{</span>
+        <span class="s1">&#39;index&#39;</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span>
+        <span class="s1">&#39;item_type&#39;</span><span class="p">:</span> <span class="nb">int</span> <span class="n">value</span> <span class="k">of</span> <span class="p">:</span><span class="n">py</span><span class="p">:</span><span class="k">class</span><span class="p">:</span><span class="o">`</span><span class="p">.</span><span class="n">ItemType</span><span class="o">`</span>
+    <span class="err">}</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </p>
@@ -1007,9 +1013,9 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>locale</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – locale to get translations from (will override default locale)</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;namespace.translation_id&#39; : string
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;namespace.translation_id&#39;</span> <span class="p">:</span> <span class="n">string</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -1041,9 +1047,9 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;count&#39; : int
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;count&#39;</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1077,10 +1083,10 @@ Provides pagination.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-    item message object,
-    ...
-]
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="n">item</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </p>
@@ -1134,12 +1140,12 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;items&#39;: [
-            ...
-        ],
-    &#39;count&#39;: int # count of all items in view
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;items&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">...</span>
+        <span class="p">],</span>
+    <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="nb">int</span> <span class="o">#</span> <span class="k">count</span> <span class="k">of</span> <span class="k">all</span> <span class="n">items</span> <span class="k">in</span> <span class="k">view</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1178,6 +1184,37 @@ Raises error if a default value was not provided and no translation was found.</
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#happypanda.interface.meta.get_locales" title="happypanda.interface.meta.get_locales"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_locales()</span></code></a></p>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="happypanda.interface.ui.update_metatags_for_view">
+<code class="descname">update_metatags_for_view</code><span class="sig-paren">(</span><em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>metatags={}</em>, <em>item_id=None</em>, <em>related_type=None</em>, <em>page=0</em>, <em>limit=100</em>, <em>search_query=''</em>, <em>search_options={}</em>, <em>filter_id=None</em>, <em>view_filter=&lt;ViewType.Library: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.ui.update_metatags_for_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update metatags for items  in view</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – possible items are <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Gallery" title="happypanda.interface.enums.ItemType.Gallery"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Gallery</span></code></a>, <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Collection" title="happypanda.interface.enums.ItemType.Collection"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Collection</span></code></a>, <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Grouping" title="happypanda.interface.enums.ItemType.Grouping"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Grouping</span></code></a></li>
+<li><strong>metatags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – a dict of <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">metatag_name</span> <span class="pre">:</span> <span class="pre">bool</span> <span class="pre">}</span></code></li>
+<li><strong>page</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – current page (zero-indexed)</li>
+<li><strong>limit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – amount of items per page, set to <cite>None</cite> to apply to all items in the view</li>
+<li><strong>search_query</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – filter item by search terms</li>
+<li><strong>search_options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – options to apply when filtering, see <a class="reference internal" href="settings.html#settings"><span class="std std-ref">Settings</span></a> for available search options. A mapping of ‘namespace.name’ : bool</li>
+<li><strong>filter_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – current <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Filter" title="happypanda.interface.enums.ItemType.Filter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Filter</span></code></a> item id</li>
+<li><strong>view_filter</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ViewType" title="happypanda.interface.enums.ViewType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewType</span></code></a>) – type of view, set <code class="docutils literal notranslate"><span class="pre">None</span></code> to not apply any filter</li>
+<li><strong>related_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>]) – child item</li>
+<li><strong>item_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – id of parent item</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:
+boolean</p>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
 </dd></dl>
 
 </div>
@@ -1374,14 +1411,14 @@ if using this event (unless you want to force a complete read)</dd>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of existing gallery</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;page&#39;: page message object,
-    &#39;end&#39;: bool, # if the gallery has been considered read, use this to determine if should continue reading
-    &#39;percent&#39;: float, # progress of how far this page is in the total amount of pages,
-    &#39;count&#39;: int, # total amount of pages,
-    &#39;timestamp&#39;: int # time when page was read
+    <span class="s1">&#39;</span><span class="s">page</span><span class="s1">&#39;</span>: <span class="nv">page</span> <span class="nv">message</span> <span class="nv">object</span>,
+    <span class="s1">&#39;</span><span class="s">end</span><span class="s1">&#39;</span>: <span class="nv">bool</span>, # <span class="k">if</span> <span class="nv">the</span> <span class="nv">gallery</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">considered</span> <span class="nv">read</span>, <span class="nv">use</span> <span class="nv">this</span> <span class="nv">to</span> <span class="nv">determine</span> <span class="k">if</span> <span class="nv">should</span> <span class="k">continue</span> <span class="nv">reading</span>
+    <span class="s1">&#39;</span><span class="s">percent</span><span class="s1">&#39;</span>: <span class="nv">float</span>, # <span class="nv">progress</span> <span class="nv">of</span> <span class="nv">how</span> <span class="nv">far</span> <span class="nv">this</span> <span class="nv">page</span> <span class="nv">is</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">total</span> <span class="nv">amount</span> <span class="nv">of</span> <span class="nv">pages</span>,
+    <span class="s1">&#39;</span><span class="s">count</span><span class="s1">&#39;</span>: <span class="nv">int</span>, # <span class="nv">total</span> <span class="nv">amount</span> <span class="nv">of</span> <span class="nv">pages</span>,
+    <span class="s1">&#39;</span><span class="s">timestamp</span><span class="s1">&#39;</span>: <span class="nv">int</span> # <span class="nv">time</span> <span class="nv">when</span> <span class="nv">page</span> <span class="nv">was</span> <span class="nv">read</span>
 }
 
-if such thing exists, else
+<span class="k">if</span> <span class="nv">such</span> <span class="nv">thing</span> <span class="nv">exists</span>, <span class="k">else</span>
 
 {}
 </pre></div>
@@ -1430,10 +1467,10 @@ if such thing exists, else
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-    item message object,
-    ...
-]
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="n">item</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </p>
@@ -1456,7 +1493,7 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a supported path (note that the path must exist on this system if path points to a file/directory)</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>a GalleryFS message object
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="n">GalleryFS</span> <span class="n">message</span> <span class="k">object</span>
 </pre></div>
 </div>
 </td>
@@ -1564,10 +1601,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;command_id&#39;: int,
-    &#39;view_id&#39;: int
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;command_id&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="s1">&#39;view_id&#39;</span><span class="p">:</span> <span class="nb">int</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1597,13 +1634,13 @@ Use the returned <code class="docutils literal notranslate"><span class="pre">vi
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;exists&#39; : bool
-    &#39;missing&#39; : [
-        {&#39;id&#39;: int, &#39;item_type&#39;: item_type},
-        ...
-        ]
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;exists&#39;</span> <span class="p">:</span> <span class="n">bool</span>
+    <span class="s1">&#39;missing&#39;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="err">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;item_type&#39;</span><span class="p">:</span> <span class="n">item_type</span><span class="err">}</span><span class="p">,</span>
+        <span class="p">...</span>
+        <span class="p">]</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1787,8 +1824,8 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-]
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </p>
@@ -1808,8 +1845,8 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queue_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.QueueType" title="happypanda.interface.enums.QueueType"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueType</span></code></a>) – type of queue</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -1887,10 +1924,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;status&#39;: text,
-    &#39;logged_in&#39;: bool
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="nb">text</span><span class="p">,</span>
+    <span class="s1">&#39;logged_in&#39;</span><span class="p">:</span> <span class="n">bool</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1920,10 +1957,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    namespace : [ tag message object, ...],
-    ...
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">namespace</span> <span class="p">:</span> <span class="p">[</span> <span class="n">tag</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span> <span class="p">...],</span>
+    <span class="p">...</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1948,10 +1985,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    namespace : [ tag message object, ...],
-    ...
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">namespace</span> <span class="p">:</span> <span class="p">[</span> <span class="n">tag</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span> <span class="p">...],</span>
+    <span class="p">...</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1978,10 +2015,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    namespace : [ tag message object, ...],
-    ...
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">namespace</span> <span class="p">:</span> <span class="p">[</span> <span class="n">tag</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span> <span class="p">...],</span>
+    <span class="p">...</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -1999,9 +2036,9 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;count&#39; : int
-}
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;count&#39;</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -2030,10 +2067,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    namespace : [ tag message object, ...],
-    ...
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">namespace</span> <span class="p">:</span> <span class="p">[</span> <span class="n">tag</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span> <span class="p">...],</span>
+    <span class="p">...</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -2100,6 +2137,35 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </dd></dl>
 
 <dl class="function">
+<dt id="happypanda.interface.database.delete_items">
+<code class="descname">delete_items</code><span class="sig-paren">(</span><em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>item_ids=[]</em>, <em>options={}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.database.delete_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an item from the database <strong>PERMANENTLY</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – type of item to create</li>
+<li><strong>item_ids</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – list with id of items</li>
+<li><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – options to apply when deleting, see <a class="reference internal" href="settings.html#settings"><span class="std std-ref">Settings</span></a> for available options</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">boolean or None</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#happypanda.interface.database.delete_item" title="happypanda.interface.database.delete_item"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_item()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="happypanda.interface.database.get_count">
 <code class="descname">get_count</code><span class="sig-paren">(</span><em>item_type=&lt;ItemType.Gallery: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.database.get_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get count of items in the database</p>
@@ -2109,9 +2175,9 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – type of item</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;count&#39; : int
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;count&#39;</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -2139,9 +2205,9 @@ Image content is base64 encoded.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    item_id : command_id
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="n">item_id</span> <span class="p">:</span> <span class="n">command_id</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -2195,13 +2261,13 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;items&#39; : [
-            item message object,
-            ...
-        ]
-    &#39;count&#39;: total number of items
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;items&#39;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="n">item</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span>
+            <span class="p">...</span>
+        <span class="p">]</span>
+    <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="n">total</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">items</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -2226,10 +2292,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;id&#39; : int
-    &#39;count&#39; : int
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;id&#39;</span> <span class="p">:</span> <span class="nb">int</span>
+    <span class="s1">&#39;count&#39;</span> <span class="p">:</span> <span class="nb">int</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -2257,10 +2323,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-    related item message object,
-    ...
-]
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="n">related</span> <span class="n">item</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </p>
@@ -2318,10 +2384,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[
-    item message object,
-    ...
-]
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="n">item</span> <span class="n">message</span> <span class="k">object</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </p>
@@ -2363,7 +2429,7 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 
 <dl class="function">
 <dt id="happypanda.interface.database.update_metatags">
-<code class="descname">update_metatags</code><span class="sig-paren">(</span><em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>item_id=0</em>, <em>metatags={}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.database.update_metatags" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update_metatags</code><span class="sig-paren">(</span><em>item_type=&lt;ItemType.Gallery: 1&gt;</em>, <em>item_id=0</em>, <em>item_ids=[]</em>, <em>metatags={}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.database.update_metatags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update metatags for an item</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2373,15 +2439,23 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <li><strong>item_type</strong> (<a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType" title="happypanda.interface.enums.ItemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code></a>) – possible items are <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Gallery" title="happypanda.interface.enums.ItemType.Gallery"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Gallery</span></code></a>, <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Page" title="happypanda.interface.enums.ItemType.Page"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Page</span></code></a>,
 <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Artist" title="happypanda.interface.enums.ItemType.Artist"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Artist</span></code></a>, <a class="reference internal" href="api_general.html#happypanda.interface.enums.ItemType.Collection" title="happypanda.interface.enums.ItemType.Collection"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ItemType.Collection</span></code></a></li>
 <li><strong>item_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – id of item</li>
-<li><strong>metatag</strong> – a dict of <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">metatag_name</span> <span class="pre">:</span> <span class="pre">bool</span> <span class="pre">}</span></code></li>
+<li><strong>item_ids</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – list of id of items</li>
+<li><strong>metatags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – a dict of <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">metatag_name</span> <span class="pre">:</span> <span class="pre">bool</span> <span class="pre">}</span></code></li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">bool indicating whether metatags were updated</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None or boolean</p>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Remarks:</dt>
+<dd>If <cite>item_ids</cite> is used, this function will return a command id</dd>
+</dl>
+<p><strong>Async function</strong> – This function returns a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">id</span></code>.
+Retrieve the value of the function with <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_command_value()</span></code>.
+See <a class="reference internal" href="api_general.html#asynchronous-commands"><span class="std std-ref">Asynchronous Commands</span></a> for more information.</p>
 </dd></dl>
 
 </div>
@@ -2402,11 +2476,11 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-&#39;plugin_id&#39;: &#39;&#39;,
-&#39;url&#39;:&#39;&#39;,
-&#39;version&#39;:(0, 0, 0)
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+<span class="s1">&#39;plugin_id&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="s1">&#39;url&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="s1">&#39;version&#39;</span><span class="p">:(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -2452,8 +2526,8 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plugin_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – UUID4 of plugin</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -2472,10 +2546,10 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plugin_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – UUID4 of plugin</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-&#39;plugin_id&#39;: id of plugin,
-&#39;config&#39;: {}
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+<span class="s1">&#39;plugin_id&#39;</span><span class="p">:</span> <span class="n">id</span> <span class="k">of</span> <span class="n">plugin</span><span class="p">,</span>
+<span class="s1">&#39;config&#39;</span><span class="p">:</span> <span class="err">{}</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -2510,8 +2584,8 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="api_general.html#happypanda.interface.enums.PluginState" title="happypanda.interface.enums.PluginState"><code class="xref py py-class docutils literal notranslate"><span class="pre">PluginState</span></code></a>]) – filter list by plugin state</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -2626,9 +2700,9 @@ These configuration keys will appear in the server’s <code class="docutils lit
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cfg</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – a dict containing <code class="docutils literal notranslate"><span class="pre">namespace.key</span></code>:<code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">value</span></code> or an empty dict to retrieve all settings</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;namespace.key&#39;: value
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;namespace.key&#39;</span><span class="p">:</span> <span class="n">value</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </td>
@@ -2653,9 +2727,9 @@ These configuration keys will appear in the server’s <code class="docutils lit
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>{
-    &#39;namespace.key&#39;: value
-}
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">{</span>
+    <span class="s1">&#39;namespace.key&#39;</span><span class="p">:</span> <span class="n">value</span>
+<span class="err">}</span>
 </pre></div>
 </div>
 </p>
@@ -2747,7 +2821,7 @@ These configuration keys will appear in the server’s <code class="docutils lit
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
     </p>
   </div>
 </footer>

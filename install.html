@@ -5,20 +5,16 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Installing &#8212; HappyPanda X 0.10.0#152 documentation</title>
+    <title>Installing &#8212; HappyPanda X 0.11.0#156 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="_static/script.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Using HappyPanda X" href="usage.html" />
@@ -27,6 +23,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
   </head><body>
 
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.10.0#152</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.0#156</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -121,21 +121,21 @@
         <strong>Quick links</strong>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
+        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
-    </li>
-    <li class="divider">&middot;</li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
-    </li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+        <a class="github-button" href="https://github.com/twiddli/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
-        <a href="https://twitter.com/pewspew"
+        <a class="github-button" href="https://github.com/twiddli/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
+    </li>
+    <li class="quick-link">
+        <a class="github-button" href="https://github.com/twiddli/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+    </li>
+    <li class="divider">&middot;</li>
+    <li class="quick-link">
+        <a href="https://twitter.com/twiddly_"
            class="twitter-follow-button" data-width="145px"
            data-link-color="#0069D6" data-show-count="false">
             Follow
@@ -146,14 +146,25 @@
         <a href="https://twitter.com/share" class="twitter-share-button"
            data-url="" data-count="horizontal"
            data-via="twbootstrap"
-           data-related="pewpews:Creator of HappyPanda X">Tweet</a>
+           data-related="twiddly_:Creator of HappyPanda X">Tweet</a>
     </li>
 </ul>
 <div class="container">
     <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Installing</a></li>
+<li><a class="reference internal" href="#">Installing</a><ul>
+<li><a class="reference internal" href="#docker">Docker</a><ul>
+<li><a class="reference internal" href="#using-with-docker">Using with Docker</a><ul>
+<li><a class="reference internal" href="#the-configuration-file">The configuration file</a></li>
+<li><a class="reference internal" href="#about-the-commands">About the commands</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-with-docker-compose">Using with Docker Compose</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -182,6 +193,98 @@ If you’re using the installer, this setup file will automatically be run for y
 On Windows it means you shouldn’t install HPX somewhere like <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)</span></code>. If you still choose to do so just remember to run HPX as admin.
 (Not recommended)</p>
 </div>
+<div class="section" id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
+<p>It is also an option to use HPX with Docker.
+If you’re new to Docker or don’t know what Docker is then I cannot recommend you go through this route.
+This is mostly for advanced users or users who experience issues with installing HPX normally.</p>
+<p>Before you can use HPX with Docker, make sure it’s <a class="reference external" href="https://www.docker.com/products/docker-desktop">installed.</a></p>
+<p>Now, there’s two ways to do this. You can either choose to use HPX with Docker alone or also complement it with Docker Compose (recommended).
+The main benefit of using it with Docker Compose is easier configuration.
+If you want to use HPX with Docker Compose, make sure it’s <a class="reference external" href="https://docs.docker.com/compose/install/#install-compose">installed</a> (if you installed Docker from the link above, then you should already have Docker Compose installed)</p>
+<div class="section" id="using-with-docker">
+<h3>Using with Docker<a class="headerlink" href="#using-with-docker" title="Permalink to this headline">¶</a></h3>
+<p>Start by copying the appropriate commands for your OS over onto a file.
+Then edit the variables so that they point to the appropriate folders and ports.</p>
+<p>Finally, copy your edit of commands over to a command-line and execute them.</p>
+<p><strong>Linux &amp; Mac OS:</strong></p>
+<hr class="docutils" />
+<p><strong>Windows:</strong></p>
+<hr class="docutils" />
+<p><strong>NOTE</strong>: This is intended for <cite>cmd.exe</cite> not PowerShell</p>
+<div class="section" id="the-configuration-file">
+<h4>The configuration file<a class="headerlink" href="#the-configuration-file" title="Permalink to this headline">¶</a></h4>
+<p>The default configuration file is set to:</p>
+<p>The config file supports environment variables, so <cite>${HPX_CONTENT}</cite> will automatically expand to your specified content folder <em>inside docker</em>.
+Another useful variable is <cite>${HPX_DATA}</cite> pointing to the data folder <em>inside docker</em>.
+Note that these environment variables are pre-defined by the image inside docker. This means you can’t just define new variables from outside and expect the docker instance to see them.</p>
+<p>To modify this configuration, create a file named <cite>config.yaml</cite> inside your <cite>HPX_DATA</cite> folder with these contents as a starting point.</p>
+</div>
+<div class="section" id="about-the-commands">
+<h4>About the commands<a class="headerlink" href="#about-the-commands" title="Permalink to this headline">¶</a></h4>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2"><cite>HPX_PORT</cite> &amp; <cite>HPX_WEBPORT</cite> &amp; <cite>HPX_TORRENTPORT</cite>:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Your desired ports to connect to the HPX servers and clients with on your machine</td>
+</tr>
+<tr class="field-even field"><th class="field-name"><cite>HPX_DATA</cite>:</th><td class="field-body">A folder on your machine where HPX should save its data, this includes config files, databases, backups, etc.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name"><cite>HPX_CONTENT</cite>:</th><td class="field-body">A folder for where manga and doujins are stored, you usually set this to your pre-existing folder where those things are stored.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2"><cite>RUN_IN_BACKGROUND</cite>:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">If <cite>false</cite> the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name"><cite>docker run …</cite>:</th><td class="field-body">You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></td>
+</tr>
+</tbody>
+</table>
+<p>The docker image is set so that subsequent arguments after the docker image name in the <cite>docker run</cite> command are passed to happypandax,
+meaning this:</p>
+<p><cite>docker run &lt;yadda.. yadda..&gt; happypandax –help</cite></p>
+<p>is the same as running the happypandax executable directly with <cite>happypanda.exe –help</cite> (the <cite>&lt;yadda.. yadda..&gt;</cite> is passed to docker, not hpx).</p>
+<p>The <cite>&lt;yadda.. yadda..&gt;</cite> part are all those arguments from the command above just shortened for brevity. Make sure to include those arguments, or else… <strong>or else Docker wouldn’t know where to store data and IT WILL BE LOST</strong>.</p>
+<p>This means that you could generate an example config file like this:</p>
+<p><cite>docker run &lt;yadda.. yadda..&gt; happypandax –gen-config</cite></p>
+<p>The config file will be generated into the folder you specified with <cite>HPX_DATA</cite>.</p>
+<p>You can also make user accounts this way:</p>
+<p><cite>docker run &lt;yadda.. yadda..&gt; happypandax user create -t “admin” -u “twiddly” -p “twiddly123”</cite></p>
+<p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a> or read on if you intend to use Docker Compose.</p>
+</div>
+</div>
+<div class="section" id="using-with-docker-compose">
+<h3>Using with Docker Compose<a class="headerlink" href="#using-with-docker-compose" title="Permalink to this headline">¶</a></h3>
+<p>Using HPX with Docker Compose lets us avoid those complicated-looking commands.
+And while we are at it, we might as well set up HPX to use postgresql with docker as well.</p>
+<p>Start by creating a folder for where you want your HPX config and data to be. You can just name this folder <cite>HappyPanda X</cite>.</p>
+<p>In that folder, create a folder named <cite>data</cite> and a file named <cite>docker-compose.yml</cite> with these contents:</p>
+<p>Change the ports and folder mappings as desired. In particular you should change <cite>./content:/content</cite> to <cite>&lt;where your manga folder is located&gt;:/content</cite>,
+or else the expected content folder will be a folder named <cite>content</cite> in the <cite>HappyPanda X</cite> folder.</p>
+<p>You can also change the ports, if you wish to do so, do it like this: <cite>&lt;your custom port&gt;:7008</cite></p>
+<p><strong>Notice that the port to postgres is set to 7005:5432</strong>, meaning unless you change it, you will have to use port <cite>7005</cite> to connect to it with.</p>
+<p>Now, create a <cite>config.yaml</cite> file with these contents and save it inside the <cite>data</cite> folder
+(unless you changed it then this folder is expected to be named <cite>data</cite> inside the <cite>HappyPanda X</cite> folder, create it if it doesn’t exist):</p>
+<p>The config file supports environment variables, so <cite>${HPX_CONTENT}</cite> will automatically expand to your specified content folder <em>inside docker</em>.
+Another useful variable is <cite>${HPX_DATA}</cite> pointing to the data folder <em>inside dicker</em>.
+Note that these environment variables are pre-defined by the image inside docker. This means you can’t just define new variables from outside and expect the docker instance to see them.</p>
+<p>Notice that the postgres host is the name of the database service as defined in <cite>docker-compose.yml</cite> to be named <cite>db</cite>.</p>
+<p>This config does a few things. It sets HPX to use the dockerized postgres service and also puts the content folder under watch so that new items in it will be added to HPX automatically.</p>
+<p>Lastly, if you don’t wish to use a postgres backend with docker, just remove this part from <cite>docker-compose.yml</cite>:</p>
+<p>Make sure to edit your <cite>config.yaml</cite> to reflect this change.</p>
+<p>With all that done, we can now start up everything. Run this command to start everything:</p>
+<p><cite>docker-compose up</cite></p>
+<p>If everything was successful, you should be able to open your browser and access HPX on <cite>localhost:7008</cite> (replace <cite>7008</cite> with whatever you set that port mapping to).</p>
+<p>You can stop everything with:</p>
+<p><cite>docker-compose down</cite></p>
+<p>Read more about what commands are available <a class="reference external" href="https://docs.docker.com/compose/reference/">here. &lt;`here.</a></p>
+<p>In the same vein as with <cite>docker run</cite>, you can also pass commands to HPX in the same way, like:</p>
+<p><cite>docker-compose run happypandax –help</cite></p>
+<p>To create a new user:</p>
+<p><cite>docker-compose run happypandax user create -t “admin” -u “twiddly” -p “twiddly123”</cite></p>
+<p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a></p>
+</div>
+</div>
 </div>
 
 
@@ -202,7 +305,7 @@ On Windows it means you shouldn’t install HPX somewhere like <code class="docu
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
     </p>
   </div>
 </footer>

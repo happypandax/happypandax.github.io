@@ -5,20 +5,16 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugins &#8212; HappyPanda X 0.10.0#152 documentation</title>
+    <title>Plugins &#8212; HappyPanda X 0.11.0#156 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     <script type="text/javascript" src="_static/script.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="TODO" href="todo.html" />
@@ -27,6 +23,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
   </head><body>
 
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.10.0#152</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.0#156</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -121,21 +121,21 @@
         <strong>Quick links</strong>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
+        <a class="github-button" href="https://github.com/twiddli" aria-label="Follow @pewpews on GitHub">Follow @pewpews</a>
     </li>
     <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
-    </li>
-    <li class="divider">&middot;</li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
-    </li>
-    <li class="quick-link">
-        <a class="github-button" href="https://github.com/pewpews/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+        <a class="github-button" href="https://github.com/twiddli/happypandax/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue pewpews/happypandax on GitHub">Issue</a>
     </li>
     <li class="divider">&middot;</li>
     <li class="quick-link">
-        <a href="https://twitter.com/pewspew"
+        <a class="github-button" href="https://github.com/twiddli/happypandax" data-icon="octicon-star" data-show-count="true" aria-label="Star pewpews/happypandax on GitHub">Star</a>
+    </li>
+    <li class="quick-link">
+        <a class="github-button" href="https://github.com/twiddli/happypandax/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork pewpews/happypandax on GitHub">Fork</a>
+    </li>
+    <li class="divider">&middot;</li>
+    <li class="quick-link">
+        <a href="https://twitter.com/twiddly_"
            class="twitter-follow-button" data-width="145px"
            data-link-color="#0069D6" data-show-count="false">
             Follow
@@ -146,7 +146,7 @@
         <a href="https://twitter.com/share" class="twitter-share-button"
            data-url="" data-count="horizontal"
            data-via="twbootstrap"
-           data-related="pewpews:Creator of HappyPanda X">Tweet</a>
+           data-related="twiddly_:Creator of HappyPanda X">Tweet</a>
     </li>
 </ul>
 <div class="container">
@@ -451,164 +451,144 @@ Which is why care must be taken when writing plugins.</p>
 <div class="section" id="available-packages">
 <h2>Available packages<a class="headerlink" href="#available-packages" title="Permalink to this headline">¶</a></h2>
 <p>Aside from the python standard library, these are the available packages HPX provides that can be imported in the plugin environment.</p>
-<p><em>aiohttp==3.2.1</em></p>
-<p><em>alabaster==0.7.10</em></p>
-<p><em>alembic==1.0.3</em></p>
-<p><em>altgraph==0.15</em></p>
+<p><em>aiohttp==3.5.4</em></p>
+<p><em>alabaster==0.7.12</em></p>
+<p><em>alembic==1.0.11</em></p>
+<p><em>altgraph==0.16.1</em></p>
 <p><em>apipkg==1.5</em></p>
-<p><em>APScheduler==3.5.3</em></p>
+<p><em>APScheduler==3.6.1</em></p>
 <p><em>argh==0.26.2</em></p>
-<p><em>arrow==0.12.1</em></p>
+<p><em>arrow==0.14.4</em></p>
 <p><em>asn1crypto==0.24.0</em></p>
-<p><em>async-timeout==3.0.0</em></p>
-<p><em>atomicwrites==1.1.5</em></p>
-<p><em>attrs==18.1.0</em></p>
-<p><em>autopep8==1.4</em></p>
-<p><em>Babel==2.5.3</em></p>
+<p><em>async-timeout==3.0.1</em></p>
+<p><em>atomicwrites==1.3.0</em></p>
+<p><em>attrs==19.1.0</em></p>
+<p><em>autopep8==1.4.4</em></p>
+<p><em>Babel==2.7.0</em></p>
 <p><em>bcrypt==3.1.3</em></p>
-<p><em>beautifulsoup4==4.6.3</em></p>
+<p><em>beautifulsoup4==4.8.0</em></p>
 <p><em>bencodepy==0.9.5</em></p>
 <p><em>biplist==1.0.3</em></p>
-<p><em>bitarray==0.8.1</em></p>
+<p><em>bitarray==1.0.1</em></p>
+<p><em>blinker==1.4</em></p>
 <p><em>CacheControl==0.12.4</em></p>
 <p><em>cachetools==3.0.0</em></p>
-<p><em>certifi==2019.3.9</em></p>
-<p><em>cffi==1.11.5</em></p>
+<p><em>certifi==2019.6.16</em></p>
+<p><em>cffi==1.12.3</em></p>
 <p><em>chardet==3.0.4</em></p>
-<p><em>click==6.7</em></p>
-<p><em>click-completion==0.5.1</em></p>
-<p><em>colorama==0.3.9</em></p>
+<p><em>Click==7.0</em></p>
 <p><em>cookies==2.2.1</em></p>
-<p><em>coverage==4.5.1</em></p>
-<p><em>crayons==0.2.0</em></p>
+<p><em>coverage==4.5.4</em></p>
 <p><em>cryptography==2.3</em></p>
-<p><em>Cython==0.29</em></p>
 <p><em>dateparser==0.7.0</em></p>
 <p><em>decorator==4.4.0</em></p>
-<p><em>Deprecated==1.2.5</em></p>
-<p><em>dill==0.2.9</em></p>
 <p><em>dmgbuild==1.3.2</em></p>
-<p><em>dnspython==1.15.0</em></p>
-<p><em>docutils==0.14</em></p>
+<p><em>docutils==0.15.2</em></p>
 <p><em>dogpile.cache==0.7.1</em></p>
 <p><em>ds-store==1.1.2</em></p>
-<p><em>execnet==1.6.0</em></p>
-<p><em>flake8==3.5.0</em></p>
-<p><em>Flask==1.0.2</em></p>
-<p><em>Flask-Caching==1.4.0</em></p>
-<p><em>Flask-SocketIO==3.1.2</em></p>
+<p><em>entrypoints==0.3</em></p>
+<p><em>execnet==1.7.0</em></p>
+<p><em>flake8==3.7.8</em></p>
+<p><em>Flask==1.1.1</em></p>
+<p><em>Flask-Caching==1.7.2</em></p>
+<p><em>Flask-SocketIO==4.2.0</em></p>
 <p><em>furl==2.0.0</em></p>
-<p><em>future==0.16.0</em></p>
 <p><em>gevent==1.4.0</em></p>
 <p><em>gprof2dot==2017.9.19</em></p>
 <p><em>greenlet==0.4.15</em></p>
 <p><em>happy-bittorrent==1.0.0</em></p>
 <p><em>happypandax-i18n==0.3.2</em></p>
-<p><em>-e</em></p>
-<p><em>git+git&#64;github.com-pewpews:andymccurdy/redis-py.git&#64;c26e7c545f0b6205465394908ae18a248b79cc86#egg=happypandax_redis</em></p>
-<p><em>idna==2.6</em></p>
-<p><em>idna-ssl==1.0.1</em></p>
-<p><em>imagesize==1.0.0</em></p>
-<p><em>importlib-metadata==0.17</em></p>
-<p><em>itsdangerous==0.24</em></p>
-<p><em>Jinja2==2.10</em></p>
+<p><em>idna==2.7</em></p>
+<p><em>idna-ssl==1.1.0</em></p>
+<p><em>imagesize==1.1.0</em></p>
+<p><em>importlib-metadata==0.19</em></p>
+<p><em>itsdangerous==1.1.0</em></p>
+<p><em>Jinja2==2.10.1</em></p>
 <p><em>karellen-geventws==1.0.2</em></p>
 <p><em>langcodes==1.4.1</em></p>
-<p><em>livereload==2.6.0</em></p>
 <p><em>mac-alias==2.0.7</em></p>
-<p><em>macholib==1.9</em></p>
-<p><em>Mako==1.0.7</em></p>
+<p><em>Mako==1.1.0</em></p>
 <p><em>marisa-trie==0.7.5</em></p>
-<p><em>MarkupSafe==1.0</em></p>
+<p><em>MarkupSafe==1.1.1</em></p>
 <p><em>mccabe==0.6.1</em></p>
 <p><em>mock==2.0.0</em></p>
-<p><em>more-itertools==6.0.0</em></p>
+<p><em>more-itertools==7.2.0</em></p>
 <p><em>msgpack-python==0.5.6</em></p>
 <p><em>multidict==4.3.1</em></p>
-<p><em>mypy==0.600</em></p>
+<p><em>mypy==0.720</em></p>
+<p><em>mypy-extensions==0.4.1</em></p>
 <p><em>natsort==5.4.1</em></p>
+<p><em>nose==1.3.7</em></p>
+<p><em>nplusone==1.0.0</em></p>
+<p><em>numpy==1.13.3</em></p>
 <p><em>ordered-set==3.0.0</em></p>
-<p><em>ordered-set-stubs==0.1.3</em></p>
-<p><em>orderedmultidict==1.0</em></p>
+<p><em>orderedmultidict==1.0.1</em></p>
 <p><em>packaging==17.1</em></p>
 <p><em>pathtools==0.1.2</em></p>
-<p><em>pbr==4.0.3</em></p>
-<p><em>pefile==2017.11.5</em></p>
+<p><em>pbr==3.1.1</em></p>
 <p><em>Pillow==6.0.0</em></p>
 <p><em>pluggy==0.12.0</em></p>
-<p><em>pockets==0.6.2</em></p>
+<p><em>pockets==0.7.2</em></p>
 <p><em>pprintpp==0.4.0</em></p>
 <p><em>psutil==5.4.5</em></p>
-<p><em>psycopg2==2.7.7</em></p>
-<p><em>py==1.5.3</em></p>
-<p><em>pycodestyle==2.3.1</em></p>
-<p><em>pycparser==2.18</em></p>
-<p><em>pycycle==0.0.8</em></p>
-<p><em>pyflakes==1.6.0</em></p>
-<p><em>Pygments==2.2.0</em></p>
-<p><em>PyInstaller==3.5.dev0+g5edb4f7d</em></p>
-<p><em>PyJWT==1.7.1</em></p>
+<p><em>psycopg2-binary==2.8.3</em></p>
+<p><em>py==1.5.2</em></p>
+<p><em>pycodestyle==2.5.0</em></p>
+<p><em>pycparser==2.19</em></p>
+<p><em>pyflakes==2.1.1</em></p>
+<p><em>Pygments==2.4.2</em></p>
+<p><em>PyInstaller==4.0.dev0+ge6182b2a</em></p>
 <p><em>pyOpenSSL==18.0.0</em></p>
-<p><em>pyparsing==2.2.0</em></p>
-<p><em>pypiwin32==223</em></p>
-<p><em>PyQt5==5.11.3</em></p>
-<p><em>PyQt5-sip==4.19.13</em></p>
+<p><em>pyparsing==2.4.2</em></p>
 <p><em>PySide2==5.11.1</em></p>
-<p><em>pytest==4.6.1</em></p>
-<p><em>pytest-cov==2.4.0</em></p>
+<p><em>pytest==5.1.1</em></p>
+<p><em>pytest-cov==2.7.1</em></p>
 <p><em>pytest-forked==1.0.2</em></p>
-<p><em>pytest-parallel==0.0.9</em></p>
-<p><em>pytest-profiling==1.3.0</em></p>
-<p><em>pytest-xdist==1.28.0</em></p>
-<p><em>python-dateutil==2.7.5</em></p>
-<p><em>python-editor==1.0.3</em></p>
-<p><em>python-engineio==3.5.1</em></p>
-<p><em>python-rapidjson==0.6.3</em></p>
-<p><em>python-socketio==4.0.0</em></p>
-<p><em>pythonnet==2.3.0</em></p>
-<p><em>pytz==2018.4</em></p>
-<p><em>pywebview==2.0.3</em></p>
-<p><em>pywin32==223</em></p>
-<p><em>pywin32-ctypes==0.2.0</em></p>
-<p><em>PyYAML==3.12</em></p>
-<p><em>QtAwesome==0.6.0.dev0</em></p>
+<p><em>pytest-profiling==1.7.0</em></p>
+<p><em>pytest-xdist==1.29.0</em></p>
+<p><em>python-dateutil==2.8.0</em></p>
+<p><em>python-editor==1.0.4</em></p>
+<p><em>python-engineio==3.9.3</em></p>
+<p><em>python-socketio==4.3.1</em></p>
+<p><em>pytz==2019.2</em></p>
+<p><em>PyYAML==5.1.1</em></p>
+<p><em>QtAwesome==0.7.0.dev0</em></p>
 <p><em>QtPy==1.5.1</em></p>
 <p><em>rarfile==3.0</em></p>
 <p><em>redis==3.2.1</em></p>
-<p><em>regex==2018.6.6</em></p>
+<p><em>regex==2019.6.8</em></p>
 <p><em>requests==2.20.1</em></p>
 <p><em>responses==0.9.0</em></p>
-<p><em>rollbar==0.14.5</em></p>
+<p><em>rollbar==0.14.7</em></p>
 <p><em>sadisplay==0.4.8</em></p>
 <p><em>Send2Trash==1.5.0</em></p>
-<p><em>shellingham==1.3.1</em></p>
-<p><em>sip==4.19.8</em></p>
 <p><em>six==1.11.0</em></p>
-<p><em>snowballstemmer==1.2.1</em></p>
-<p><em>Sphinx==1.8.2</em></p>
+<p><em>snowballstemmer==1.9.0</em></p>
+<p><em>soupsieve==1.9.3</em></p>
+<p><em>Sphinx==1.7.8</em></p>
 <p><em>sphinx-autodoc-napoleon-typehints==2.1.6</em></p>
-<p><em>sphinx-bootstrap-theme==0.6.5</em></p>
-<p><em>sphinxcontrib-autoprogram==0.1.5</em></p>
+<p><em>sphinx-bootstrap-theme==0.7.1</em></p>
+<p><em>sphinxcontrib-autoprogram==0.1.4</em></p>
 <p><em>sphinxcontrib-documentedlist==0.6</em></p>
 <p><em>sphinxcontrib-napoleon==0.7</em></p>
-<p><em>sphinxcontrib-websupport==1.1.0</em></p>
-<p><em>SQLAlchemy==1.3.3</em></p>
+<p><em>sphinxcontrib-websupport==1.1.2</em></p>
+<p><em>SQLAlchemy==1.3.6</em></p>
 <p><em>sqlalchemy-json==0.2.2</em></p>
-<p><em>SQLAlchemy-Utils==0.33.11</em></p>
-<p><em>tinydb==3.13.0</em></p>
-<p><em>tornado==5.1.1</em></p>
+<p><em>SQLAlchemy-Utils==0.34.1</em></p>
+<p><em>sqlparse==0.3.0</em></p>
+<p><em>sqltap==0.3.11</em></p>
 <p><em>Transcrypt==3.6.101</em></p>
 <p><em>treelib==1.5.1</em></p>
-<p><em>typed-ast==1.1.0</em></p>
-<p><em>typing==3.6.4</em></p>
-<p><em>tzlocal==1.5.1</em></p>
-<p><em>urllib3==1.22</em></p>
+<p><em>typed-ast==1.4.0</em></p>
+<p><em>typing==3.7.4.1</em></p>
+<p><em>typing-extensions==3.7.4</em></p>
+<p><em>tzlocal==2.0.0</em></p>
+<p><em>urllib3==1.24.3</em></p>
 <p><em>watchdog==0.9.0</em></p>
 <p><em>wcwidth==0.1.7</em></p>
-<p><em>Werkzeug==0.14.1</em></p>
-<p><em>wrapt==1.11.1</em></p>
-<p><em>yarl==1.2.4</em></p>
-<p><em>zipp==0.5.1</em></p>
+<p><em>Werkzeug==0.15.5</em></p>
+<p><em>yarl==1.3.0</em></p>
+<p><em>zipp==0.6.0</em></p>
 </div>
 </div>
 
@@ -630,7 +610,7 @@ Which is why care must be taken when writing plugins.</p>
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
     </p>
   </div>
 </footer>

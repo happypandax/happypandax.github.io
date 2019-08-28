@@ -2,7 +2,7 @@ Using HappyPanda X
 ========================================
 
 
-A default HPX installation has the following two components:
+A default HPX installation contains the following two components:
 
 - **HappyPanda X Server**
 
@@ -10,7 +10,7 @@ A default HPX installation has the following two components:
 
 - **HappyPanda X Webclient**
 
-    The default frontend that comes with HPX. A web-based (JS) frontend for HPX, if you will.
+    The default frontend that comes with HPX.
 
     This component should also be running, even if you're not going to use the client.
     It is started automatically on server start.
@@ -142,7 +142,7 @@ you disable this user. Disable it with the setting ``server.disable_default_user
 
 Additionally, you may also want to disallow people accessing the server without logging in with the settings ``server.allow_guests`` and ``server.require_auth``.
 
-To create and delete users, see the command-line args ``--create-user``, ``--delete-user`` and ``--list-users``.
+To create and delete users, see the command-line args ``user --help`` or use the GUI.
 
 TLS/SSL Support
 -------------------------------------
