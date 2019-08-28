@@ -54,7 +54,7 @@ Finally, copy your edit of commands over to a command-line and execute them.
     HPX_DATA="/path/to/desired/hpx/datadir"
     HPX_CONTENT="/path/to/desired/hpx/contentdir"
     RUN_IN_BACKGROUND=true
-    docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND happypandax
+    docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND twiddly/happypandax
 
 **Windows:**
 
@@ -70,7 +70,7 @@ Finally, copy your edit of commands over to a command-line and execute them.
     set HPX_DATA="C:\path\to\desired\hpx\datadir"
     set HPX_CONTENT="C:\path\to\desired\hpx\content"
     set RUN_IN_BACKGROUND=false
-    docker run -p %HPX_PORT%:7007 -p %HPX_WEBPORT%:7008 -p %HPX_TORRENTPORT%:7006 --name happypandax --volume=%HPX_DATA%:/data --volume=%HPX_CONTENT%:/content -d=%RUN_IN_BACKGROUND% happypandax
+    docker run -p %HPX_PORT%:7007 -p %HPX_WEBPORT%:7008 -p %HPX_TORRENTPORT%:7006 --name happypandax --volume=%HPX_DATA%:/data --volume=%HPX_CONTENT%:/content -d=%RUN_IN_BACKGROUND% twiddly/happypandax
 
 The configuration file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -133,6 +133,37 @@ You can also make user accounts this way:
 
 ``docker run <yadda.. yadda..> happypandax user create -t "admin" -u "twiddly" -p "twiddly123"``
 
+To stop the container, execute:
+
+``docker stop happypandax``
+
+And to start it again,
+
+``docker start happypandax``
+
+Remove it with:
+
+``docker rm happypandax``
+
+Updating
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Update to the latest docker image by running:
+
+``docker pull twiddly/happypandax:latest``
+
+For a specific version:
+
+``docker pull twiddly/happypandax:0.11.0``
+
+Then remove your current container
+
+``docker rm happypandax``
+
+Now, rerun the ``docker run <yadda.. yadda..> happypandax`` command from before.
+
+Updating will not reset your data as long as you keep mounting the same volumes.
+
 Now, continue to :ref:`Using HappyPanda X` or read on if you intend to use Docker Compose.
 
 Using with Docker Compose
@@ -147,14 +178,43 @@ In that folder, create a folder named ``data`` and a file named ``docker-compose
 
 ::
 
-    hello
+    version: '3'
+
+    services:
+      happypandax:
+        image: twiddly/happypandax:latest
+        ports:
+          - "7006:7006"
+          - "7007:7007"
+          - "7008:7008"
+        volumes:
+          - ./data:/data
+          - ./content:/content
+        links:
+          - db
+
+      db:
+        image: postgres:latest
+        restart: always
+        ports:
+          - 7005:5432
+        environment:
+          POSTGRES_USER: 'happypandax'
+          POSTGRES_PASSWORD: 'postgres'
+        volumes:
+          - database:/var/lib/postgresql/data
+
+
+    volumes:
+      database:
+        driver: local
 
 Change the ports and folder mappings as desired. In particular you should change ``./content:/content`` to ``<where your manga folder is located>:/content``,
 or else the expected content folder will be a folder named ``content`` in the ``HappyPanda X`` folder.
 
 You can also change the ports, if you wish to do so, do it like this: ``<your custom port>:7008``
 
-**Notice that the port to postgres is set to 7005:5432**, meaning unless you change it, you will have to use port ``7005`` to connect to it with.
+**Notice that the port to postgres is set to 7005:5432**, meaning unless you change it, you will have to use port ``7005`` to connect to it with *from outside*.
 
 Now, create a ``config.yaml`` file with these contents and save it inside the ``data`` folder
 (unless you changed it then this folder is expected to be named ``data`` inside the ``HappyPanda X`` folder, create it if it doesn't exist):
@@ -177,7 +237,7 @@ Now, create a ``config.yaml`` file with these contents and save it inside the ``
         username: happypandax
         password: postgres
         host: db
-        port: 7005
+        port: 5432
         name: happypanda
 
 
@@ -186,6 +246,7 @@ Another useful variable is ``${HPX_DATA}`` pointing to the data folder *inside d
 Note that these environment variables are pre-defined by the image inside docker. This means you can't just define new variables from outside and expect the docker instance to see them.
 
 Notice that the postgres host is the name of the database service as defined in ``docker-compose.yml`` to be named ``db``.
+And the port is set to ``5432`` because that's the port postgres listens on *inside the container*, but to access it from outside docker, you will need to use ``7005`` or whatever was defined.
 
 This config does a few things. It sets HPX to use the dockerized postgres service and also puts the content folder under watch so that new items in it will be added to HPX automatically.
 
@@ -194,7 +255,7 @@ Lastly, if you don't wish to use a postgres backend with docker, just remove thi
 ::
 
         links:
-            - db
+          - db
 
       db:
         image: postgres:latest
@@ -202,15 +263,14 @@ Lastly, if you don't wish to use a postgres backend with docker, just remove thi
         ports:
           - 7005:5432
         environment:
-          POSTGRES_DB: 'happypandax'
           POSTGRES_USER: 'happypandax'
           POSTGRES_PASSWORD: 'postgres'
         volumes:
-          - happypandax_database:/var/lib/postgresql/data
+          - database:/var/lib/postgresql/data
 
 
     volumes:
-      happypandax_database:
+      database:
         driver: local
 
 Make sure to edit your ``config.yaml`` to reflect this change.
@@ -235,4 +295,13 @@ To create a new user:
 
 ``docker-compose run happypandax user create -t "admin" -u "twiddly" -p "twiddly123"``
 
-Now, continue to :ref:`Using HappyPanda X`
+Updating
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Update to the latest docker image by running:
+
+``docker-compose pull``
+
+And then:
+
+``docker-compose up --force-recreate``

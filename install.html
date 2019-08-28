@@ -158,9 +158,13 @@
 <li><a class="reference internal" href="#using-with-docker">Using with Docker</a><ul>
 <li><a class="reference internal" href="#the-configuration-file">The configuration file</a></li>
 <li><a class="reference internal" href="#about-the-commands">About the commands</a></li>
+<li><a class="reference internal" href="#updating">Updating</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-with-docker-compose">Using with Docker Compose</a></li>
+<li><a class="reference internal" href="#using-with-docker-compose">Using with Docker Compose</a><ul>
+<li><a class="reference internal" href="#id3">Updating</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -215,7 +219,7 @@ HPX_TORRENTPORT=7006
 HPX_DATA=&quot;/path/to/desired/hpx/datadir&quot;
 HPX_CONTENT=&quot;/path/to/desired/hpx/contentdir&quot;
 RUN_IN_BACKGROUND=true
-docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND happypandax
+docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND twiddly/happypandax
 </pre></div>
 </div>
 <p><strong>Windows:</strong></p>
@@ -227,7 +231,7 @@ docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --nam
 <span class="nb">set</span> <span class="n">HPX_DATA</span><span class="o">=</span><span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\desired\hpx\datadir&quot;</span>
 <span class="nb">set</span> <span class="n">HPX_CONTENT</span><span class="o">=</span><span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\desired\hpx\content&quot;</span>
 <span class="nb">set</span> <span class="n">RUN_IN_BACKGROUND</span><span class="o">=</span><span class="n">false</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_PORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7007</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_WEBPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7008</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_TORRENTPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7006</span> <span class="o">--</span><span class="n">name</span> <span class="n">happypandax</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_DATA</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_CONTENT</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">d</span><span class="o">=%</span><span class="n">RUN_IN_BACKGROUND</span><span class="o">%</span> <span class="n">happypandax</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_PORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7007</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_WEBPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7008</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_TORRENTPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7006</span> <span class="o">--</span><span class="n">name</span> <span class="n">happypandax</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_DATA</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_CONTENT</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">d</span><span class="o">=%</span><span class="n">RUN_IN_BACKGROUND</span><span class="o">%</span> <span class="n">twiddly</span><span class="o">/</span><span class="n">happypandax</span>
 </pre></div>
 </div>
 <div class="section" id="the-configuration-file">
@@ -280,6 +284,23 @@ meaning this:</p>
 <p>The config file will be generated into the folder you specified with <code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code>.</p>
 <p>You can also make user accounts this way:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
+<p>To stop the container, execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">happypandax</span></code></p>
+<p>And to start it again,</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">start</span> <span class="pre">happypandax</span></code></p>
+<p>Remove it with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">happypandax</span></code></p>
+</div>
+<div class="section" id="updating">
+<h4>Updating<a class="headerlink" href="#updating" title="Permalink to this headline">¶</a></h4>
+<p>Update to the latest docker image by running:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">twiddly/happypandax:latest</span></code></p>
+<p>For a specific version:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">twiddly/happypandax:0.11.0</span></code></p>
+<p>Then remove your current container</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">happypandax</span></code></p>
+<p>Now, rerun the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span></code> command from before.</p>
+<p>Updating will not reset your data as long as you keep mounting the same volumes.</p>
 <p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a> or read on if you intend to use Docker Compose.</p>
 </div>
 </div>
@@ -289,13 +310,42 @@ meaning this:</p>
 And while we are at it, we might as well set up HPX to use postgresql with docker as well.</p>
 <p>Start by creating a folder for where you want your HPX config and data to be. You can just name this folder <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code>.</p>
 <p>In that folder, create a folder named <code class="docutils literal notranslate"><span class="pre">data</span></code> and a file named <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> with these contents:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
+
+<span class="n">services</span><span class="p">:</span>
+  <span class="n">happypandax</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">twiddly</span><span class="o">/</span><span class="n">happypandax</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s2">&quot;7006:7006&quot;</span>
+      <span class="o">-</span> <span class="s2">&quot;7007:7007&quot;</span>
+      <span class="o">-</span> <span class="s2">&quot;7008:7008&quot;</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="o">./</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span>
+      <span class="o">-</span> <span class="o">./</span><span class="n">content</span><span class="p">:</span><span class="o">/</span><span class="n">content</span>
+    <span class="n">links</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">db</span>
+
+  <span class="n">db</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">postgres</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="mi">7005</span><span class="p">:</span><span class="mi">5432</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="n">POSTGRES_USER</span><span class="p">:</span> <span class="s1">&#39;happypandax&#39;</span>
+      <span class="n">POSTGRES_PASSWORD</span><span class="p">:</span> <span class="s1">&#39;postgres&#39;</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">database</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span>
+
+
+<span class="n">volumes</span><span class="p">:</span>
+  <span class="n">database</span><span class="p">:</span>
+    <span class="n">driver</span><span class="p">:</span> <span class="n">local</span>
 </pre></div>
 </div>
 <p>Change the ports and folder mappings as desired. In particular you should change <code class="docutils literal notranslate"><span class="pre">./content:/content</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;where</span> <span class="pre">your</span> <span class="pre">manga</span> <span class="pre">folder</span> <span class="pre">is</span> <span class="pre">located&gt;:/content</span></code>,
 or else the expected content folder will be a folder named <code class="docutils literal notranslate"><span class="pre">content</span></code> in the <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> folder.</p>
 <p>You can also change the ports, if you wish to do so, do it like this: <code class="docutils literal notranslate"><span class="pre">&lt;your</span> <span class="pre">custom</span> <span class="pre">port&gt;:7008</span></code></p>
-<p><strong>Notice that the port to postgres is set to 7005:5432</strong>, meaning unless you change it, you will have to use port <code class="docutils literal notranslate"><span class="pre">7005</span></code> to connect to it with.</p>
+<p><strong>Notice that the port to postgres is set to 7005:5432</strong>, meaning unless you change it, you will have to use port <code class="docutils literal notranslate"><span class="pre">7005</span></code> to connect to it with <em>from outside</em>.</p>
 <p>Now, create a <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file with these contents and save it inside the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder
 (unless you changed it then this folder is expected to be named <code class="docutils literal notranslate"><span class="pre">data</span></code> inside the <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> folder, create it if it doesn’t exist):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import:
@@ -314,18 +364,19 @@ db:
     username: happypandax
     password: postgres
     host: db
-    port: 7005
+    port: 5432
     name: happypanda
 </pre></div>
 </div>
 <p>The config file supports environment variables, so <code class="docutils literal notranslate"><span class="pre">${HPX_CONTENT}</span></code> will automatically expand to your specified content folder <em>inside docker</em>.
 Another useful variable is <code class="docutils literal notranslate"><span class="pre">${HPX_DATA}</span></code> pointing to the data folder <em>inside dicker</em>.
 Note that these environment variables are pre-defined by the image inside docker. This means you can’t just define new variables from outside and expect the docker instance to see them.</p>
-<p>Notice that the postgres host is the name of the database service as defined in <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> to be named <code class="docutils literal notranslate"><span class="pre">db</span></code>.</p>
+<p>Notice that the postgres host is the name of the database service as defined in <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> to be named <code class="docutils literal notranslate"><span class="pre">db</span></code>.
+And the port is set to <code class="docutils literal notranslate"><span class="pre">5432</span></code> because that’s the port postgres listens on <em>inside the container</em>, but to access it from outside docker, you will need to use <code class="docutils literal notranslate"><span class="pre">7005</span></code> or whatever was defined.</p>
 <p>This config does a few things. It sets HPX to use the dockerized postgres service and also puts the content folder under watch so that new items in it will be added to HPX automatically.</p>
 <p>Lastly, if you don’t wish to use a postgres backend with docker, just remove this part from <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">links</span><span class="p">:</span>
-        <span class="o">-</span> <span class="n">db</span>
+      <span class="o">-</span> <span class="n">db</span>
 
   <span class="n">db</span><span class="p">:</span>
     <span class="n">image</span><span class="p">:</span> <span class="n">postgres</span><span class="p">:</span><span class="n">latest</span>
@@ -333,15 +384,14 @@ Note that these environment variables are pre-defined by the image inside docker
     <span class="n">ports</span><span class="p">:</span>
       <span class="o">-</span> <span class="mi">7005</span><span class="p">:</span><span class="mi">5432</span>
     <span class="n">environment</span><span class="p">:</span>
-      <span class="n">POSTGRES_DB</span><span class="p">:</span> <span class="s1">&#39;happypandax&#39;</span>
       <span class="n">POSTGRES_USER</span><span class="p">:</span> <span class="s1">&#39;happypandax&#39;</span>
       <span class="n">POSTGRES_PASSWORD</span><span class="p">:</span> <span class="s1">&#39;postgres&#39;</span>
     <span class="n">volumes</span><span class="p">:</span>
-      <span class="o">-</span> <span class="n">happypandax_database</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span>
+      <span class="o">-</span> <span class="n">database</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span>
 
 
 <span class="n">volumes</span><span class="p">:</span>
-  <span class="n">happypandax_database</span><span class="p">:</span>
+  <span class="n">database</span><span class="p">:</span>
     <span class="n">driver</span><span class="p">:</span> <span class="n">local</span>
 </pre></div>
 </div>
@@ -356,7 +406,13 @@ Note that these environment variables are pre-defined by the image inside docker
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">happypandax</span> <span class="pre">--help</span></code></p>
 <p>To create a new user:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
-<p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a></p>
+<div class="section" id="id3">
+<h4>Updating<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Update to the latest docker image by running:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">pull</span></code></p>
+<p>And then:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--force-recreate</span></code></p>
+</div>
 </div>
 </div>
 </div>
