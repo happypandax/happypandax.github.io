@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Creating frontends &#8212; HappyPanda X 0.11.0#156 documentation</title>
+    <title>Creating frontends &#8212; HappyPanda X 0.11.1#157 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.11.0#156</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.1#157</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -154,6 +154,7 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">Creating frontends</a><ul>
+<li><a class="reference internal" href="#client-libraries">Client libraries</a></li>
 <li><a class="reference internal" href="#exchanging-messages">Exchanging messages</a></li>
 <li><a class="reference internal" href="#authenticating">Authenticating</a></li>
 <li><a class="reference internal" href="#session">Session</a></li>
@@ -176,6 +177,16 @@
 <p>Before wanting to talk to a HPX server, make sure you have one running. Note that there’s no need to run HPX from source if you just want to create a client.</p>
 <p>It is recommended that you run the server with the <code class="docutils literal notranslate"><span class="pre">--debug</span></code> and <code class="docutils literal notranslate"><span class="pre">--dev</span></code> commandline switches so that you can see what’s going on while you’re connected.
 See <a class="reference internal" href="switches.html#command-line-arguments"><span class="std std-ref">Command-Line Arguments</span></a>.</p>
+<div class="section" id="client-libraries">
+<h2>Client libraries<a class="headerlink" href="#client-libraries" title="Permalink to this headline">¶</a></h2>
+<p>There currently exists a couple of client libraries that can handle the communication part for you.</p>
+<p>Here are the known ones:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/happypandax/js-client">js-client</a> (javascript)</li>
+<li><a class="reference external" href="https://github.com/happypandax/py-client">py-client</a> (python)</li>
+</ul>
+<p>It is however a good idea to read this through so that you understand how HPX communicates.</p>
+</div>
 <div class="section" id="exchanging-messages">
 <h2>Exchanging messages<a class="headerlink" href="#exchanging-messages" title="Permalink to this headline">¶</a></h2>
 <p>Needless to say, to start exchanging messages with the server, you need a basic understanding of TCP.</p>

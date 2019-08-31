@@ -10,6 +10,18 @@ Before wanting to talk to a HPX server, make sure you have one running. Note tha
 It is recommended that you run the server with the ``--debug`` and ``--dev`` commandline switches so that you can see what's going on while you're connected.
 See :ref:`Command-Line Arguments`.
 
+Client libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There currently exists a couple of client libraries that can handle the communication part for you.
+
+Here are the known ones:
+
+- `js-client <https://github.com/happypandax/js-client>`_ (javascript)
+- `py-client <https://github.com/happypandax/py-client>`_ (python)
+
+It is however a good idea to read this through so that you understand how HPX communicates.
+
 Exchanging messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

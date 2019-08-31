@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Installing &#8212; HappyPanda X 0.11.0#156 documentation</title>
+    <title>Installing &#8212; HappyPanda X 0.11.1#157 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.11.0#156</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.1#157</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -162,7 +162,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#using-with-docker-compose">Using with Docker Compose</a><ul>
-<li><a class="reference internal" href="#id3">Updating</a></li>
+<li><a class="reference internal" href="#id4">Updating</a></li>
 </ul>
 </li>
 </ul>
@@ -219,7 +219,8 @@ HPX_TORRENTPORT=7006
 HPX_DATA=&quot;/path/to/desired/hpx/datadir&quot;
 HPX_CONTENT=&quot;/path/to/desired/hpx/contentdir&quot;
 RUN_IN_BACKGROUND=true
-docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND twiddly/happypandax
+AUTOSTART_ON_BOOT=always
+docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --restart AUTOSTART_ON_BOOT --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND twiddly/happypandax
 </pre></div>
 </div>
 <p><strong>Windows:</strong></p>
@@ -231,7 +232,8 @@ docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --nam
 <span class="nb">set</span> <span class="n">HPX_DATA</span><span class="o">=</span><span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\desired\hpx\datadir&quot;</span>
 <span class="nb">set</span> <span class="n">HPX_CONTENT</span><span class="o">=</span><span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\desired\hpx\content&quot;</span>
 <span class="nb">set</span> <span class="n">RUN_IN_BACKGROUND</span><span class="o">=</span><span class="n">false</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_PORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7007</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_WEBPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7008</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_TORRENTPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7006</span> <span class="o">--</span><span class="n">name</span> <span class="n">happypandax</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_DATA</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_CONTENT</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">d</span><span class="o">=%</span><span class="n">RUN_IN_BACKGROUND</span><span class="o">%</span> <span class="n">twiddly</span><span class="o">/</span><span class="n">happypandax</span>
+<span class="nb">set</span> <span class="n">AUTOSTART_ON_BOOT</span><span class="o">=</span><span class="n">always</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_PORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7007</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_WEBPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7008</span> <span class="o">-</span><span class="n">p</span> <span class="o">%</span><span class="n">HPX_TORRENTPORT</span><span class="o">%</span><span class="p">:</span><span class="mi">7006</span> <span class="o">--</span><span class="n">name</span> <span class="n">happypandax</span> <span class="o">--</span><span class="n">restart</span> <span class="o">%</span><span class="n">AUTOSTART_ON_BOOT</span><span class="o">%</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_DATA</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="o">--</span><span class="n">volume</span><span class="o">=%</span><span class="n">HPX_CONTENT</span><span class="o">%</span><span class="p">:</span><span class="o">/</span><span class="n">content</span> <span class="o">-</span><span class="n">d</span><span class="o">=%</span><span class="n">RUN_IN_BACKGROUND</span><span class="o">%</span> <span class="n">twiddly</span><span class="o">/</span><span class="n">happypandax</span>
 </pre></div>
 </div>
 <div class="section" id="the-configuration-file">
@@ -270,20 +272,23 @@ Note that these environment variables are pre-defined by the image inside docker
 <tr class="field-even field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">RUN_IN_BACKGROUND</span></code>:</th></tr>
 <tr class="field-even field"><td>&#160;</td><td class="field-body">If <code class="docutils literal notranslate"><span class="pre">false</span></code> the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code>:</th><td class="field-body">You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></td>
+<tr class="field-odd field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">AUTOSTART_ON_BOOT</span></code>:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Automatically start the HPX container whenever Docker starts, available values are <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">on-failure</span></code> and <code class="docutils literal notranslate"><span class="pre">unless-stopped</span></code>, read more about it <a class="reference external" href="https://docs.docker.com/config/containers/start-containers-automatically/">here.</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code>:</th><td class="field-body">You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></td>
 </tr>
 </tbody>
 </table>
 <p>The docker image is set so that subsequent arguments after the docker image name in the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command are passed to happypandax,
 meaning this:</p>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">--help</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">twiddly/happypandax</span> <span class="pre">--help</span></code></p>
 <p>is the same as running the happypandax executable directly with <code class="docutils literal notranslate"><span class="pre">happypanda.exe</span> <span class="pre">--help</span></code> (the <code class="docutils literal notranslate"><span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span></code> is passed to docker, not hpx).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span></code> part are all those arguments from the command above just shortened for brevity. Make sure to include those arguments, or else… <strong>or else Docker wouldn’t know where to store data and IT WILL BE LOST</strong>.</p>
 <p>This means that you could generate an example config file like this:</p>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">--gen-config</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">twiddly/happypandax</span> <span class="pre">--gen-config</span></code></p>
 <p>The config file will be generated into the folder you specified with <code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code>.</p>
 <p>You can also make user accounts this way:</p>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">twiddly/happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
 <p>To stop the container, execute:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">happypandax</span></code></p>
 <p>And to start it again,</p>
@@ -299,7 +304,7 @@ meaning this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">twiddly/happypandax:0.11.0</span></code></p>
 <p>Then remove your current container</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">happypandax</span></code></p>
-<p>Now, rerun the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">happypandax</span></code> command from before.</p>
+<p>Now, rerun the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">twiddly/happypandax</span></code> command from before.</p>
 <p>Updating will not reset your data as long as you keep mounting the same volumes.</p>
 <p>Now, continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a> or read on if you intend to use Docker Compose.</p>
 </div>
@@ -315,6 +320,8 @@ And while we are at it, we might as well set up HPX to use postgresql with docke
 <span class="n">services</span><span class="p">:</span>
   <span class="n">happypandax</span><span class="p">:</span>
     <span class="n">image</span><span class="p">:</span> <span class="n">twiddly</span><span class="o">/</span><span class="n">happypandax</span><span class="p">:</span><span class="n">latest</span>
+    <span class="c1"># start this container automatically on boot</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
     <span class="n">ports</span><span class="p">:</span>
       <span class="o">-</span> <span class="s2">&quot;7006:7006&quot;</span>
       <span class="o">-</span> <span class="s2">&quot;7007:7007&quot;</span>
@@ -335,7 +342,8 @@ And while we are at it, we might as well set up HPX to use postgresql with docke
       <span class="n">POSTGRES_PASSWORD</span><span class="p">:</span> <span class="s1">&#39;postgres&#39;</span>
     <span class="n">volumes</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">database</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span>
-
+    <span class="n">logging</span><span class="p">:</span>
+      <span class="n">driver</span><span class="p">:</span> <span class="n">none</span>
 
 <span class="n">volumes</span><span class="p">:</span>
   <span class="n">database</span><span class="p">:</span>
@@ -399,6 +407,13 @@ And the port is set to <code class="docutils literal notranslate"><span class="p
 <p>With all that done, we can now start up everything. Run this command to start everything:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code></p>
 <p>If everything was successful, you should be able to open your browser and access HPX on <code class="docutils literal notranslate"><span class="pre">localhost:7008</span></code> (replace <code class="docutils literal notranslate"><span class="pre">7008</span></code> with whatever you set that port mapping to).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In some cases, the postgres instance won’t get ready in time for when HPX starts, resulting in HPX saying it can’t connect to the database.
+If that happens, just run: <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--force-recreate</span></code></p>
+</div>
+<p>To run in the background, supply the <code class="docutils literal notranslate"><span class="pre">-d</span></code> flag:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code></p>
 <p>You can stop everything with:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">down</span></code></p>
 <p>Read more about what commands are available <a class="reference external" href="https://docs.docker.com/compose/reference/">here.</a></p>
@@ -406,8 +421,8 @@ And the port is set to <code class="docutils literal notranslate"><span class="p
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">happypandax</span> <span class="pre">--help</span></code></p>
 <p>To create a new user:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">happypandax</span> <span class="pre">user</span> <span class="pre">create</span> <span class="pre">-t</span> <span class="pre">&quot;admin&quot;</span> <span class="pre">-u</span> <span class="pre">&quot;twiddly&quot;</span> <span class="pre">-p</span> <span class="pre">&quot;twiddly123&quot;</span></code></p>
-<div class="section" id="id3">
-<h4>Updating<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id4">
+<h4>Updating<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p>Update to the latest docker image by running:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">pull</span></code></p>
 <p>And then:</p>

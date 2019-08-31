@@ -54,7 +54,8 @@ Finally, copy your edit of commands over to a command-line and execute them.
     HPX_DATA="/path/to/desired/hpx/datadir"
     HPX_CONTENT="/path/to/desired/hpx/contentdir"
     RUN_IN_BACKGROUND=true
-    docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND twiddly/happypandax
+    AUTOSTART_ON_BOOT=always
+    docker run -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -p $HPX_TORRENTPORT:7006 --name happypandax --restart AUTOSTART_ON_BOOT --volume=$HPX_DATA:/data --volume=$HPX_CONTENT:/content -d=$RUN_IN_BACKGROUND twiddly/happypandax
 
 **Windows:**
 
@@ -70,7 +71,8 @@ Finally, copy your edit of commands over to a command-line and execute them.
     set HPX_DATA="C:\path\to\desired\hpx\datadir"
     set HPX_CONTENT="C:\path\to\desired\hpx\content"
     set RUN_IN_BACKGROUND=false
-    docker run -p %HPX_PORT%:7007 -p %HPX_WEBPORT%:7008 -p %HPX_TORRENTPORT%:7006 --name happypandax --volume=%HPX_DATA%:/data --volume=%HPX_CONTENT%:/content -d=%RUN_IN_BACKGROUND% twiddly/happypandax
+    set AUTOSTART_ON_BOOT=always
+    docker run -p %HPX_PORT%:7007 -p %HPX_WEBPORT%:7008 -p %HPX_TORRENTPORT%:7006 --name happypandax --restart %AUTOSTART_ON_BOOT% --volume=%HPX_DATA%:/data --volume=%HPX_CONTENT%:/content -d=%RUN_IN_BACKGROUND% twiddly/happypandax
 
 The configuration file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -111,13 +113,16 @@ About the commands
 :``RUN_IN_BACKGROUND``:
     If ``false`` the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.
 
+:``AUTOSTART_ON_BOOT``:
+    Automatically start the HPX container whenever Docker starts, available values are ``always``, ``no``, ``on-failure`` and ``unless-stopped``, read more about it `here. <https://docs.docker.com/config/containers/start-containers-automatically/>`_
+
 :``docker run ...``:
     You can read more about what the different docker flags means `here. <https://docs.docker.com/engine/reference/run/>`_
 
 The docker image is set so that subsequent arguments after the docker image name in the ``docker run`` command are passed to happypandax,
 meaning this:
 
-``docker run <yadda.. yadda..> happypandax --help``
+``docker run <yadda.. yadda..> twiddly/happypandax --help``
 
 is the same as running the happypandax executable directly with ``happypanda.exe --help`` (the ``<yadda.. yadda..>`` is passed to docker, not hpx).
 
@@ -125,13 +130,13 @@ The ``<yadda.. yadda..>`` part are all those arguments from the command above ju
 
 This means that you could generate an example config file like this:
 
-``docker run <yadda.. yadda..> happypandax --gen-config``
+``docker run <yadda.. yadda..> twiddly/happypandax --gen-config``
 
 The config file will be generated into the folder you specified with ``HPX_DATA``.
 
 You can also make user accounts this way:
 
-``docker run <yadda.. yadda..> happypandax user create -t "admin" -u "twiddly" -p "twiddly123"``
+``docker run <yadda.. yadda..> twiddly/happypandax user create -t "admin" -u "twiddly" -p "twiddly123"``
 
 To stop the container, execute:
 
@@ -160,7 +165,7 @@ Then remove your current container
 
 ``docker rm happypandax``
 
-Now, rerun the ``docker run <yadda.. yadda..> happypandax`` command from before.
+Now, rerun the ``docker run <yadda.. yadda..> twiddly/happypandax`` command from before.
 
 Updating will not reset your data as long as you keep mounting the same volumes.
 
@@ -183,6 +188,8 @@ In that folder, create a folder named ``data`` and a file named ``docker-compose
     services:
       happypandax:
         image: twiddly/happypandax:latest
+        # start this container automatically on boot
+        restart: always
         ports:
           - "7006:7006"
           - "7007:7007"
@@ -203,7 +210,8 @@ In that folder, create a folder named ``data`` and a file named ``docker-compose
           POSTGRES_PASSWORD: 'postgres'
         volumes:
           - database:/var/lib/postgresql/data
-
+        logging:
+          driver: none
 
     volumes:
       database:
@@ -280,6 +288,14 @@ With all that done, we can now start up everything. Run this command to start ev
 ``docker-compose up``
 
 If everything was successful, you should be able to open your browser and access HPX on ``localhost:7008`` (replace ``7008`` with whatever you set that port mapping to).
+
+.. Note::
+    In some cases, the postgres instance won't get ready in time for when HPX starts, resulting in HPX saying it can't connect to the database.
+    If that happens, just run: ``docker-compose up --force-recreate``
+
+To run in the background, supply the ``-d`` flag:
+
+``docker-compose up -d``
 
 You can stop everything with:
 
