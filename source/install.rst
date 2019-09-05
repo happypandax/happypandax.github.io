@@ -91,6 +91,8 @@ The default configuration file is set to:
         options:
           ${HPX_CONTENT}:
             import.scan_on_startup: true
+    plugin:
+        plugin_dir: ${HPX_DATA}
 
 The config file supports environment variables, so ``${HPX_CONTENT}`` will automatically expand to your specified content folder *inside docker*.
 Another useful variable is ``${HPX_DATA}`` pointing to the data folder *inside docker*.

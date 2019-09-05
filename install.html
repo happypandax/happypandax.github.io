@@ -249,6 +249,8 @@ watch:
     options:
       ${HPX_CONTENT}:
         import.scan_on_startup: true
+plugin:
+    plugin_dir: ${HPX_DATA}
 </pre></div>
 </div>
 <p>The config file supports environment variables, so <code class="docutils literal notranslate"><span class="pre">${HPX_CONTENT}</span></code> will automatically expand to your specified content folder <em>inside docker</em>.
