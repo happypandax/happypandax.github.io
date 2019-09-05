@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Server API &#8212; HappyPanda X 0.11.1#157 documentation</title>
+    <title>Server API &#8212; HappyPanda X 0.11.2#158 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.11.1#157</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.11.2#158</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -325,7 +325,7 @@ HPX enters beta status.</p>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_grouping" title="happypanda.interface.gallery.remove_from_grouping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_grouping</span></code></a>([gallery_id,&nbsp;item_id])</td>
 <td>Remove a gallery from a grouping</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.scan_galleries" title="happypanda.interface.gallery.scan_galleries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_galleries</span></code></a>(path[,&nbsp;scan_options])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.scan_galleries" title="happypanda.interface.gallery.scan_galleries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_galleries</span></code></a>(path[,&nbsp;scan_options,&nbsp;limit,&nbsp;…])</td>
 <td>Scan for galleries in the given directory/archive</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.source_exists" title="happypanda.interface.gallery.source_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_exists</span></code></a>([item_type,&nbsp;item_id,&nbsp;check_all])</td>
@@ -376,7 +376,7 @@ HPX enters beta status.</p>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.remove_from_grouping" title="happypanda.interface.gallery.remove_from_grouping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_from_grouping</span></code></a>([gallery_id,&nbsp;item_id])</td>
 <td>Remove a gallery from a grouping</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.scan_galleries" title="happypanda.interface.gallery.scan_galleries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_galleries</span></code></a>(path[,&nbsp;scan_options])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.interface.gallery.scan_galleries" title="happypanda.interface.gallery.scan_galleries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_galleries</span></code></a>(path[,&nbsp;scan_options,&nbsp;limit,&nbsp;…])</td>
 <td>Scan for galleries in the given directory/archive</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#happypanda.interface.gallery.source_exists" title="happypanda.interface.gallery.source_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_exists</span></code></a>([item_type,&nbsp;item_id,&nbsp;check_all])</td>
@@ -1589,7 +1589,7 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 
 <dl class="function">
 <dt id="happypanda.interface.gallery.scan_galleries">
-<code class="descname">scan_galleries</code><span class="sig-paren">(</span><em>path</em>, <em>scan_options={}</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.gallery.scan_galleries" title="Permalink to this definition">¶</a></dt>
+<code class="descname">scan_galleries</code><span class="sig-paren">(</span><em>path</em>, <em>scan_options={}</em>, <em>limit=0</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.gallery.scan_galleries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scan for galleries in the given directory/archive</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1598,6 +1598,8 @@ See <a class="reference internal" href="api_general.html#asynchronous-commands">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – path to directory/archive that exists on this system</li>
 <li><strong>scan_options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – options to apply to the scanning process, see <a class="reference internal" href="settings.html#settings"><span class="std std-ref">Settings</span></a> for available scanning options</li>
+<li><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – offset the list of found items to add</li>
+<li><strong>limit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – limit the list of found items to add</li>
 </ul>
 </td>
 </tr>
