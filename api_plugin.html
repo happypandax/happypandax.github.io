@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugin API &#8212; HappyPanda X 0.11.2#158 documentation</title>
+    <title>Plugin API &#8212; HappyPanda X 0.12.0#159 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -40,7 +40,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.11.2#158</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.12.0#159</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -232,7 +232,7 @@ and can be imported like so:</p>
 <li>current_dir: path to the plugin’s folder</li>
 </ul>
 <p><strong>current_dir</strong> : <em>str</em> =</p>
-<p><strong>database_version</strong> : <em>tuple</em> = (0, 7, 0)</p>
+<p><strong>database_version</strong> : <em>tuple</em> = (0, 8, 0)</p>
 <p><strong>debug</strong> : <em>bool</em> = False</p>
 <p><strong>dev</strong> : <em>bool</em> = False</p>
 <p><strong>download_path</strong> : <em>str</em> = downloads</p>
@@ -243,8 +243,8 @@ and can be imported like so:</p>
 <p><strong>is_win</strong> : <em>bool</em> = False</p>
 <p><strong>thumbnail_path</strong> : <em>str</em> = static/thumbnails</p>
 <p><strong>translation_path</strong> : <em>str</em> = translations</p>
-<p><strong>version</strong> : <em>tuple</em> = (0, 11, 2)</p>
-<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 11, 1)</p>
+<p><strong>version</strong> : <em>tuple</em> = (0, 12, 0)</p>
+<p><strong>webclient_version</strong> : <em>tuple</em> = (0, 12, 0)</p>
 </div></blockquote>
 <hr class="docutils" />
 <dl class="function">
@@ -478,28 +478,31 @@ that would still be lingering even after its folder has been deleted.</dd>
 <tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.CheckUpdate" title="happypanda.core.commands.meta_cmd.CheckUpdate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheckUpdate</span></code></a>([service,&nbsp;priority])</td>
 <td>Check for new release</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.InitApplication" title="happypanda.core.commands.meta_cmd.InitApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InitApplication</span></code></a>([priority])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClientLogger</span></code>(name[,&nbsp;propagate,&nbsp;logger])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">InitApplication</span></code>([priority])</td>
 <td>Initialize the appplication</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.RemoveCommandFilter" title="happypanda.core.commands.meta_cmd.RemoveCommandFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemoveCommandFilter</span></code></a>([priority])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemoveCommandFilter</span></code>([priority])</td>
 <td>Remove a callable to a pipeline command</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.RestartApplication" title="happypanda.core.commands.meta_cmd.RestartApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RestartApplication</span></code></a>([priority])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">RestartApplication</span></code>([priority])</td>
 <td>Restart the appplication</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.RestoreApplication" title="happypanda.core.commands.meta_cmd.RestoreApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RestoreApplication</span></code></a>([priority])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">RestoreApplication</span></code>([priority])</td>
 <td>Restore the application from a backup</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.ShutdownApplication" title="happypanda.core.commands.meta_cmd.ShutdownApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ShutdownApplication</span></code></a>([priority])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ShutdownApplication</span></code>([priority])</td>
 <td>Shutdown the appplication</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.TrashSweeper" title="happypanda.core.commands.meta_cmd.TrashSweeper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrashSweeper</span></code></a>([service,&nbsp;priority])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrashSweeper</span></code>([service,&nbsp;priority])</td>
 <td>Sweeps trashed items</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.UpdateApplication" title="happypanda.core.commands.meta_cmd.UpdateApplication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateApplication</span></code></a>([service,&nbsp;priority])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateApplication</span></code>([service,&nbsp;priority])</td>
 <td>Check for new release and update the application</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.meta_cmd.UpdatePlugin" title="happypanda.core.commands.meta_cmd.UpdatePlugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdatePlugin</span></code></a>([service,&nbsp;priority])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdatePlugin</span></code>([service,&nbsp;priority])</td>
 <td>Check for new release and update a plugin</td>
 </tr>
 </tbody>
@@ -790,13 +793,16 @@ that would still be lingering even after its folder has been deleted.</dd>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.ScanGallery" title="happypanda.core.commands.gallery_cmd.ScanGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScanGallery</span></code></a>([service,&nbsp;priority])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.OpenGallery" title="happypanda.core.commands.gallery_cmd.OpenGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenGallery</span></code></a>()</td>
+<td>Open a gallery in an external viewer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.ScanGallery" title="happypanda.core.commands.gallery_cmd.ScanGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScanGallery</span></code></a>([service,&nbsp;priority])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="happypanda.core.commands.gallery_cmd.SimilarGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimilarGallery</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SimilarGallery" title="happypanda.core.commands.gallery_cmd.SimilarGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimilarGallery</span></code></a>()</td>
 <td>Get a list of similar galleries to given gallery</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SyncWithSource" title="happypanda.core.commands.gallery_cmd.SyncWithSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SyncWithSource</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#happypanda.core.commands.gallery_cmd.SyncWithSource" title="happypanda.core.commands.gallery_cmd.SyncWithSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SyncWithSource</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Synchronise the gallery source with the database, meaning if the source is a path on the filesystem, it will rescan the source for any possibly new items for given item.</td>
 </tr>
 </tbody>
@@ -830,7 +836,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseData</span></code>()</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArtistUserDataData</span></code>([item,&nbsp;user_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -841,7 +847,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CategoryData</span></code>([item,&nbsp;galleries,&nbsp;name,&nbsp;id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseData</span></code>()</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -852,7 +858,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircleData</span></code>([item,&nbsp;artists,&nbsp;galleries,&nbsp;name,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CategoryData</span></code>([item,&nbsp;galleries,&nbsp;name,&nbsp;id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -863,7 +869,29 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CollectionData</span></code>([item,&nbsp;info,&nbsp;pub_date,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircleData</span></code>([item,&nbsp;artists,&nbsp;galleries,&nbsp;name,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CollectionData</span></code>([item,&nbsp;info,&nbsp;pub_date,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CollectionUserDataData</span></code>([item,&nbsp;user_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -885,7 +913,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilterData</span></code>([item,&nbsp;filter,&nbsp;enforce,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilterData</span></code>([item,&nbsp;name,&nbsp;user,&nbsp;user_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -918,7 +946,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupingData</span></code>([item,&nbsp;status_id,&nbsp;galleries,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">GalleryUserDataData</span></code>([item,&nbsp;user_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -929,7 +957,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">HashData</span></code>([item,&nbsp;type,&nbsp;name,&nbsp;id,&nbsp;metalists,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupingData</span></code>([item,&nbsp;status_id,&nbsp;galleries,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -940,7 +968,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">LanguageData</span></code>([item,&nbsp;code,&nbsp;galleries,&nbsp;name,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">HashData</span></code>([item,&nbsp;type,&nbsp;name,&nbsp;id,&nbsp;metalists,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -951,7 +979,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaListData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">LanguageData</span></code>([item,&nbsp;code,&nbsp;galleries,&nbsp;name,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -962,7 +990,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaTagData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;users,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaListData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -973,7 +1001,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">NamespaceData</span></code>([item,&nbsp;tags,&nbsp;name,&nbsp;id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaTagData</span></code>([item,&nbsp;is_user_data,&nbsp;name,&nbsp;id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -984,7 +1012,29 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">NamespaceTagData</span></code>([item,&nbsp;tag_id,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">NamespaceData</span></code>([item,&nbsp;tags,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">NamespaceTagData</span></code>([item,&nbsp;tag_id,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">NamespaceTagUserDataData</span></code>([item,&nbsp;user_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1020,7 +1070,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParodyData</span></code>([item,&nbsp;names,&nbsp;galleries,&nbsp;id,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">PageUserDataData</span></code>([item,&nbsp;user_id,&nbsp;parent_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1031,7 +1081,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParodyNameData</span></code>([item,&nbsp;name,&nbsp;parody_id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParodyData</span></code>([item,&nbsp;names,&nbsp;galleries,&nbsp;id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1042,7 +1092,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProfileData</span></code>([item,&nbsp;path,&nbsp;data,&nbsp;size,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParodyNameData</span></code>([item,&nbsp;name,&nbsp;parody_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1053,7 +1103,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">Remove</span></code>(value)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProfileData</span></code>([item,&nbsp;path,&nbsp;data,&nbsp;size,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1064,7 +1114,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">Set</span></code>(value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">Remove</span></code>(value)</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1075,7 +1125,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusData</span></code>([item,&nbsp;groupings,&nbsp;name,&nbsp;id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">Set</span></code>(value)</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1086,7 +1136,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TagData</span></code>([item,&nbsp;namespaces,&nbsp;name,&nbsp;id,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusData</span></code>([item,&nbsp;groupings,&nbsp;name,&nbsp;id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1097,7 +1147,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaggableData</span></code>([item,&nbsp;tags,&nbsp;last_updated,&nbsp;id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TagData</span></code>([item,&nbsp;namespaces,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1108,7 +1158,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TitleData</span></code>([item,&nbsp;name,&nbsp;language_id,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaggableData</span></code>([item,&nbsp;tags,&nbsp;last_updated,&nbsp;id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1119,7 +1169,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">UrlData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;user_id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">TitleData</span></code>([item,&nbsp;name,&nbsp;language_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1130,7 +1180,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserData</span></code>([item,&nbsp;name,&nbsp;role,&nbsp;address,&nbsp;…])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">UrlData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;user_id,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1141,7 +1191,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">yData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;user_id,&nbsp;…])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserData</span></code>([item,&nbsp;name,&nbsp;role,&nbsp;address,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1152,43 +1202,63 @@ that would still be lingering even after its folder has been deleted.</dd>
 </table>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">artist_preferred_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">yData</span></code>([item,&nbsp;name,&nbsp;id,&nbsp;user,&nbsp;user_id,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">artist_preferred_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_id_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_id_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_search_validate</span></code>(obj,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_search_validate</span></code>(obj,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">gallery_preferred_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">gallery_preferred_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_class</span></code>(db_cls)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">gallery_rating_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashtype_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">gallery_times_read_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">metatags_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_class</span></code>(db_cls)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugin_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashtype_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">tags_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">metatags_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">trash_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">plugin_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_right_add_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">tags_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_right_remove_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">trash_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_right_update_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_right_add_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_right_remove_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">user_right_update_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">userdata_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
 <td></td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">userrole_validate</span></code>(self,&nbsp;attr,&nbsp;value)</td>
@@ -1362,6 +1432,56 @@ that would still be lingering even after its folder has been deleted.</dd>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">DownloadInfo</span></code>([identifier,&nbsp;name,&nbsp;parser,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">DownloadItem</span></code>(url[,&nbsp;options,&nbsp;name,&nbsp;type,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">DownloadRequest</span></code>(downloaditem,&nbsp;url[,&nbsp;type,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">DownloadResource</span></code>([priority])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">DownloadResult</span></code>(downloaditem,&nbsp;requests,&nbsp;status)</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDownloadInfo</span></code>([priority])</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1520,259 +1640,10 @@ that would still be lingering even after its folder has been deleted.</dd>
 <p class="rubric">Available events:</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.InitApplication">
-<code class="descname">InitApplication</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.InitApplication" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize the appplication</p>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-<ul>
-<li><dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.after_plugins">
-<code class="descname">after_plugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#happypanda.core.commands.meta_cmd.after_plugins" title="Permalink to this definition">¶</a></dt>
-<dd><p>Emitted on application startup just after plugins are loaded and initialized.</p>
-<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">InitApplication.after_plugins</span></code></p>
-</dd></dl>
-
-</li>
-<li><dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.before_plugins">
-<code class="descname">before_plugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#happypanda.core.commands.meta_cmd.before_plugins" title="Permalink to this definition">¶</a></dt>
-<dd><p>Emitted on application startup just before plugins are loaded and initialized.</p>
-<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">InitApplication.before_plugins</span></code></p>
-</dd></dl>
-
-</li>
-<li><dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.init">
-<code class="descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#happypanda.core.commands.meta_cmd.init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Emitted on application startup where everything has been initialized after the server has started.</p>
-<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">InitApplication.init</span></code></p>
-</dd></dl>
-
-</li>
-</ul>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.RemoveCommandFilter">
-<code class="descname">RemoveCommandFilter</code><span class="sig-paren">(</span><em>command_name: str</em>, <em>filter: Callable</em>, <em>on: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.RemoveCommandFilter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove a callable to a pipeline command</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>command_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – name of pipeline command</li>
-<li><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>) – a callable</li>
-<li><strong>on</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – on a specific action</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a boolean indicating whether the filter was removed</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.RestartApplication">
-<code class="descname">RestartApplication</code><span class="sig-paren">(</span><em>delay: int = None</em>, <em>push: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.RestartApplication" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>delay</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – delay in seconds before restarting</li>
-<li><strong>push</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – push notifications to clients</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Restart the appplication</p>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-<ul>
-<li><dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.restart">
-<code class="descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#happypanda.core.commands.meta_cmd.restart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Emitted when about to restart</p>
-<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">RestartApplication.restart</span></code></p>
-</dd></dl>
-
-</li>
-</ul>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.RestoreApplication">
-<code class="descname">RestoreApplication</code><span class="sig-paren">(</span><em>backup_path: str = None</em>, <em>settings: bool = True</em>, <em>internals: bool = True</em>, <em>database: bool = True</em>, <em>database_name: str = None</em>, <em>stdout: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.RestoreApplication" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restore the application from a backup</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>backup_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – directory or archive where the backup files are in</li>
-<li><strong>settings</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – restore the configuration</li>
-<li><strong>internals</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – restore the internals</li>
-<li><strong>database</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – restore the database</li>
-<li><strong>database_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – name of the database to restore into, incase of af DBMS</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">bool indicating whether a backup was created or not</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.ShutdownApplication">
-<code class="descname">ShutdownApplication</code><span class="sig-paren">(</span><em>delay: int = None</em>, <em>push: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.ShutdownApplication" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>delay</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – delay in seconds before shutting down</li>
-<li><strong>push</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – push notifications to clients</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Shutdown the appplication</p>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-<ul>
-<li><dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.shutdown">
-<code class="descname">shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#happypanda.core.commands.meta_cmd.shutdown" title="Permalink to this definition">¶</a></dt>
-<dd><p>Emitted when about to shutdown</p>
-<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">ShutdownApplication.shutdown</span></code></p>
-</dd></dl>
-
-</li>
-</ul>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.TrashSweeper">
-<code class="descname">TrashSweeper</code><span class="sig-paren">(</span><em>options: dict = None</em>, <em>force: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.TrashSweeper" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sweeps trashed items</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>options</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – trash options</li>
-<li><strong>force</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – force removal of items even if not due</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">bool indicating whether the folder was cleaned or not</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.UpdateApplication">
-<code class="descname">UpdateApplication</code><span class="sig-paren">(</span><em>download_url: str = None</em>, <em>restart: bool = True</em>, <em>silent: bool = True</em>, <em>push: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.UpdateApplication" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check for new release and update the application</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>download_url</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – url to file which is to be downloaded, if <code class="docutils literal notranslate"><span class="pre">None</span></code> the url will be retrieved with <a class="reference internal" href="#happypanda.core.commands.meta_cmd.CheckUpdate" title="happypanda.core.commands.meta_cmd.CheckUpdate"><code class="xref py py-func docutils literal notranslate"><span class="pre">CheckUpdate()</span></code></a></li>
-<li><strong>restart</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – call <a class="reference internal" href="#happypanda.core.commands.meta_cmd.RestartApplication" title="happypanda.core.commands.meta_cmd.RestartApplication"><code class="xref py py-func docutils literal notranslate"><span class="pre">RestartApplication()</span></code></a> when the update has been registered</li>
-<li><strong>silent</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – supress all errors</li>
-<li><strong>push</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – push notifications on update</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">bool indicating whether the update has been registered or not</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-<ul>
-<li><dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>status: bool</em>, <em>restart: bool</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#happypanda.core.commands.meta_cmd.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Emitted at the end of the process</p>
-<p><strong>Fully qualified name:</strong> <code class="docutils literal notranslate"><span class="pre">UpdateApplication.update</span></code></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>status</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – whether the update has been registered or not</li>
-<li><strong>restart</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – whether the call <a class="reference internal" href="#happypanda.core.commands.meta_cmd.RestartApplication" title="happypanda.core.commands.meta_cmd.RestartApplication"><code class="xref py py-func docutils literal notranslate"><span class="pre">RestartApplication()</span></code></a> if the update was registered</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</li>
-</ul>
-</dd></dl>
-
-<dl class="function">
-<dt id="happypanda.core.commands.meta_cmd.UpdatePlugin">
-<code class="descname">UpdatePlugin</code><span class="sig-paren">(</span><em>plugin_id: Union[list</em>, <em>str] = None</em>, <em>force: bool = False</em>, <em>push: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.meta_cmd.UpdatePlugin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check for new release and update a plugin</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>plugin_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – a plugin id, or a list of plugin ids or None for update on all enabled or failed plugins</li>
-<li><strong>force</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – bypass user config on allowing checking for updates</li>
-<li><strong>for</strong> – push notifications on update</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a list of plugin ids of the plugins that have been successfully updated</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Available entries:</p>
-<p class="rubric">Available events:</p>
-</dd></dl>
-
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">happypanda.core.commands.meta_cmd</p>
+</div>
 <span class="target" id="module-happypanda.core.commands.io_cmd"></span><div class="section" id="i-o">
 <h3>.I/O<a class="headerlink" href="#i-o" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
@@ -2527,7 +2398,7 @@ that would still be lingering even after its folder has been deleted.</dd>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a formatted str of the logs</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
 </td>
 </tr>
 </tbody>
@@ -2781,6 +2652,32 @@ that would still be lingering even after its folder has been deleted.</dd>
 <span class="target" id="module-happypanda.core.commands.gallery_cmd"></span><div class="section" id="gallery">
 <h3>.Gallery<a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h3>
 </div>
+<dl class="function">
+<dt id="happypanda.core.commands.gallery_cmd.GalleryExists">
+<code class="descname">GalleryExists</code><span class="sig-paren">(</span><em>url: str = None</em>, <em>name: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.GalleryExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a gallery exists in the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>url</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – check if gallery exists with given url</li>
+<li><strong>name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – check if gallery exists with given name</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Available entries:</p>
+<p class="rubric">Available events:</p>
+</dd></dl>
+
 <dl class="function">
 <dt id="happypanda.core.commands.gallery_cmd.OpenGallery">
 <code class="descname">OpenGallery</code><span class="sig-paren">(</span><em>gallery_or_id: happypanda.core.db.Gallery = None</em>, <em>number: int = None</em>, <em>args=()</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.core.commands.gallery_cmd.OpenGallery" title="Permalink to this definition">¶</a></dt>
@@ -3313,6 +3210,10 @@ that would still be lingering even after its folder has been deleted.</dd>
 
 <span class="target" id="module-happypanda.core.commands.download_cmd"></span><div class="section" id="download">
 <h3>.Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">happypanda.core.commands.download_cmd</p>
 </div>
 </div>
 </div>

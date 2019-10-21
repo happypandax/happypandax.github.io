@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Settings &#8212; HappyPanda X 0.11.2#158 documentation</title>
+    <title>Settings &#8212; HappyPanda X 0.12.0#159 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.11.2#158</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.12.0#159</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -261,112 +261,117 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <td>server</td>
 <td>Interval in hours between periodically performing a backup, set to 0 to disable to auto backup (default: 3 days)</td>
 </tr>
-<tr class="row-even"><td>auto_install_release</td>
+<tr class="row-even"><td>auto_cache_clean_size</td>
+<td>2000</td>
+<td>server</td>
+<td>Maximum size in megabytes to which the cache folder will automatically get emptied when exceeded</td>
+</tr>
+<tr class="row-odd"><td>auto_install_release</td>
 <td>True</td>
 <td>server</td>
 <td>Automatically download, install and restart when a new update is found</td>
 </tr>
-<tr class="row-odd"><td>auto_pages_clean_size</td>
+<tr class="row-even"><td>auto_pages_clean_size</td>
 <td>800</td>
 <td>server</td>
 <td>Maximum size in megabytes to which the pages cache folder will automatically get emptied when exceeded</td>
 </tr>
-<tr class="row-even"><td>auto_temp_clean_size</td>
+<tr class="row-odd"><td>auto_temp_clean_size</td>
 <td>800</td>
 <td>server</td>
 <td>Maximum size in megabytes to which the temp folder will automatically get emptied when exceeded</td>
 </tr>
-<tr class="row-odd"><td>auto_thumb_clean_size</td>
+<tr class="row-even"><td>auto_thumb_clean_size</td>
 <td>500</td>
 <td>server</td>
 <td>Maximum size in megabytes to which the thumbnail cache folder will automatically get emptied when exceeded</td>
 </tr>
-<tr class="row-even"><td>backup_dir</td>
+<tr class="row-odd"><td>backup_dir</td>
 <td>backups</td>
 <td>server</td>
 <td>Directory where to create backups</td>
 </tr>
-<tr class="row-odd"><td>backup_on_update</td>
+<tr class="row-even"><td>backup_on_update</td>
 <td>True</td>
 <td>server</td>
 <td>Create a backup before applying a new update</td>
 </tr>
-<tr class="row-even"><td>cache_expiration_time</td>
+<tr class="row-odd"><td>cache_expiration_time</td>
 <td>43200</td>
 <td>client</td>
 <td>How much time in seconds items are to be cached for before they expire (default: 12 hours)</td>
 </tr>
-<tr class="row-odd"><td>check_new_releases</td>
+<tr class="row-even"><td>check_new_releases</td>
 <td>True</td>
 <td>server</td>
 <td>Regularly check for updates</td>
 </tr>
-<tr class="row-even"><td>check_release_interval</td>
+<tr class="row-odd"><td>check_release_interval</td>
 <td>30</td>
 <td>server</td>
 <td>Interval in minutes between checking for a new update, set 0 to only check once every startup</td>
 </tr>
-<tr class="row-odd"><td>concurrent_image_tasks</td>
+<tr class="row-even"><td>concurrent_image_tasks</td>
 <td>10</td>
 <td>server</td>
 <td>Amount of image service tasks allowed to run at the same time (higher count does not necessarily mean faster generation)</td>
 </tr>
-<tr class="row-even"><td>concurrent_network_tasks</td>
+<tr class="row-odd"><td>concurrent_network_tasks</td>
 <td>50</td>
 <td>server</td>
 <td>Amount of network service tasks allowed to run at the same time (higher count does not necessarily mean faster network speed)</td>
 </tr>
-<tr class="row-odd"><td>debug</td>
+<tr class="row-even"><td>debug</td>
 <td>False</td>
 <td>server</td>
 <td>Run in debug mode</td>
 </tr>
-<tr class="row-even"><td>interface_cache_time</td>
+<tr class="row-odd"><td>interface_cache_time</td>
 <td>21600</td>
 <td>server</td>
 <td>How many seconds to hold on to cached values from client functions (default: 6 hour)</td>
 </tr>
-<tr class="row-odd"><td>message_cache_time</td>
+<tr class="row-even"><td>message_cache_time</td>
 <td>3600</td>
 <td>server</td>
 <td>How many seconds to hold on to cached server messages (default: 1 hour)</td>
 </tr>
-<tr class="row-even"><td>pg_dump_tool_path</td>
+<tr class="row-odd"><td>pg_dump_tool_path</td>
 <td>pg_dump</td>
 <td>server</td>
 <td>Path to pg_dump tool. On Windows the default path is ‘bin/win32/pg_dump.exe’. On Unix the default path is ‘pg_dump’ which assumes the tool is available in PATH</td>
 </tr>
-<tr class="row-odd"><td>pg_restore_tool_path</td>
+<tr class="row-even"><td>pg_restore_tool_path</td>
 <td>pg_restore</td>
 <td>server</td>
 <td>Path to pg_restore tool. On Windows the default path is ‘bin/win32/pg_restore.exe’. On Unix the default path is ‘pg_restore’ which assumes the tool is available in PATH</td>
 </tr>
-<tr class="row-even"><td>report_critical_errors</td>
+<tr class="row-odd"><td>report_critical_errors</td>
 <td>True</td>
 <td>server</td>
 <td>Send occurring critical errors to me (creator) so I can fix them faster</td>
 </tr>
-<tr class="row-odd"><td>send_to_systemtrash</td>
+<tr class="row-even"><td>send_to_systemtrash</td>
 <td>True</td>
 <td>client</td>
 <td>Send deleted files to the os recycle bin</td>
 </tr>
-<tr class="row-even"><td>trash_item_delete_files</td>
+<tr class="row-odd"><td>trash_item_delete_files</td>
 <td>True</td>
 <td>server</td>
 <td>Whether to also delete the files on the filesystem when an item gets removed by the periodic trash sweeper</td>
 </tr>
-<tr class="row-odd"><td>trash_item_duration</td>
+<tr class="row-even"><td>trash_item_duration</td>
 <td>168.0</td>
 <td>server</td>
 <td>How many hours an item can stay in the trash before getting deleted PERMANENTLY (default is 7 days)</td>
 </tr>
-<tr class="row-even"><td>trash_send_to_systemtrash</td>
+<tr class="row-odd"><td>trash_send_to_systemtrash</td>
 <td>True</td>
 <td>server</td>
 <td>Whether to to send deleted files to the os recycle bin when an item gets removed by the periodic trash sweeper</td>
 </tr>
-<tr class="row-odd"><td>unrar_tool_path</td>
+<tr class="row-even"><td>unrar_tool_path</td>
 <td>unrar</td>
 <td>server</td>
 <td>Path to unrar tool. On Windows the default path is ‘bin/win32/unrar.exe’. On Unix the default path is ‘unrar’ which assumes the tool is available in PATH</td>
@@ -379,59 +384,119 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-even"><th class="head" colspan="4">db</th>
+<tr class="row-odd"><th class="head" colspan="4">db</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-odd"><td>dialect</td>
+<tr class="row-even"><td>dialect</td>
 <td>sqlite</td>
 <td>server</td>
 <td>Which SQL dialect to use between ‘sqlite’ and ‘postgres’. Note that HPX will not transfer data from one dialect to another once chosen. It is therefore advised that you choose a dialect early and stick to it throughout. Only Postgres version 9.4 and up is supported</td>
 </tr>
-<tr class="row-even"><td>host</td>
+<tr class="row-odd"><td>host</td>
 <td></td>
 <td>server</td>
 <td>Database host. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-odd"><td>name</td>
+<tr class="row-even"><td>name</td>
 <td>happypanda</td>
 <td>server</td>
 <td>Database name. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-even"><td>password</td>
+<tr class="row-odd"><td>password</td>
 <td></td>
 <td>server</td>
 <td>Database password. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-odd"><td>pool_size</td>
+<tr class="row-even"><td>pool_size</td>
 <td>15</td>
 <td>server</td>
 <td>The size of the pool to be maintained. This is the largest number of connections that will be kept persistently in the pool. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-even"><td>pool_timeout</td>
+<tr class="row-odd"><td>pool_timeout</td>
 <td>45</td>
 <td>server</td>
 <td>The number of seconds to wait before giving up on returning a connection. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-odd"><td>port</td>
+<tr class="row-even"><td>port</td>
 <td></td>
 <td>server</td>
 <td>Database port. This setting does not apply when the SQLite dialect is used</td>
 </tr>
-<tr class="row-even"><td>query</td>
+<tr class="row-odd"><td>query</td>
 <td>{}</td>
 <td>server</td>
 <td>A mapping of options to be passed to the database upon connect</td>
 </tr>
-<tr class="row-odd"><td>sqlite_database_timeout</td>
+<tr class="row-even"><td>sqlite_database_timeout</td>
 <td>30</td>
 <td>server</td>
 <td>Amount of seconds to wait for the database to be writeable</td>
 </tr>
-<tr class="row-even"><td>username</td>
+<tr class="row-odd"><td>username</td>
 <td></td>
 <td>server</td>
 <td>Database user name. This setting does not apply when the SQLite dialect is used</td>
+</tr>
+</tbody>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-even"><th class="head" colspan="4">download</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>delete_failed_downloads</td>
+<td>True</td>
+<td>client</td>
+<td>Delete a download item if the processing was incomplete</td>
+</tr>
+<tr class="row-even"><td>disabled</td>
+<td>server</td>
+<td colspan="2">A list of downloaders that shouldn’t be used, this is a list of download identifiers defined by the respective plugins</td>
+</tr>
+<tr class="row-odd"><td>download_cache_dir</td>
+<td></td>
+<td>server</td>
+<td>Folder where to put temporary downloaded resources</td>
+</tr>
+<tr class="row-even"><td>download_dir</td>
+<td>downloads</td>
+<td>client</td>
+<td>Folder where to put successfully downloaded resources</td>
+</tr>
+<tr class="row-odd"><td>import</td>
+<td>True</td>
+<td>client</td>
+<td>Import item (if applicable) after it has been downloaded successfully</td>
+</tr>
+<tr class="row-even"><td>options</td>
+<td>{}</td>
+<td>server</td>
+<td>A mapping of setting:value, where setting is a fully qualified name of a config setting that should be overwritten For example: { ‘import.move_gallery’ : true, ‘import.move_dir’: ‘some/other/path’ } to move downloaded galleries to `some/other/path` during import</td>
+</tr>
+<tr class="row-odd"><td>priority</td>
+<td>server</td>
+<td colspan="2">A priority list of downloaders, this is a list of download identifiers defined by the respective plugins.</td>
+</tr>
+<tr class="row-even"><td>size</td>
+<td>4</td>
+<td>server</td>
+<td>Size of concurrent downloads</td>
+</tr>
+<tr class="row-odd"><td>skip_if_downloaded_before</td>
+<td>True</td>
+<td>client</td>
+<td>Skip a download URL if it has been successfully downloaded before</td>
+</tr>
+<tr class="row-even"><td>skip_if_item_exists</td>
+<td>True</td>
+<td>client</td>
+<td>Prevent adding a download item if it already exists in the database</td>
 </tr>
 </tbody>
 <colgroup>
@@ -624,12 +689,17 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <td>server</td>
 <td colspan="2">A priority list of metadata fetchers, this is a list of metadata identifiers defined by the respective plugins. Note that the priority is just a hint and not a guarantee.</td>
 </tr>
-<tr class="row-even"><td>stop_after_first</td>
+<tr class="row-even"><td>size</td>
+<td>4</td>
+<td>server</td>
+<td>Size of concurrent metadata fetches</td>
+</tr>
+<tr class="row-odd"><td>stop_after_first</td>
 <td>True</td>
 <td>server</td>
 <td>Halt item metadata lookup after first successful lookup</td>
 </tr>
-<tr class="row-odd"><td>use_applied_urls</td>
+<tr class="row-even"><td>use_applied_urls</td>
 <td>True</td>
 <td>server</td>
 <td>Fetch metadata from the applied URLs</td>
@@ -642,26 +712,26 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-even"><th class="head" colspan="4">network</th>
+<tr class="row-odd"><th class="head" colspan="4">network</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-odd"><td>delays</td>
+<tr class="row-even"><td>delays</td>
 <td>{}</td>
 <td>server</td>
 <td>Impose delays when peforming requests on certain urls. A mapping of url:delay in seconds</td>
 </tr>
-<tr class="row-even"><td>delays_jitter</td>
+<tr class="row-odd"><td>delays_jitter</td>
 <td>0.3</td>
 <td>server</td>
 <td>A randomization factor to add when delaying, should be a value between 0 and 1, inclusive</td>
 </tr>
-<tr class="row-odd"><td>proxy</td>
+<tr class="row-even"><td>proxy</td>
 <td>{‘http’: ‘’, ‘https’: ‘’}</td>
 <td>server</td>
 <td>Specify network proxies. Proxy URLs must include the scheme. To use HTTP Basic Auth with your proxy, use the http://user:password&#64;host/ syntax</td>
 </tr>
-<tr class="row-even"><td>request_timeout</td>
+<tr class="row-odd"><td>request_timeout</td>
 <td>30</td>
 <td>server</td>
 <td>Upper limit of a request timeout in seconds</td>
@@ -674,36 +744,36 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="4">plugin</th>
+<tr class="row-even"><th class="head" colspan="4">plugin</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>auto_install_plugin</td>
+<tr class="row-odd"><td>auto_install_plugin</td>
 <td>False</td>
 <td>server</td>
 <td>Automatically install a discovered plugin</td>
 </tr>
-<tr class="row-odd"><td>auto_install_plugin_dependency</td>
+<tr class="row-even"><td>auto_install_plugin_dependency</td>
 <td>True</td>
 <td>server</td>
 <td>Automatically install a plugin’s dependencies when installing a plugin</td>
 </tr>
-<tr class="row-even"><td>auto_install_plugin_release</td>
+<tr class="row-odd"><td>auto_install_plugin_release</td>
 <td>True</td>
 <td>server</td>
 <td>Automatically download and install a new plugin update is found</td>
 </tr>
-<tr class="row-odd"><td>check_new_plugin_releases</td>
+<tr class="row-even"><td>check_new_plugin_releases</td>
 <td>True</td>
 <td>server</td>
 <td>Regularly check plugins for updates</td>
 </tr>
-<tr class="row-even"><td>check_plugin_release_interval</td>
+<tr class="row-odd"><td>check_plugin_release_interval</td>
 <td>45</td>
 <td>server</td>
 <td>Interval in minutes between checking plugins for a new update, set 0 to only check once every startup</td>
 </tr>
-<tr class="row-odd"><td>plugin_dir</td>
+<tr class="row-even"><td>plugin_dir</td>
 <td></td>
 <td>server</td>
 <td>Additional optional plugin directory to look for plugins</td>
@@ -716,31 +786,31 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-even"><th class="head" colspan="4">search</th>
+<tr class="row-odd"><th class="head" colspan="4">search</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-odd"><td>case_sensitive</td>
+<tr class="row-even"><td>case_sensitive</td>
 <td>False</td>
 <td>client</td>
 <td>Search filter is case sensitive</td>
 </tr>
-<tr class="row-even"><td>children</td>
+<tr class="row-odd"><td>children</td>
 <td>True</td>
 <td>client</td>
 <td>Also match on children</td>
 </tr>
-<tr class="row-odd"><td>match_all_terms</td>
+<tr class="row-even"><td>match_all_terms</td>
 <td>True</td>
 <td>client</td>
 <td>Match only items that has all terms</td>
 </tr>
-<tr class="row-even"><td>match_exact</td>
+<tr class="row-odd"><td>match_exact</td>
 <td>False</td>
 <td>server</td>
 <td>Match terms exact</td>
 </tr>
-<tr class="row-odd"><td>regex</td>
+<tr class="row-even"><td>regex</td>
 <td>False</td>
 <td>client</td>
 <td>Allow regex in search filters</td>
@@ -753,24 +823,29 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <col width="25%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-even"><th class="head" colspan="4">server</th>
+<tr class="row-odd"><th class="head" colspan="4">server</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-odd"><td>allow_guests</td>
+<tr class="row-even"><td>allow_guests</td>
 <td>True</td>
 <td>server</td>
 <td>Specify if guests are allowed on this server</td>
 </tr>
-<tr class="row-even"><td>allowed_clients</td>
+<tr class="row-odd"><td>allowed_clients</td>
 <td>0</td>
 <td>server</td>
 <td>Limit amount of clients allowed to be connected (0 means no limit)</td>
 </tr>
-<tr class="row-odd"><td>disable_default_user</td>
+<tr class="row-even"><td>disable_default_user</td>
 <td>False</td>
 <td>server</td>
 <td>Disable default user</td>
+</tr>
+<tr class="row-odd"><td>enable_http_endpoint</td>
+<td>True</td>
+<td>server</td>
+<td>Enable the /server HTTP endpoint on the webserver for communicating with HPX</td>
 </tr>
 <tr class="row-even"><td>enable_ssl</td>
 <td>False</td>
@@ -838,7 +913,7 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <td>Path to a certificate and the corresponding private key. If keyfile is not set, the private key will be taken from certfile. Note that if SSL is enabled and no cert files are provided, a self-signed certificate will be created and used instead. The self-signed certificate can be found at data/certs/</td>
 </tr>
 <tr class="row-odd"><td>server_name</td>
-<td>sena_momo_mikan</td>
+<td>albedo_mayoi_testarossa</td>
 <td>server</td>
 <td>Specifiy name of the server</td>
 </tr>
@@ -899,7 +974,7 @@ This means, for example, <code class="docutils literal notranslate"><span class=
 <tr class="row-even"><td>options</td>
 <td>{}</td>
 <td>server</td>
-<td>A mapping of path:options, where options is a mapping of settings to apply for the given path. For example: { ‘some/path/ : { ‘watch.auto_add’: true } } to auto add items for this specific path</td>
+<td>A mapping of path:options, where options is a mapping of settings to apply for the given path. For example: { ‘some/path/’ : { ‘watch.auto_add’: true } } to auto add items for this specific path</td>
 </tr>
 <tr class="row-odd"><td>scan_on_startup</td>
 <td>True</td>

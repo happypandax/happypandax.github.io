@@ -92,7 +92,7 @@ The default configuration file is set to:
           ${HPX_CONTENT}:
             import.scan_on_startup: true
     plugin:
-        plugin_dir: ${HPX_DATA}
+        plugin_dir: ${HPX_DATA}/plugins
 
 The config file supports environment variables, so ``${HPX_CONTENT}`` will automatically expand to your specified content folder *inside docker*.
 Another useful variable is ``${HPX_DATA}`` pointing to the data folder *inside docker*.
@@ -241,6 +241,8 @@ Now, create a ``config.yaml`` file with these contents and save it inside the ``
         options:
           ${HPX_CONTENT}:
             import.scan_on_startup: true
+    plugin:
+        plugin_dir: ${HPX_DATA}/plugins
 
     db:
         dialect: postgres

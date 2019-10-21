@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>General &#8212; HappyPanda X 0.11.2#158 documentation</title>
+    <title>General &#8212; HappyPanda X 0.12.0#159 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
@@ -41,7 +41,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.11.2#158</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.12.0#159</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -613,6 +613,30 @@ Enum member names may change sometime in the future. It is not likely to happen 
 </dd></dl>
 
 <dl class="class">
+<dt id="happypanda.interface.enums.LogType">
+<em class="property">class </em><code class="descname">LogType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.LogType" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogType.Changelog">
+<code class="descname">Changelog</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Changelog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changelog</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogType.Download">
+<code class="descname">Download</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="happypanda.interface.enums.LogType.Metadata">
+<code class="descname">Metadata</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="happypanda.interface.enums.PluginState">
 <em class="property">class </em><code class="descname">PluginState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.PluginState" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
@@ -742,6 +766,12 @@ Enum member names may change sometime in the future. It is not likely to happen 
 <dt id="happypanda.interface.enums.QueueType">
 <em class="property">class </em><code class="descname">QueueType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.QueueType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
+<dl class="attribute">
+<dt id="happypanda.interface.enums.QueueType.Download">
+<code class="descname">Download</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Download" title="Permalink to this definition">¶</a></dt>
+<dd><p>a queue for downloading item</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="happypanda.interface.enums.QueueType.Metadata">
 <code class="descname">Metadata</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Metadata" title="Permalink to this definition">¶</a></dt>
@@ -1016,6 +1046,13 @@ message: explanation of error</dd>
 </dd></dl>
 
 <dl class="exception">
+<dt id="happypanda.common.exceptions.PluginNoHandlerError">
+<em class="property">exception </em><code class="descname">PluginNoHandlerError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginNoHandlerError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">215</span></code></p>
+<p>Plugin No Handler Error.</p>
+</dd></dl>
+
+<dl class="exception">
 <dt id="happypanda.common.exceptions.DatabaseError">
 <em class="property">exception </em><code class="descname">DatabaseError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">300</span></code></p>
@@ -1226,6 +1263,20 @@ msg: error message</dd>
 <em class="property">exception </em><code class="descname">NetworkError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.NetworkError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">700</span></code></p>
 <p>Base network exception, all network exceptions will derive from this</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.DownloadError">
+<em class="property">exception </em><code class="descname">DownloadError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DownloadError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">750</span></code></p>
+<p>Base download exception, all download exceptions will derive from this</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="happypanda.common.exceptions.DownloadMoveError">
+<em class="property">exception </em><code class="descname">DownloadMoveError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DownloadMoveError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">751</span></code></p>
+<p>Failed to move downloaded resource</p>
 </dd></dl>
 
 <dl class="exception">
