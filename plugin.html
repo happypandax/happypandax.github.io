@@ -1,20 +1,21 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plugins &#8212; HappyPanda X 0.12.4#163 documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugins &#8212; HappyPanda X 0.13.0#166 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="_static/script.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="_static/script.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="TODO" href="todo.html" />
@@ -41,7 +42,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.12.4#163</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.13.0#166</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -188,20 +189,23 @@ Before that though, here are some new terminologies to learn before diving in to
 <h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
 <p><strong>Command</strong>:</p>
 <blockquote>
-<div>Besides some core features that makes everything play nice together, a <strong>command</strong> is essentially what <em>a feature</em> in HPX is.
+<div><p>Besides some core features that makes everything play nice together, a <strong>command</strong> is essentially what <em>a feature</em> in HPX is.
 An example of a command in HPX would be <code class="docutils literal notranslate"><span class="pre">AddGallery</span></code>. This command, like its name implies, adds a gallery into HPX.
 <strong>Commands</strong> are self-contained and can act as a building-block for other commands (used by another command).
 Many of the functionalities provided by HPX are built up by using many different <strong>commands</strong>. These commands can range from being very simple doing just one small job
-to being complex and doing something big.</div></blockquote>
+to being complex and doing something big.</p>
+</div></blockquote>
 <p><strong>Command entry</strong>:</p>
 <blockquote>
-<div>This is what allows <strong>commands</strong> to be extensible. An <strong>entry</strong> allows other code to step in and run.
+<div><p>This is what allows <strong>commands</strong> to be extensible. An <strong>entry</strong> allows other code to step in and run.
 In plugin terms, it’s what allows a plugin handler to step in and run its code to either modify the process or do something else entirely.
-<strong>Command entries</strong> are defined by <strong>commands</strong> and it’s up to a command when and how an <strong>entry</strong> is used.</div></blockquote>
+<strong>Command entries</strong> are defined by <strong>commands</strong> and it’s up to a command when and how an <strong>entry</strong> is used.</p>
+</div></blockquote>
 <p><strong>Command event</strong>:</p>
 <blockquote>
-<div>A <strong>command event</strong> is almost like an <strong>entry</strong> with the difference that instead of modifying a process, a handler <em>reacts</em> to a process.
-Like an <strong>entry</strong>, it’s up to a command when and to what an <strong>event</strong> is emitted.</div></blockquote>
+<div><p>A <strong>command event</strong> is almost like an <strong>entry</strong> with the difference that instead of modifying a process, a handler <em>reacts</em> to a process.
+Like an <strong>entry</strong>, it’s up to a command when and to what an <strong>event</strong> is emitted.</p>
+</div></blockquote>
 </div>
 <div class="section" id="defining-a-plugin">
 <h2>Defining a plugin<a class="headerlink" href="#defining-a-plugin" title="Permalink to this headline">¶</a></h2>
@@ -236,17 +240,12 @@ Like an <strong>entry</strong>, it’s up to a command when and to what an <stro
 </pre></div>
 </div>
 <ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">id</span></code>: A UUID4 string. Unique across all plugins. This attribute is required to be present.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Path to the entry python file. Path is relative to this folder and must exist. This attribute is required to be present.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">shortname</span></code>: Your plugin name in short form. Must be all lowercase and cannot exceed <code class="docutils literal notranslate"><span class="pre">20</span></code> characters nor contain any whitespace. This attribute is required to be present.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">name</span></code>: Name of your plugin. This attribute is required to be present.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">author</span></code>: Name of plugin author. This attribute is required to be present.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">version</span></code>: A string of the version of your plugin. Must conform <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a>. This attribute is required to be present.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: A UUID4 string. Unique across all plugins. This attribute is required to be present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>: Path to the entry python file. Path is relative to this folder and must exist. This attribute is required to be present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shortname</span></code>: Your plugin name in short form. Must be all lowercase and cannot exceed <code class="docutils literal notranslate"><span class="pre">20</span></code> characters nor contain any whitespace. This attribute is required to be present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: Name of your plugin. This attribute is required to be present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">author</span></code>: Name of plugin author. This attribute is required to be present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code>: A string of the version of your plugin. Must conform <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a>. This attribute is required to be present.</p>
 <blockquote>
 <div><p>Examples of versioning that conforms <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.0</span><span class="o">.</span><span class="n">dev456</span><span class="p">,</span> <span class="mf">1.0</span><span class="n">a1</span><span class="p">,</span> <span class="mf">1.0</span><span class="n">a2</span><span class="o">.</span><span class="n">dev1</span><span class="p">,</span> <span class="mf">1.0</span><span class="n">b1</span><span class="o">.</span><span class="n">dev4</span><span class="p">,</span> <span class="mf">1.0</span><span class="n">rc1</span><span class="p">,</span> <span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="n">b2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.1</span><span class="o">.</span><span class="mi">2</span>
@@ -254,13 +253,10 @@ Like an <strong>entry</strong>, it’s up to a command when and to what an <stro
 </div>
 </div></blockquote>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">description</span></code>: A description of your plugin. This attribute is required to be present.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">test</span></code>: Path to the entry file for tests. Path is relative to this folder and must exist. This attribute is optional.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">website</span></code>: A url to a website for the plugin, author, etc. This attribute is optional.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">require</span></code>: A list of strings defining other plugins as dependencies. This attribute is optional.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: A description of your plugin. This attribute is required to be present.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code>: Path to the entry file for tests. Path is relative to this folder and must exist. This attribute is optional.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website</span></code>: A url to a website for the plugin, author, etc. This attribute is optional.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">require</span></code>: A list of strings defining other plugins as dependencies. This attribute is optional.</p>
 <blockquote>
 <div><p>A requirement must conform <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0508"><strong>PEP 508</strong></a> with a few exceptions.</p>
 <p>Other plugins can be referred to by their id or shortname.</p>
@@ -297,14 +293,14 @@ Markers can also be used freely like so:</p>
 The default location is the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> folder that exists inside the HPX root folder. It is also possible to define an additional location where to also look for plugins
 through the setting <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">On a MacOS HPX installation, the root HPX folder is inside the bundle at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code>.</p>
+<p class="admonition-title">Note</p>
+<p>On a MacOS HPX installation, the root HPX folder is inside the bundle at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code>.</p>
 </div>
 <p>After placing it in one of the locations, HPX should detect it and try to register it automatically either on startup or while running.
 You can see if the plugin has been registered successfully if it appears on the plugin listing in a HPX client or if HPX doesn’t print any warnings.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">It is recommended that you run HPX with the <code class="docutils literal notranslate"><span class="pre">--debug</span></code> and <code class="docutils literal notranslate"><span class="pre">--dev</span></code> commandline switches so that you can see what’s going on when your plugin is being loaded and in use.
+<p class="admonition-title">Tip</p>
+<p>It is recommended that you run HPX with the <code class="docutils literal notranslate"><span class="pre">--debug</span></code> and <code class="docutils literal notranslate"><span class="pre">--dev</span></code> commandline switches so that you can see what’s going on when your plugin is being loaded and in use.
 See <a class="reference internal" href="switches.html#command-line-arguments"><span class="std std-ref">Command-Line Arguments</span></a>.
 You can also disable all loggers except the plugin logger by adding them to the setting <code class="docutils literal notranslate"><span class="pre">advanced.disabled_loggers</span></code> to filter out all noise.</p>
 </div>
@@ -323,15 +319,15 @@ are true.</p>
 The entry file will be run in a special plugin environment and will be run just like any other Python code.</p>
 <p>There are a couple of notable things about the plugin environment:</p>
 <ul class="simple">
-<li>The entry file’s <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be set to <code class="docutils literal notranslate"><span class="pre">__main__</span></code> just like how Python does with its entry file.</li>
+<li><p>The entry file’s <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be set to <code class="docutils literal notranslate"><span class="pre">__main__</span></code> just like how Python does with its entry file.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal notranslate"><span class="pre">__file__</span></code> attribute in the entry file is correctly set to be the path of the entry file.</p>
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">__file__</span></code> attribute in the entry file is correctly set to be the path of the entry file.</p>
 </div>
 <ul class="simple">
-<li>The plugin environment has been provided the special HPX interface module <a class="reference internal" href="api_plugin.html#module-happypanda.core.plugin_interface" title="happypanda.core.plugin_interface"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__hpx__</span></code></a>.</li>
-<li>You can import any module and packages except <code class="docutils literal notranslate"><span class="pre">happypanda</span></code>.</li>
+<li><p>The plugin environment has been provided the special HPX interface module <a class="reference internal" href="api_plugin.html#module-happypanda.core.plugin_interface" title="happypanda.core.plugin_interface"><code class="xref py py-mod docutils literal notranslate"><span class="pre">__hpx__</span></code></a>.</p></li>
+<li><p>You can import any module and packages except <code class="docutils literal notranslate"><span class="pre">happypanda</span></code>.</p></li>
 </ul>
 <p>With all this in mind, we can now write code to interface with HPX. In the <code class="docutils literal notranslate"><span class="pre">main.py</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">__hpx__</span> <span class="k">as</span> <span class="nn">hpx</span>
@@ -376,9 +372,9 @@ We can use these events to initialize/terminate our stuff:</p>
 </pre></div>
 </div>
 <p>While it is true that we could also initialize on the module level, it is safer to do it on the <code class="docutils literal notranslate"><span class="pre">init</span></code> event reasons explained at <a class="reference internal" href="api_plugin.html#module-happypanda.core.commands.meta_cmd"><span class="std std-ref">Commands</span></a>.</p>
-<div class="admonition-todo admonition" id="index-5">
-<p class="first admonition-title">Todo</p>
-<p class="last">commands and capture tokens</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>commands and capture tokens</p>
 </div>
 </div>
 <div class="section" id="logging-and-errors">
@@ -397,23 +393,23 @@ HPX also has its own <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="section" id="debugging">
 <h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="index-6">
-<p class="first admonition-title">Todo</p>
-<p class="last">debugging plugins</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>debugging plugins</p>
 </div>
 </div>
 <div class="section" id="testing">
 <h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="index-7">
-<p class="first admonition-title">Todo</p>
-<p class="last">testing plugins</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>testing plugins</p>
 </div>
 </div>
 <div class="section" id="about-thread-safety">
 <h3>About thread safety<a class="headerlink" href="#about-thread-safety" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="index-8">
-<p class="first admonition-title">Todo</p>
-<p class="last">gevent and etc.</p>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>gevent and etc.</p>
 </div>
 </div>
 <div class="section" id="how-to-not-break-stuff">
@@ -423,10 +419,10 @@ and generally make it so things are not working as intended.
 Which is why care must be taken when writing plugins.</p>
 <p>Here are some <strong>DO</strong>’s and <strong>DON’T</strong>’s that should ensure that everything plays nicely together.</p>
 <ul class="simple">
-<li><strong>DON’T</strong> ever change the current working directory. Especially because of the issues explained in <a class="reference internal" href="#about-thread-safety"><span class="std std-ref">thread safety</span></a>.</li>
-<li><strong>DO</strong> always prefer the <a class="reference internal" href="api_plugin.html#plugin-api"><span class="std std-ref">Plugin API</span></a> instead of rolling your own thing. If you think the API is limited and doesn’t allow doing what you want to, consider opening a PR on Github instead.</li>
-<li><strong>DO</strong> always prefer using the <strong>commands</strong> that HPX provides, especially because it allows other things that are beyond your control a chance to run.</li>
-<li><strong>DO</strong> keep everything you produce in the plugin’s own folder when possible. Use <code class="docutils literal notranslate"><span class="pre">__hpx__.constants.current_dir</span></code> to retrieve the path to the plugin’s folder.</li>
+<li><p><strong>DON’T</strong> ever change the current working directory. Especially because of the issues explained in <a class="reference internal" href="#about-thread-safety"><span class="std std-ref">thread safety</span></a>.</p></li>
+<li><p><strong>DO</strong> always prefer the <a class="reference internal" href="api_plugin.html#plugin-api"><span class="std std-ref">Plugin API</span></a> instead of rolling your own thing. If you think the API is limited and doesn’t allow doing what you want to, consider opening a PR on Github instead.</p></li>
+<li><p><strong>DO</strong> always prefer using the <strong>commands</strong> that HPX provides, especially because it allows other things that are beyond your control a chance to run.</p></li>
+<li><p><strong>DO</strong> keep everything you produce in the plugin’s own folder when possible. Use <code class="docutils literal notranslate"><span class="pre">__hpx__.constants.current_dir</span></code> to retrieve the path to the plugin’s folder.</p></li>
 </ul>
 </div>
 <div class="section" id="importing-modules-and-packages">
@@ -441,9 +437,9 @@ Which is why care must be taken when writing plugins.</p>
 <div class="section" id="importing-external-packages">
 <h4>Importing external packages<a class="headerlink" href="#importing-external-packages" title="Permalink to this headline">¶</a></h4>
 <p>If you need an external package that is not listed in <a class="reference internal" href="#available-packages"><span class="std std-ref">Available packages</span></a> then here’s what you can do.</p>
-<div class="admonition-todo admonition" id="index-9">
-<p class="first admonition-title">Todo</p>
-<p class="last">external packages</p>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>external packages</p>
 </div>
 </div>
 </div>
@@ -453,157 +449,181 @@ Which is why care must be taken when writing plugins.</p>
 <p>Aside from the python standard library, these are the available packages HPX provides that can be imported in the plugin environment.</p>
 <p><em>aiohttp==3.2.1</em></p>
 <p><em>alabaster==0.7.12</em></p>
-<p><em>alembic==1.0.11</em></p>
-<p><em>altgraph==0.16.1</em></p>
+<p><em>alembic==1.4.2</em></p>
+<p><em>altgraph==0.17</em></p>
 <p><em>apipkg==1.5</em></p>
 <p><em>APScheduler==3.6.1</em></p>
 <p><em>argh==0.26.2</em></p>
-<p><em>arrow==0.14.4</em></p>
-<p><em>art==4.0</em></p>
-<p><em>asn1crypto==1.2.0</em></p>
+<p><em>arrow==0.15.6</em></p>
+<p><em>art==4.7</em></p>
+<p><em>asn1crypto==1.4.0</em></p>
 <p><em>async-timeout==3.0.1</em></p>
 <p><em>atomicwrites==1.3.0</em></p>
-<p><em>attrs==19.1.0</em></p>
-<p><em>autopep8==1.4.4</em></p>
-<p><em>Babel==2.7.0</em></p>
+<p><em>attrs==19.3.0</em></p>
+<p><em>autopep8==1.5.2</em></p>
+<p><em>Babel==2.8.0</em></p>
 <p><em>bcrypt==3.1.3</em></p>
 <p><em>beautifulsoup4==4.8.0</em></p>
 <p><em>bencodepy==0.9.5</em></p>
 <p><em>biplist==1.0.3</em></p>
-<p><em>bitarray==1.0.1</em></p>
+<p><em>bitarray==1.5.2</em></p>
 <p><em>blinker==1.4</em></p>
 <p><em>CacheControl==0.12.4</em></p>
-<p><em>cachetools==3.0.0</em></p>
-<p><em>certifi==2019.9.11</em></p>
-<p><em>cffi==1.13.1</em></p>
+<p><em>cachetools==4.1.0</em></p>
+<p><em>certifi==2020.6.20</em></p>
+<p><em>cffi==1.14.2</em></p>
 <p><em>chardet==3.0.4</em></p>
-<p><em>Click==7.0</em></p>
+<p><em>click==7.1.2</em></p>
 <p><em>colorlog==4.0.2</em></p>
 <p><em>cookies==2.2.1</em></p>
-<p><em>coverage==4.5.4</em></p>
+<p><em>coverage==5.2.1</em></p>
 <p><em>cryptography==2.3</em></p>
-<p><em>dateparser==0.7.0</em></p>
+<p><em>dateparser==0.7.4</em></p>
 <p><em>decorator==4.4.0</em></p>
-<p><em>diskcache==4.0.0</em></p>
+<p><em>diskcache==4.1.0</em></p>
 <p><em>dmgbuild==1.3.2</em></p>
-<p><em>docutils==0.15.2</em></p>
-<p><em>dogpile.cache==0.7.1</em></p>
+<p><em>docutils==0.16</em></p>
+<p><em>dogpile.cache==1.0.2</em></p>
 <p><em>ds-store==1.1.2</em></p>
+<p><em>elasticsearch==7.9.1</em></p>
+<p><em>elasticsearch-dsl==7.2.0</em></p>
 <p><em>entrypoints==0.3</em></p>
 <p><em>execnet==1.7.1</em></p>
 <p><em>fakeredis==1.0.5</em></p>
 <p><em>flake8==3.7.8</em></p>
-<p><em>Flask==1.1.1</em></p>
-<p><em>Flask-Caching==1.7.2</em></p>
-<p><em>Flask-Cors==3.0.7</em></p>
-<p><em>Flask-SocketIO==4.2.0</em></p>
-<p><em>furl==2.0.0</em></p>
-<p><em>gevent==1.4.0</em></p>
-<p><em>gprof2dot==2017.9.19</em></p>
-<p><em>greenlet==0.4.15</em></p>
-<p><em>happy-bittorrent==1.0.0</em></p>
-<p><em>happypandax-i18n==0.3.2</em></p>
-<p><em>idna==2.7</em></p>
-<p><em>idna-ssl==1.1.0</em></p>
-<p><em>imagesize==1.1.0</em></p>
-<p><em>importlib-metadata==0.23</em></p>
+<p><em>Flask==1.1.2</em></p>
+<p><em>Flask-Caching==1.9.0</em></p>
+<p><em>Flask-Cors==3.0.8</em></p>
+<p><em>Flask-SocketIO==4.3.1</em></p>
+<p><em>furl==2.1.0</em></p>
+<p><em>gevent==20.6.2</em></p>
+<p><em>gevent-websocket==0.10.1</em></p>
+<p><em>gprof2dot==2019.11.30</em></p>
+<p><em>greenlet==0.4.16</em></p>
+<p><em>happy-bittorrent</em></p>
+<p><em>&#64;</em></p>
+<p><em>https://github.com/Pewpews/happy-bittorrent/archive/master/1.0.0.zip</em></p>
+<p><em>happypandax-i18n</em></p>
+<p><em>&#64;</em></p>
+<p><em>https://github.com/happypandax/i18n/archive/master.zip</em></p>
+<p><em>idna==2.10</em></p>
+<p><em>imagesize==1.2.0</em></p>
+<p><em>importlib-metadata==0.18</em></p>
 <p><em>itsdangerous==1.1.0</em></p>
-<p><em>Jinja2==2.10.3</em></p>
-<p><em>karellen-geventws==1.0.2</em></p>
-<p><em>langcodes==1.4.1</em></p>
+<p><em>Jinja2==2.11.2</em></p>
+<p><em>langcodes==2.0.0</em></p>
 <p><em>mac-alias==2.0.7</em></p>
-<p><em>Mako==1.1.0</em></p>
+<p><em>Mako==1.1.3</em></p>
 <p><em>marisa-trie==0.7.5</em></p>
 <p><em>MarkupSafe==1.1.1</em></p>
 <p><em>mccabe==0.6.1</em></p>
-<p><em>mock==2.0.0</em></p>
+<p><em>mock==4.0.2</em></p>
 <p><em>more-itertools==7.2.0</em></p>
 <p><em>msgpack-python==0.5.6</em></p>
 <p><em>multidict==4.3.1</em></p>
-<p><em>mypy==0.740</em></p>
+<p><em>mypy==0.782</em></p>
 <p><em>mypy-extensions==0.4.3</em></p>
-<p><em>natsort==5.4.1</em></p>
+<p><em>natsort==7.0.1</em></p>
 <p><em>nose==1.3.7</em></p>
 <p><em>nplusone==1.0.0</em></p>
-<p><em>numpy==1.16.2</em></p>
-<p><em>ordered-set==3.0.0</em></p>
-<p><em>orderedmultidict==1.0</em></p>
+<p><em>numpy==1.16.4</em></p>
+<p><em>ordered-set==4.0.2</em></p>
+<p><em>orderedmultidict==1.0.1</em></p>
 <p><em>packaging==17.1</em></p>
 <p><em>pathtools==0.1.2</em></p>
-<p><em>pbr==5.0.0</em></p>
-<p><em>Pillow==6.0.0</em></p>
+<p><em>pbr==5.4.5</em></p>
+<p><em>Pillow==7.2.0</em></p>
 <p><em>pipenv==2018.11.26</em></p>
-<p><em>pluggy==0.13.0</em></p>
-<p><em>pockets==0.9.1</em></p>
+<p><em>pluggy==0.12.0</em></p>
 <p><em>pprintpp==0.4.0</em></p>
-<p><em>psutil==5.4.5</em></p>
+<p><em>psutil==5.7.2</em></p>
 <p><em>psycopg2-binary==2.8.3</em></p>
-<p><em>py==1.7.0</em></p>
-<p><em>pycodestyle==2.5.0</em></p>
-<p><em>pycparser==2.19</em></p>
+<p><em>py==1.8.0</em></p>
+<p><em>pycodestyle==2.6.0</em></p>
+<p><em>pycparser==2.20</em></p>
 <p><em>pyflakes==2.1.1</em></p>
-<p><em>Pygments==2.4.2</em></p>
-<p><em>PyInstaller==4.0.dev0+g5d4bbbee</em></p>
+<p><em>Pygments==2.6.1</em></p>
+<p><em>pyinstaller==4.0</em></p>
+<p><em>pyinstaller-hooks-contrib==2020.7</em></p>
 <p><em>pyOpenSSL==18.0.0</em></p>
-<p><em>pyparsing==2.4.2</em></p>
+<p><em>pyparsing==2.4.0</em></p>
 <p><em>PySide2==5.11.1</em></p>
 <p><em>pytest==5.1.1</em></p>
 <p><em>pytest-cov==2.7.1</em></p>
-<p><em>pytest-forked==1.1.3</em></p>
+<p><em>pytest-forked==1.3.0</em></p>
 <p><em>pytest-profiling==1.7.0</em></p>
 <p><em>pytest-xdist==1.29.0</em></p>
-<p><em>python-dateutil==2.8.0</em></p>
+<p><em>python-dateutil==2.8.1</em></p>
 <p><em>python-editor==1.0.4</em></p>
-<p><em>python-engineio==3.10.0</em></p>
-<p><em>python-socketio==4.3.1</em></p>
-<p><em>pytz==2019.3</em></p>
-<p><em>PyYAML==5.1.1</em></p>
-<p><em>QtAwesome==0.7.0.dev0</em></p>
+<p><em>python-engineio==3.13.2</em></p>
+<p><em>python-socketio==4.6.0</em></p>
+<p><em>pytz==2020.1</em></p>
+<p><em>PyYAML==5.3.1</em></p>
+<p><em>QtAwesome</em></p>
+<p><em>&#64;</em></p>
+<p><em>https://github.com/spyder-ide/qtawesome/archive/master.zip</em></p>
 <p><em>QtPy==1.5.1</em></p>
-<p><em>rarfile==3.0</em></p>
+<p><em>rarfile==4.0</em></p>
 <p><em>redis==3.2.1</em></p>
-<p><em>regex==2019.6.8</em></p>
+<p><em>regex==2020.7.14</em></p>
 <p><em>requests==2.20.1</em></p>
 <p><em>responses==0.9.0</em></p>
+<p><em>Rx==3.1.1</em></p>
 <p><em>sadisplay==0.4.8</em></p>
 <p><em>Send2Trash==1.5.0</em></p>
-<p><em>sentry-sdk==0.12.3</em></p>
+<p><em>sentry-sdk==0.16.5</em></p>
 <p><em>six==1.12.0</em></p>
 <p><em>snowballstemmer==2.0.0</em></p>
-<p><em>sortedcontainers==2.1.0</em></p>
-<p><em>soupsieve==1.9.5</em></p>
-<p><em>Sphinx==1.7.8</em></p>
-<p><em>sphinx-autodoc-napoleon-typehints==2.1.6</em></p>
+<p><em>sortedcontainers==2.2.0</em></p>
+<p><em>soupsieve==2.0.1</em></p>
+<p><em>Sphinx==3.2.1</em></p>
+<p><em>sphinx-autodoc-typehints==1.11.0</em></p>
 <p><em>sphinx-bootstrap-theme==0.7.1</em></p>
-<p><em>sphinxcontrib-autoprogram==0.1.4</em></p>
+<p><em>sphinxcontrib-applehelp==1.0.2</em></p>
+<p><em>sphinxcontrib-autoprogram==0.1.5</em></p>
+<p><em>sphinxcontrib-devhelp==1.0.2</em></p>
 <p><em>sphinxcontrib-documentedlist==0.6</em></p>
-<p><em>sphinxcontrib-napoleon==0.7</em></p>
-<p><em>sphinxcontrib-websupport==1.1.2</em></p>
-<p><em>SQLAlchemy==1.3.6</em></p>
-<p><em>sqlalchemy-json==0.2.2</em></p>
-<p><em>SQLAlchemy-Utils==0.34.1</em></p>
-<p><em>sqlparse==0.3.0</em></p>
+<p><em>sphinxcontrib-htmlhelp==1.0.3</em></p>
+<p><em>sphinxcontrib-jsmath==1.0.1</em></p>
+<p><em>sphinxcontrib-qthelp==1.0.3</em></p>
+<p><em>sphinxcontrib-serializinghtml==1.1.4</em></p>
+<p><em>SQLAlchemy==1.3.19</em></p>
+<p><em>sqlalchemy-json==0.4.0</em></p>
+<p><em>SQLAlchemy-Utils==0.36.8</em></p>
+<p><em>sqlparse==0.3.1</em></p>
 <p><em>sqltap==0.3.11</em></p>
-<p><em>Transcrypt==3.6.101</em></p>
+<p><em>stevedore==3.2.0</em></p>
+<p><em>Transcrypt==3.7.16</em></p>
 <p><em>treelib==1.5.1</em></p>
-<p><em>typed-ast==1.4.0</em></p>
-<p><em>typing==3.7.4.1</em></p>
-<p><em>typing-extensions==3.7.4.1</em></p>
-<p><em>tzlocal==2.0.0</em></p>
+<p><em>typed-ast==1.4.1</em></p>
+<p><em>typing-extensions==3.7.4.3</em></p>
+<p><em>tzlocal==2.1</em></p>
 <p><em>urllib3==1.24.3</em></p>
-<p><em>virtualenv==16.0.0</em></p>
-<p><em>virtualenv-clone==0.4.0</em></p>
+<p><em>virtualenv==16.6.0</em></p>
+<p><em>virtualenv-clone==0.5.3</em></p>
 <p><em>watchdog==0.9.0</em></p>
 <p><em>wcwidth==0.1.7</em></p>
-<p><em>Werkzeug==0.16.0</em></p>
-<p><em>yarl==1.3.0</em></p>
-<p><em>zipp==0.6.0</em></p>
+<p><em>Werkzeug==1.0.1</em></p>
+<p><em>yarl==1.5.1</em></p>
+<p><em>zipp==0.5.1</em></p>
+<p><em>zope.event==4.4</em></p>
+<p><em>zope.interface==5.1.0</em></p>
 </div>
 </div>
 
 
         </div>
           
+    </div>
+    <div class="row">
+        <script src="https://utteranc.es/client.js"
+                repo="happypandax/happypandax.github.io"
+                issue-term="pathname"
+                label="💬 docs"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
     </div>
 </div>
 
@@ -619,7 +639,7 @@ Which is why care must be taken when writing plugins.</p>
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

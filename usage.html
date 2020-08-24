@@ -1,20 +1,21 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Using HappyPanda X &#8212; HappyPanda X 0.12.4#163 documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using HappyPanda X &#8212; HappyPanda X 0.13.0#166 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="_static/script.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="_static/script.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Translations" href="translation.html" />
@@ -41,7 +42,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.12.4#163</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.13.0#166</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -196,12 +197,12 @@
 <h1>Using HappyPanda X<a class="headerlink" href="#using-happypanda-x" title="Permalink to this headline">¶</a></h1>
 <p>A default HPX installation contains the following two components:</p>
 <ul>
-<li><p class="first"><strong>HappyPanda X Server</strong></p>
+<li><p><strong>HappyPanda X Server</strong></p>
 <blockquote>
 <div><p>The backbone of everything. HPX and its associated clients and/or plugins won’t function without this running.</p>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>HappyPanda X Webclient</strong></p>
+<li><p><strong>HappyPanda X Webclient</strong></p>
 <blockquote>
 <div><p>The default frontend that comes with HPX.</p>
 <p>This component should also be running, even if you’re not going to use the client.
@@ -216,10 +217,10 @@ You can see the available settings <a class="reference internal" href="settings.
 <p>To use these settings, you create a configuration file named <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> in the root directory of HPX.</p>
 <p>You can generate an example configuration file with all settings listed with their default values if you run this command: <code class="docutils literal notranslate"><span class="pre">./happypandax</span> <span class="pre">--gen-config</span></code>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>On a MacOS HPX installation, the root HPX folder is inside the bundle at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code>.</li>
-<li>On Windows the executable is named <code class="docutils literal notranslate"><span class="pre">happypandax.exe</span></code> (with <code class="docutils literal notranslate"><span class="pre">.exe</span></code> suffix).</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>On a MacOS HPX installation, the root HPX folder is inside the bundle at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code>.</p></li>
+<li><p>On Windows the executable is named <code class="docutils literal notranslate"><span class="pre">happypandax.exe</span></code> (with <code class="docutils literal notranslate"><span class="pre">.exe</span></code> suffix).</p></li>
 </ul>
 </div>
 <p>Most of these settings can also be configured from a HPX client.</p>
@@ -227,8 +228,8 @@ You can see the available settings <a class="reference internal" href="settings.
 <h3>Choosing a database backend<a class="headerlink" href="#choosing-a-database-backend" title="Permalink to this headline">¶</a></h3>
 <p>HPX supports these database backends:</p>
 <ul class="simple">
-<li>SQLite</li>
-<li>PostgreSQL</li>
+<li><p>SQLite</p></li>
+<li><p>PostgreSQL</p></li>
 </ul>
 <p>Before using HPX, it is important that you settle on a backend because transferring data between backends is not supported.
 If you’re not sure on which one to pick, go with PostgreSQL, just to be on the safe side.
@@ -246,8 +247,8 @@ setup before you can use it. Look up a guide on google.</p>
 You could also refer to <a class="reference internal" href="switches.html#command-line-arguments"><span class="std std-ref">Command-Line Arguments</span></a>.</p>
 <p>To start the server (and the webclient with it) you just start one of the two executables.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">On a MacOS HPX installation, the app bundle is set to invoke <code class="docutils literal notranslate"><span class="pre">happypandax_gui</span></code> on launch.</p>
+<p class="admonition-title">Note</p>
+<p>On a MacOS HPX installation, the app bundle is set to invoke <code class="docutils literal notranslate"><span class="pre">happypandax_gui</span></code> on launch.</p>
 </div>
 </div>
 <div class="section" id="migrating-from-happypanda">
@@ -271,8 +272,8 @@ If you’re interested in building a client to work with HPX, head over to <a cl
 <p>Your HPX installation can be extended with plugins. If you wish to create a plugin for HPX then head over to <a class="reference internal" href="plugin.html#plugins"><span class="std std-ref">Plugins</span></a>.</p>
 <p>HPX looks for plugins in the following folders:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">[HPX]/plugins</span></code> which exists in your HPX root folder</li>
-<li>a folder defined by the <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code> setting</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[HPX]/plugins</span></code> which exists in your HPX root folder</p></li>
+<li><p>a folder defined by the <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code> setting</p></li>
 </ul>
 <p>If you’re on OS X, your root HPX folder is inside the bundle at <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X.app/Contents/MacOS/</span></code> which might be a bit bothersome, so I recommend that you
 define a new folder of your choosing where HPX can look for plugins in with the <code class="docutils literal notranslate"><span class="pre">plugin.plugin_dir</span></code> setting.</p>
@@ -321,8 +322,8 @@ To get other clients to accept your server with the self-signed certificate, pro
 <p>When using the self-signed certificate, browsers will complain about an unsecure connection. Since you’re using HPX for personal reasons and trust yourself (i hope so), you can go
 ahead and allow the connection by adding an exception.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you have enabled SSL for the <code class="docutils literal notranslate"><span class="pre">web</span></code> component, do remember to access through the <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> protocol and not <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or you won’t be able to connect.</p>
+<p class="admonition-title">Note</p>
+<p>If you have enabled SSL for the <code class="docutils literal notranslate"><span class="pre">web</span></code> component, do remember to access through the <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> protocol and not <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or you won’t be able to connect.</p>
 </div>
 </div>
 </div>
@@ -340,11 +341,11 @@ We can also set the ports with the settings <code class="docutils literal notran
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Press <code class="docutils literal notranslate"><span class="pre">Win</span> <span class="pre">+</span> <span class="pre">R</span></code> type <code class="docutils literal notranslate"><span class="pre">`firewall.cpl</span></code> in the dialogbox and press enter.</li>
-<li>On the lefthand side click on the text that says something along <em>Allow a program to pass through firewall</em>.</li>
-<li>Click on the <em>Change settings</em> button on the top and check if <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> is on the list. If not then click on the button <em>Allow another program</em> below.</li>
-<li>If <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> is not on the list then add either <code class="docutils literal notranslate"><span class="pre">happypandax.exe</span></code> or <code class="docutils literal notranslate"><span class="pre">happypandax_gui</span></code> (depending on which you use) or both to the list.</li>
-<li>Make sure the checkbox on the right is checked. Which one to check depends on your network configuration but you can just check both if you’re not sure.</li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Win</span> <span class="pre">+</span> <span class="pre">R</span></code> type <code class="docutils literal notranslate"><span class="pre">`firewall.cpl</span></code> in the dialogbox and press enter.</p></li>
+<li><p>On the lefthand side click on the text that says something along <em>Allow a program to pass through firewall</em>.</p></li>
+<li><p>Click on the <em>Change settings</em> button on the top and check if <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> is on the list. If not then click on the button <em>Allow another program</em> below.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">HappyPanda</span> <span class="pre">X</span></code> is not on the list then add either <code class="docutils literal notranslate"><span class="pre">happypandax.exe</span></code> or <code class="docutils literal notranslate"><span class="pre">happypandax_gui</span></code> (depending on which you use) or both to the list.</p></li>
+<li><p>Make sure the checkbox on the right is checked. Which one to check depends on your network configuration but you can just check both if you’re not sure.</p></li>
 </ol>
 </div>
 <div class="section" id="mac">
@@ -359,9 +360,9 @@ We can also set the ports with the settings <code class="docutils literal notran
 <div class="section" id="public-network">
 <h2>Public network<a class="headerlink" href="#public-network" title="Permalink to this headline">¶</a></h2>
 <p>Exposing HPX to the public network will allow you to access HPX from <em>any device connected to the internet</em>.</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">expose HPX</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>expose HPX</p>
 </div>
 </div>
 <div class="section" id="reverse-proxy">
@@ -420,6 +421,16 @@ We can also set the ports with the settings <code class="docutils literal notran
         </div>
           
     </div>
+    <div class="row">
+        <script src="https://utteranc.es/client.js"
+                repo="happypandax/happypandax.github.io"
+                issue-term="pathname"
+                label="💬 docs"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
 </div>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -434,7 +445,7 @@ We can also set the ports with the settings <code class="docutils literal notran
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

@@ -1,20 +1,21 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Installing &#8212; HappyPanda X 0.12.4#163 documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installing &#8212; HappyPanda X 0.13.0#166 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="_static/script.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="_static/script.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Using HappyPanda X" href="usage.html" />
@@ -41,7 +42,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.12.4#163</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.13.0#166</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -178,9 +179,9 @@
   <div class="section" id="installing">
 <h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic simple">
-<li>Download the archive/installer matching your OS from <a class="reference external" href="https://github.com/happypandax/server/releases">Github Releases</a></li>
-<li>Extract the archive or run the installer</li>
-<li>Continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a></li>
+<li><p>Download the archive/installer matching your OS from <a class="reference external" href="https://github.com/happypandax/server/releases">Github Releases</a></p></li>
+<li><p>Extract the archive or run the installer</p></li>
+<li><p>Continue to <a class="reference internal" href="usage.html#using-happypanda-x"><span class="std std-ref">Using HappyPanda X</span></a></p></li>
 </ol>
 <p>HPX is self-contained.
 Everything HPX creates and modifies, it does so in its own folder.
@@ -192,8 +193,8 @@ They are placed in your <code class="docutils literal notranslate"><span class="
 The setup file is included in the archive, look for <code class="docutils literal notranslate"><span class="pre">vc_redist.x86.exe</span></code>.
 If you’re using the installer, this setup file will automatically be run for you.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">HPX requires sufficient permissions to read and write from it’s own folder to be able to run properly. This is required for the auto-update process to work.
+<p class="admonition-title">Warning</p>
+<p>HPX requires sufficient permissions to read and write from it’s own folder to be able to run properly. This is required for the auto-update process to work.
 On Windows it means you shouldn’t install HPX somewhere like <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)</span></code>. If you still choose to do so just remember to run HPX as admin.
 (Not recommended)</p>
 </div>
@@ -260,27 +261,26 @@ Note that these environment variables are pre-defined by the image inside docker
 </div>
 <div class="section" id="about-the-commands">
 <h4>About the commands<a class="headerlink" href="#about-the-commands" title="Permalink to this headline">¶</a></h4>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">HPX_PORT</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">HPX_WEBPORT</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">HPX_TORRENTPORT</span></code>:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Your desired ports to connect to the HPX servers and clients with on your machine</td>
-</tr>
-<tr class="field-even field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code>:</th><td class="field-body">A folder on your machine where HPX should save its data, this includes config files, databases, backups, etc.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">HPX_CONTENT</span></code>:</th><td class="field-body">A folder for where manga and doujins are stored, you usually set this to your pre-existing folder where those things are stored.</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">RUN_IN_BACKGROUND</span></code>:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">If <code class="docutils literal notranslate"><span class="pre">false</span></code> the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name" colspan="2"><code class="docutils literal notranslate"><span class="pre">AUTOSTART_ON_BOOT</span></code>:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Automatically start the HPX container whenever Docker starts, available values are <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">on-failure</span></code> and <code class="docutils literal notranslate"><span class="pre">unless-stopped</span></code>, read more about it <a class="reference external" href="https://docs.docker.com/config/containers/start-containers-automatically/">here.</a></td>
-</tr>
-<tr class="field-even field"><th class="field-name"><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code>:</th><td class="field-body">You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd"><code class="docutils literal notranslate"><span class="pre">HPX_PORT</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">HPX_WEBPORT</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">HPX_TORRENTPORT</span></code></dt>
+<dd class="field-odd"><p>Your desired ports to connect to the HPX servers and clients with on your machine</p>
+</dd>
+<dt class="field-even"><code class="docutils literal notranslate"><span class="pre">HPX_DATA</span></code></dt>
+<dd class="field-even"><p>A folder on your machine where HPX should save its data, this includes config files, databases, backups, etc.</p>
+</dd>
+<dt class="field-odd"><code class="docutils literal notranslate"><span class="pre">HPX_CONTENT</span></code></dt>
+<dd class="field-odd"><p>A folder for where manga and doujins are stored, you usually set this to your pre-existing folder where those things are stored.</p>
+</dd>
+<dt class="field-even"><code class="docutils literal notranslate"><span class="pre">RUN_IN_BACKGROUND</span></code></dt>
+<dd class="field-even"><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code> the docker container will run in the foreground, meaning that closing the command-line window will also exit the docker container.</p>
+</dd>
+<dt class="field-odd"><code class="docutils literal notranslate"><span class="pre">AUTOSTART_ON_BOOT</span></code></dt>
+<dd class="field-odd"><p>Automatically start the HPX container whenever Docker starts, available values are <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">on-failure</span></code> and <code class="docutils literal notranslate"><span class="pre">unless-stopped</span></code>, read more about it <a class="reference external" href="https://docs.docker.com/config/containers/start-containers-automatically/">here.</a></p>
+</dd>
+<dt class="field-even"><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code></dt>
+<dd class="field-even"><p>You can read more about what the different docker flags means <a class="reference external" href="https://docs.docker.com/engine/reference/run/">here.</a></p>
+</dd>
+</dl>
 <p>The docker image is set so that subsequent arguments after the docker image name in the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command are passed to happypandax,
 meaning this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;yadda..</span> <span class="pre">yadda..&gt;</span> <span class="pre">twiddly/happypandax</span> <span class="pre">--help</span></code></p>
@@ -412,8 +412,8 @@ And the port is set to <code class="docutils literal notranslate"><span class="p
 <p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code></p>
 <p>If everything was successful, you should be able to open your browser and access HPX on <code class="docutils literal notranslate"><span class="pre">localhost:7008</span></code> (replace <code class="docutils literal notranslate"><span class="pre">7008</span></code> with whatever you set that port mapping to).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">In some cases, the postgres instance won’t get ready in time for when HPX starts, resulting in HPX saying it can’t connect to the database.
+<p class="admonition-title">Note</p>
+<p>In some cases, the postgres instance won’t get ready in time for when HPX starts, resulting in HPX saying it can’t connect to the database.
 If that happens, just run: <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--force-recreate</span></code></p>
 </div>
 <p>To run in the background, supply the <code class="docutils literal notranslate"><span class="pre">-d</span></code> flag:</p>
@@ -440,6 +440,16 @@ If that happens, just run: <code class="docutils literal notranslate"><span clas
         </div>
           
     </div>
+    <div class="row">
+        <script src="https://utteranc.es/client.js"
+                repo="happypandax/happypandax.github.io"
+                issue-term="pathname"
+                label="💬 docs"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
 </div>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -454,7 +464,7 @@ If that happens, just run: <code class="docutils literal notranslate"><span clas
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

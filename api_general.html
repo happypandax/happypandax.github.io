@@ -1,20 +1,21 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>General &#8212; HappyPanda X 0.12.4#163 documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General &#8212; HappyPanda X 0.13.0#166 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="_static/script.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="_static/script.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Server API" href="api.html" />
@@ -41,7 +42,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.12.4#163</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.13.0#166</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -204,661 +205,739 @@ Enum member names are case insensitive:</p>
 </div>
 <p>It is recommended that enum members are used by their <em>values</em> and not names.
 Enum member names may change sometime in the future. It is not likely to happen but no promises.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.CommandState">
-<em class="property">class </em><code class="descname">CommandState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.CommandState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">CommandState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.CommandState" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.failed">
-<code class="descname">failed</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.failed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failed</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.failed" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has finished with an error</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.finished">
-<code class="descname">finished</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.finished" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">finished</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.finished" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has finished succesfully</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.in_queue">
-<code class="descname">in_queue</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.in_queue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">in_queue</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.in_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has been scheduled to start</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.in_service">
-<code class="descname">in_service</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.in_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">in_service</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.in_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has been put in a service (but not started or stopped yet)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.out_of_service">
-<code class="descname">out_of_service</code><em class="property"> = 0</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.out_of_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">out_of_service</code><em class="property"> = 0</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.out_of_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has not been put in any service yet</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.started">
-<code class="descname">started</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.started" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">started</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.started" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has been started</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.CommandState.stopped">
-<code class="descname">stopped</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.stopped" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopped</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.CommandState.stopped" title="Permalink to this definition">¶</a></dt>
 <dd><p>command has been forcefully stopped without finishing</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ImageSize">
-<em class="property">class </em><code class="descname">ImageSize</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ImageSize" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ImageSize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ImageSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.Big">
-<code class="descname">Big</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Big" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Big</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Big" title="Permalink to this definition">¶</a></dt>
 <dd><p>Big image size</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.Medium">
-<code class="descname">Medium</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Medium" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Medium</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Medium" title="Permalink to this definition">¶</a></dt>
 <dd><p>Medium image size</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.Original">
-<code class="descname">Original</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Original" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Original</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Original" title="Permalink to this definition">¶</a></dt>
 <dd><p>Original image size</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.Small">
-<code class="descname">Small</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Small" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Small</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.Small" title="Permalink to this definition">¶</a></dt>
 <dd><p>Small image size</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.x1280">
-<code class="descname">x1280</code><em class="property"> = 12</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x1280" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">x1280</code><em class="property"> = 12</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x1280" title="Permalink to this definition">¶</a></dt>
 <dd><p>A maximum width of 1280</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.x1600">
-<code class="descname">x1600</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x1600" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">x1600</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x1600" title="Permalink to this definition">¶</a></dt>
 <dd><p>A maximum width of 2400</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.x2400">
-<code class="descname">x2400</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x2400" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">x2400</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x2400" title="Permalink to this definition">¶</a></dt>
 <dd><p>A maximum width of 2400</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.x768">
-<code class="descname">x768</code><em class="property"> = 14</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x768" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">x768</code><em class="property"> = 14</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x768" title="Permalink to this definition">¶</a></dt>
 <dd><p>A maximum width of 768</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ImageSize.x960">
-<code class="descname">x960</code><em class="property"> = 13</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x960" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">x960</code><em class="property"> = 13</em><a class="headerlink" href="#happypanda.interface.enums.ImageSize.x960" title="Permalink to this definition">¶</a></dt>
 <dd><p>A maximum width of 960</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ItemSort">
-<em class="property">class </em><code class="descname">ItemSort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemSort" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ItemSort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemSort" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.ArtistName">
-<code class="descname">ArtistName</code><em class="property"> = 20</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.ArtistName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ArtistName</code><em class="property"> = 20</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.ArtistName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Artist Name</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.CircleName">
-<code class="descname">CircleName</code><em class="property"> = 40</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CircleName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CircleName</code><em class="property"> = 40</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CircleName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Circle Name</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.CollectionDate">
-<code class="descname">CollectionDate</code><em class="property"> = 52</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionDate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CollectionDate</code><em class="property"> = 52</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionDate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection Date Added</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.CollectionGalleryCount">
-<code class="descname">CollectionGalleryCount</code><em class="property"> = 54</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionGalleryCount" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CollectionGalleryCount</code><em class="property"> = 54</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionGalleryCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection Gallery Count</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.CollectionName">
-<code class="descname">CollectionName</code><em class="property"> = 51</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CollectionName</code><em class="property"> = 51</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection Name</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.CollectionPublished">
-<code class="descname">CollectionPublished</code><em class="property"> = 53</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionPublished" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CollectionPublished</code><em class="property"> = 53</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionPublished" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection Date Published</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.CollectionRandom">
-<code class="descname">CollectionRandom</code><em class="property"> = 50</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionRandom" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CollectionRandom</code><em class="property"> = 50</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.CollectionRandom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection Random</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.FilterName">
-<code class="descname">FilterName</code><em class="property"> = 35</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.FilterName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">FilterName</code><em class="property"> = 35</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.FilterName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tag</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryArtist">
-<code class="descname">GalleryArtist</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryArtist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryArtist</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryArtist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Artist Name</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryCircle">
-<code class="descname">GalleryCircle</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryCircle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryCircle</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryCircle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Circle</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryDate">
-<code class="descname">GalleryDate</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryDate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryDate</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryDate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Date Added</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryPageCount">
-<code class="descname">GalleryPageCount</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryPageCount" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryPageCount</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryPageCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Page Count</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryPublished">
-<code class="descname">GalleryPublished</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryPublished" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryPublished</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryPublished" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Date Published</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryRandom">
-<code class="descname">GalleryRandom</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryRandom" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryRandom</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryRandom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Random</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryRating">
-<code class="descname">GalleryRating</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryRating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryRating</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryRating" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Rating</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryRead">
-<code class="descname">GalleryRead</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryRead" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryRead</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryRead" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Last Read</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryReadCount">
-<code class="descname">GalleryReadCount</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryReadCount" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryReadCount</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryReadCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Read Count</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryTitle">
-<code class="descname">GalleryTitle</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryTitle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryTitle</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryTitle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Title</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.GalleryUpdated">
-<code class="descname">GalleryUpdated</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryUpdated" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryUpdated</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.GalleryUpdated" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Last Updated</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.NamespaceTagNamespace">
-<code class="descname">NamespaceTagNamespace</code><em class="property"> = 30</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.NamespaceTagNamespace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">NamespaceTagNamespace</code><em class="property"> = 30</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.NamespaceTagNamespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Namespace</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.NamespaceTagTag">
-<code class="descname">NamespaceTagTag</code><em class="property"> = 31</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.NamespaceTagTag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">NamespaceTagTag</code><em class="property"> = 31</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.NamespaceTagTag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tag</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemSort.ParodyName">
-<code class="descname">ParodyName</code><em class="property"> = 45</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.ParodyName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ParodyName</code><em class="property"> = 45</em><a class="headerlink" href="#happypanda.interface.enums.ItemSort.ParodyName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parody Name</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ItemType">
-<em class="property">class </em><code class="descname">ItemType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ItemType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Artist">
-<code class="descname">Artist</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Artist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Artist</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Artist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Artist</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Category">
-<code class="descname">Category</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Category" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Category</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Category" title="Permalink to this definition">¶</a></dt>
 <dd><p>Category</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Circle">
-<code class="descname">Circle</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Circle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Circle</code><em class="property"> = 11</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Circle</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Collection">
-<code class="descname">Collection</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Collection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Collection</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Filter">
-<code class="descname">Filter</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Filter</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Gallery">
-<code class="descname">Gallery</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Gallery" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Gallery</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Grouping">
-<code class="descname">Grouping</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Grouping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Grouping</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Grouping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Namespace</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Language">
-<code class="descname">Language</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Language" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Language</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Language" title="Permalink to this definition">¶</a></dt>
 <dd><p>Language</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Page">
-<code class="descname">Page</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Page" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Page</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Page</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Parody">
-<code class="descname">Parody</code><em class="property"> = 13</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Parody" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Parody</code><em class="property"> = 13</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Parody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Parody</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Status">
-<code class="descname">Status</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Status</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Status</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Title">
-<code class="descname">Title</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Title" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Title</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Title" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gallery Title</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemType.Url">
-<code class="descname">Url</code><em class="property"> = 12</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Url</code><em class="property"> = 12</em><a class="headerlink" href="#happypanda.interface.enums.ItemType.Url" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ItemsKind">
-<em class="property">class </em><code class="descname">ItemsKind</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemsKind" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ItemsKind</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ItemsKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemsKind.all_items">
-<code class="descname">all_items</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.all_items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">all_items</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.all_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add all items</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemsKind.inbox_items">
-<code class="descname">inbox_items</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.inbox_items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">inbox_items</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.inbox_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add items from inbox</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemsKind.library_items">
-<code class="descname">library_items</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.library_items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">library_items</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.library_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add items from library</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemsKind.tags_missing_inbox_items">
-<code class="descname">tags_missing_inbox_items</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_inbox_items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags_missing_inbox_items</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_inbox_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add items with missing tags from inbox</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemsKind.tags_missing_items">
-<code class="descname">tags_missing_items</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags_missing_items</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add items with missing tags</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ItemsKind.tags_missing_library_items">
-<code class="descname">tags_missing_library_items</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_library_items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags_missing_library_items</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ItemsKind.tags_missing_library_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add items with missing tags from library</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.LogLevel">
-<em class="property">class </em><code class="descname">LogLevel</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.LogLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">LogLevel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.LogLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogLevel.CRITICAL">
-<code class="descname">CRITICAL</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.CRITICAL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CRITICAL</code><em class="property"> = 10</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.CRITICAL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Critical</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogLevel.DEBUG">
-<code class="descname">DEBUG</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.DEBUG" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEBUG</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.DEBUG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Debug</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogLevel.ERROR">
-<code class="descname">ERROR</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.ERROR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ERROR</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.ERROR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Error</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogLevel.INFO">
-<code class="descname">INFO</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.INFO" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">INFO</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.INFO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Info</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogLevel.WARNING">
-<code class="descname">WARNING</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.WARNING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">WARNING</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.LogLevel.WARNING" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.LogType">
-<em class="property">class </em><code class="descname">LogType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.LogType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">LogType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.LogType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogType.Changelog">
-<code class="descname">Changelog</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Changelog" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Changelog</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Changelog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changelog</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogType.Download">
-<code class="descname">Download</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Download" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Download</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Download" title="Permalink to this definition">¶</a></dt>
 <dd><p>Download</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.LogType.Metadata">
-<code class="descname">Metadata</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Metadata</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.LogType.Metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metadata</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="happypanda.interface.enums.PluginState">
-<em class="property">class </em><code class="descname">PluginState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.PluginState" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt id="happypanda.interface.enums.NotificationScope">
+<em class="property">class </em><code class="sig-name descname">NotificationScope</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.NotificationScope" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationScope.CurrentClient">
+<code class="sig-name descname">CurrentClient</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.NotificationScope.CurrentClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>CurrentClient</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationScope.Global">
+<code class="sig-name descname">Global</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.NotificationScope.Global" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="happypanda.interface.enums.NotificationType">
+<em class="property">class </em><code class="sig-name descname">NotificationType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.NotificationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Backup">
+<code class="sig-name descname">Backup</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Backup</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Custom">
+<code class="sig-name descname">Custom</code><em class="property"> = 99</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Custom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Indexer">
+<code class="sig-name descname">Indexer</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Indexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indexer</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Meta">
+<code class="sig-name descname">Meta</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Meta</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.PluginUpdate">
+<code class="sig-name descname">PluginUpdate</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.PluginUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>PluginUpdate</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Restart">
+<code class="sig-name descname">Restart</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Shutdown">
+<code class="sig-name descname">Shutdown</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.TrashSweeper">
+<code class="sig-name descname">TrashSweeper</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.TrashSweeper" title="Permalink to this definition">¶</a></dt>
+<dd><p>TrashSweeper</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="happypanda.interface.enums.NotificationType.Update">
+<code class="sig-name descname">Update</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.NotificationType.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="happypanda.interface.enums.PluginState">
+<em class="property">class </em><code class="sig-name descname">PluginState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.PluginState" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.PluginState.Disabled">
-<code class="descname">Disabled</code><em class="property"> = 0</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Disabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Disabled</code><em class="property"> = 0</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Disabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Puporsely disabled</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.PluginState.Enabled">
-<code class="descname">Enabled</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Enabled</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plugin is loaded and in use</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.PluginState.Failed">
-<code class="descname">Failed</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Failed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Failed</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Failed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Failed because of error</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.PluginState.Installed">
-<code class="descname">Installed</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Installed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Installed</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allowed to be enabled</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.PluginState.Registered">
-<code class="descname">Registered</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Registered" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Registered</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Registered" title="Permalink to this definition">¶</a></dt>
 <dd><p>Was just registered but not installed</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.PluginState.Unloaded">
-<code class="descname">Unloaded</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Unloaded" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Unloaded</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.PluginState.Unloaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unloaded because of dependencies, etc.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.Priority">
-<em class="property">class </em><code class="descname">Priority</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.Priority" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Priority</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.Priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.Priority.High">
-<code class="descname">High</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.Priority.High" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">High</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.Priority.High" title="Permalink to this definition">¶</a></dt>
 <dd><p>a high priority</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.Priority.Low">
-<code class="descname">Low</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.Priority.Low" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Low</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.Priority.Low" title="Permalink to this definition">¶</a></dt>
 <dd><p>a low priority</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.Priority.Medium">
-<code class="descname">Medium</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.Priority.Medium" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Medium</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.Priority.Medium" title="Permalink to this definition">¶</a></dt>
 <dd><p>a medium priority</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ProgressType">
-<em class="property">class </em><code class="descname">ProgressType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ProgressType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ProgressType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ProgressType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.CheckPluginUpdate">
-<code class="descname">CheckPluginUpdate</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.CheckPluginUpdate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CheckPluginUpdate</code><em class="property"> = 8</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.CheckPluginUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A check for plugin update</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.CheckUpdate">
-<code class="descname">CheckUpdate</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.CheckUpdate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CheckUpdate</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.CheckUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A check for new update</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.GalleryScan">
-<code class="descname">GalleryScan</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.GalleryScan" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryScan</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.GalleryScan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scanning for galleries</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.ItemAdd">
-<code class="descname">ItemAdd</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.ItemAdd" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ItemAdd</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.ItemAdd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adding items to the database</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.ItemRemove">
-<code class="descname">ItemRemove</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.ItemRemove" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ItemRemove</code><em class="property"> = 7</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.ItemRemove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removing items from the database</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.Request">
-<code class="descname">Request</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.Request" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Request</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.Request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Network request</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.Unknown">
-<code class="descname">Unknown</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.Unknown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Unknown</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.Unknown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unknown</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.UpdateApplication">
-<code class="descname">UpdateApplication</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdateApplication" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">UpdateApplication</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdateApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updating application</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ProgressType.UpdatePlugin">
-<code class="descname">UpdatePlugin</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdatePlugin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">UpdatePlugin</code><em class="property"> = 9</em><a class="headerlink" href="#happypanda.interface.enums.ProgressType.UpdatePlugin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Upldating plugin</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.QueueType">
-<em class="property">class </em><code class="descname">QueueType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.QueueType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">QueueType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.QueueType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.QueueType.Download">
-<code class="descname">Download</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Download" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Download</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Download" title="Permalink to this definition">¶</a></dt>
 <dd><p>a queue for downloading item</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.QueueType.Metadata">
-<code class="descname">Metadata</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Metadata</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.QueueType.Metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>a queue for fetching metadata</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ServerCommand">
-<em class="property">class </em><code class="descname">ServerCommand</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ServerCommand" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ServerCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ServerCommand" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ServerCommand.Logout">
-<code class="descname">Logout</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.Logout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Logout</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.Logout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logout</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ServerCommand.RequestAuth">
-<code class="descname">RequestAuth</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.RequestAuth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">RequestAuth</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.RequestAuth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Request authentication</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ServerCommand.ServerQuit">
-<code class="descname">ServerQuit</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.ServerQuit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ServerQuit</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.ServerQuit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shut down the server</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ServerCommand.ServerRestart">
-<code class="descname">ServerRestart</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.ServerRestart" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ServerRestart</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ServerCommand.ServerRestart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart the server</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.TemporaryViewType">
-<em class="property">class </em><code class="descname">TemporaryViewType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.TemporaryViewType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">TemporaryViewType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.TemporaryViewType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.TemporaryViewType.GalleryAddition">
-<code class="descname">GalleryAddition</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.TemporaryViewType.GalleryAddition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GalleryAddition</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.TemporaryViewType.GalleryAddition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains gallery items to be added</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="happypanda.interface.enums.ViewType">
-<em class="property">class </em><code class="descname">ViewType</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ViewType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ViewType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.interface.enums.ViewType" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ViewType.All">
-<code class="descname">All</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.All" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">All</code><em class="property"> = 6</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.All" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains all items except items in Trash</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ViewType.Favorite">
-<code class="descname">Favorite</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Favorite" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Favorite</code><em class="property"> = 2</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Favorite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains all favourite items (mutually exclusive with items in Inbox)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ViewType.Inbox">
-<code class="descname">Inbox</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Inbox" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Inbox</code><em class="property"> = 3</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Inbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains only items in Inbox</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ViewType.Library">
-<code class="descname">Library</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Library" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Library</code><em class="property"> = 1</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Library" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains all items except items in Inbox and Trash</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ViewType.ReadLater">
-<code class="descname">ReadLater</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.ReadLater" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ReadLater</code><em class="property"> = 5</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.ReadLater" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains only items in ReadLater</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="happypanda.interface.enums.ViewType.Trash">
-<code class="descname">Trash</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Trash" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Trash</code><em class="property"> = 4</em><a class="headerlink" href="#happypanda.interface.enums.ViewType.Trash" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains only items in Trash</p>
 </dd></dl>
 
@@ -870,432 +949,438 @@ Enum member names may change sometime in the future. It is not likely to happen 
 <span id="exceptions"></span><h2>Exceptions<a class="headerlink" href="#module-happypanda.common.exceptions" title="Permalink to this headline">¶</a></h2>
 <p>These are errors that HPX may raise.
 Any error raised not on this list is an <em>unhandled exception</em> and usually classifies as a critical error.</p>
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.HappypandaError">
-<em class="property">exception </em><code class="descname">HappypandaError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.HappypandaError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">HappypandaError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.HappypandaError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">100</span></code></p>
 <p>Base Happypanda exception, all exceptions will derive from this.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.CoreError">
-<em class="property">exception </em><code class="descname">CoreError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CoreError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">CoreError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CoreError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">101</span></code></p>
 <p>Base Happypanda core exception, all core exceptions will derive from this.</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>Args:</dt>
-<dd>where: where the error occured
-message: explanation of error</dd>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>where: where the error occured
+message: explanation of error</p>
+</dd>
 </dl>
 </div></blockquote>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.TimeoutError">
-<em class="property">exception </em><code class="descname">TimeoutError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.TimeoutError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">TimeoutError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.TimeoutError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">102</span></code></p>
 <p>Timed out</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.SettingsError">
-<em class="property">exception </em><code class="descname">SettingsError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SettingsError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">SettingsError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SettingsError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">110</span></code></p>
 <p>Base settings error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.SettingsNoExistError">
-<em class="property">exception </em><code class="descname">SettingsNoExistError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SettingsNoExistError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">SettingsNoExistError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SettingsNoExistError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">111</span></code></p>
 <p>Settings doesn’t exist error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.InvalidSettingError">
-<em class="property">exception </em><code class="descname">InvalidSettingError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.InvalidSettingError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">InvalidSettingError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.InvalidSettingError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">112</span></code></p>
 <p>Invalid setting error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.CommandError">
-<em class="property">exception </em><code class="descname">CommandError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CommandError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">CommandError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CommandError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">120</span></code></p>
 <p>Base command error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.CommandAlreadyRunningError">
-<em class="property">exception </em><code class="descname">CommandAlreadyRunningError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CommandAlreadyRunningError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">CommandAlreadyRunningError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.CommandAlreadyRunningError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">121</span></code></p>
 <p>Command is already running</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ScanError">
-<em class="property">exception </em><code class="descname">ScanError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ScanError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ScanError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ScanError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">130</span></code></p>
 <p>Item scan error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginError">
-<em class="property">exception </em><code class="descname">PluginError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">200</span></code></p>
 <p>Base plugin exception, all plugin exceptions will derive from this.</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>Args:</dt>
-<dd>name: name of plugin
-message: explanation of error</dd>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>name: name of plugin
+message: explanation of error</p>
+</dd>
 </dl>
 </div></blockquote>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginAttributeError">
-<em class="property">exception </em><code class="descname">PluginAttributeError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginAttributeError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginAttributeError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginAttributeError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">201</span></code></p>
 <p>Plugin Attribute Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginCommandError">
-<em class="property">exception </em><code class="descname">PluginCommandError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginCommandError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginCommandError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginCommandError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">202</span></code></p>
 <p>Plugin Command Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginCommandNotFoundError">
-<em class="property">exception </em><code class="descname">PluginCommandNotFoundError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginCommandNotFoundError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginCommandNotFoundError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginCommandNotFoundError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">203</span></code></p>
 <p>Plugin Command Not Found Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginHandlerError">
-<em class="property">exception </em><code class="descname">PluginHandlerError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginHandlerError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginHandlerError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginHandlerError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">204</span></code></p>
 <p>Plugin Handler Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginSignatureError">
-<em class="property">exception </em><code class="descname">PluginSignatureError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginSignatureError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginSignatureError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginSignatureError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">205</span></code></p>
 <p>Plugin Signature Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginLoadError">
-<em class="property">exception </em><code class="descname">PluginLoadError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginLoadError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginLoadError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginLoadError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">206</span></code></p>
 <p>Plugin Load Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginInitError">
-<em class="property">exception </em><code class="descname">PluginInitError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginInitError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginInitError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginInitError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">207</span></code></p>
 <p>Plugin Init Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginInstallError">
-<em class="property">exception </em><code class="descname">PluginInstallError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginInstallError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginInstallError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginInstallError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">208</span></code></p>
 <p>Plugin Install Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginUpdateError">
-<em class="property">exception </em><code class="descname">PluginUpdateError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginUpdateError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">210</span></code></p>
 <p>Plugin Update No HPlugin Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginUpdateHPluginError">
-<em class="property">exception </em><code class="descname">PluginUpdateHPluginError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateHPluginError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginUpdateHPluginError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateHPluginError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">211</span></code></p>
 <p>Plugin Update HPlugin Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginUpdateInvalidURLError">
-<em class="property">exception </em><code class="descname">PluginUpdateInvalidURLError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateInvalidURLError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginUpdateInvalidURLError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateInvalidURLError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">212</span></code></p>
 <p>Plugin Update Invalid Url Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginUpdateCheckError">
-<em class="property">exception </em><code class="descname">PluginUpdateCheckError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateCheckError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginUpdateCheckError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateCheckError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">213</span></code></p>
 <p>Plugin Update Check Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginUpdateDownloadError">
-<em class="property">exception </em><code class="descname">PluginUpdateDownloadError</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateDownloadError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginUpdateDownloadError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginUpdateDownloadError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">214</span></code></p>
 <p>Plugin Update Down Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.PluginNoHandlerError">
-<em class="property">exception </em><code class="descname">PluginNoHandlerError</code><span class="sig-paren">(</span><em>name_or_node</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginNoHandlerError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">PluginNoHandlerError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_or_node</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.PluginNoHandlerError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">215</span></code></p>
 <p>Plugin No Handler Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DatabaseError">
-<em class="property">exception </em><code class="descname">DatabaseError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DatabaseError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">300</span></code></p>
 <p>Base database exception, all database exceptions will derive from this.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DatabaseInitError">
-<em class="property">exception </em><code class="descname">DatabaseInitError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseInitError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DatabaseInitError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseInitError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">301</span></code></p>
 <p>Database initialization error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DatabaseVersionError">
-<em class="property">exception </em><code class="descname">DatabaseVersionError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseVersionError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DatabaseVersionError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseVersionError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">302</span></code></p>
 <p>Database version error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DatabaseItemNotFoundError">
-<em class="property">exception </em><code class="descname">DatabaseItemNotFoundError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseItemNotFoundError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DatabaseItemNotFoundError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseItemNotFoundError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">303</span></code></p>
 <p>Database item not found error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DatabaseDataError">
-<em class="property">exception </em><code class="descname">DatabaseDataError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseDataError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DatabaseDataError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DatabaseDataError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">304</span></code></p>
 <p>Database data error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.EmptyNameError">
-<em class="property">exception </em><code class="descname">EmptyNameError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.EmptyNameError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">EmptyNameError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.EmptyNameError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">305</span></code></p>
 <p>Database empty name error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ServerError">
-<em class="property">exception </em><code class="descname">ServerError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ServerError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ServerError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ServerError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">400</span></code></p>
 <p>Base server exception, all server exceptions will derive from this.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ClientDisconnectError">
-<em class="property">exception </em><code class="descname">ClientDisconnectError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ClientDisconnectError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ClientDisconnectError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ClientDisconnectError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">401</span></code></p>
 <p>Client disconnected.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.InvalidMessage">
-<em class="property">exception </em><code class="descname">InvalidMessage</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.InvalidMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">InvalidMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.InvalidMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">403</span></code></p>
 <p>Invalid message error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.APIError">
-<em class="property">exception </em><code class="descname">APIError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.APIError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">APIError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.APIError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">404</span></code></p>
 <p>API error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.APIRequirementError">
-<em class="property">exception </em><code class="descname">APIRequirementError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.APIRequirementError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">APIRequirementError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.APIRequirementError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">405</span></code></p>
 <p>API requirement error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.AuthError">
-<em class="property">exception </em><code class="descname">AuthError</code><span class="sig-paren">(</span><em>where</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">AuthError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">406</span></code></p>
 <p>Auth Base Error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.AuthRequiredError">
-<em class="property">exception </em><code class="descname">AuthRequiredError</code><span class="sig-paren">(</span><em>where</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthRequiredError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">AuthRequiredError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthRequiredError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">407</span></code></p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.SessionExpiredError">
-<em class="property">exception </em><code class="descname">SessionExpiredError</code><span class="sig-paren">(</span><em>where</em>, <em>session_id</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SessionExpiredError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">SessionExpiredError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">session_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.SessionExpiredError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">408</span></code></p>
 <p>Session expired error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.EnumError">
-<em class="property">exception </em><code class="descname">EnumError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.EnumError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">EnumError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.EnumError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">409</span></code></p>
 <p>Enum error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ParsingError">
-<em class="property">exception </em><code class="descname">ParsingError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ParsingError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ParsingError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ParsingError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">410</span></code></p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.AuthWrongCredentialsError">
-<em class="property">exception </em><code class="descname">AuthWrongCredentialsError</code><span class="sig-paren">(</span><em>where</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthWrongCredentialsError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">AuthWrongCredentialsError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthWrongCredentialsError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">411</span></code></p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.AuthMissingCredentials">
-<em class="property">exception </em><code class="descname">AuthMissingCredentials</code><span class="sig-paren">(</span><em>where</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthMissingCredentials" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">AuthMissingCredentials</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.AuthMissingCredentials" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">412</span></code></p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
+<dt id="happypanda.common.exceptions.UserPermissionError">
+<em class="property">exception </em><code class="sig-name descname">UserPermissionError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.UserPermissionError" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">413</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ClientError">
-<em class="property">exception </em><code class="descname">ClientError</code><span class="sig-paren">(</span><em>name</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ClientError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ClientError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ClientError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">500</span></code></p>
 <p>Base client exception, all client exceptions will derive from this.</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>Args:</dt>
-<dd>name: name of client
-msg: error message</dd>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>name: name of client
+msg: error message</p>
+</dd>
 </dl>
 </div></blockquote>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ConnectionError">
-<em class="property">exception </em><code class="descname">ConnectionError</code><span class="sig-paren">(</span><em>name</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ConnectionError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ConnectionError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ConnectionError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">501</span></code></p>
 <p>Server connection error.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ServerDisconnectError">
-<em class="property">exception </em><code class="descname">ServerDisconnectError</code><span class="sig-paren">(</span><em>name</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ServerDisconnectError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ServerDisconnectError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ServerDisconnectError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">502</span></code></p>
 <p>Server disconnected.</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveError">
-<em class="property">exception </em><code class="descname">ArchiveError</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">600</span></code></p>
 <p>Base archive exception, all archive exceptions will derive from this</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveCreateError">
-<em class="property">exception </em><code class="descname">ArchiveCreateError</code><span class="sig-paren">(</span><em>filepath</em>, <em>error</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveCreateError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveCreateError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filepath</span></em>, <em class="sig-param"><span class="n">error</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveCreateError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">601</span></code></p>
 <p>Could not create archive object</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveCorruptError">
-<em class="property">exception </em><code class="descname">ArchiveCorruptError</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveCorruptError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveCorruptError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filepath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveCorruptError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">602</span></code></p>
 <p>Bad file found in archive</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveFileNotFoundError">
-<em class="property">exception </em><code class="descname">ArchiveFileNotFoundError</code><span class="sig-paren">(</span><em>f</em>, <em>archive_f</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveFileNotFoundError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveFileNotFoundError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">archive_f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveFileNotFoundError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">603</span></code></p>
 <p>File not found in archive</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveUnsupportedError">
-<em class="property">exception </em><code class="descname">ArchiveUnsupportedError</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveUnsupportedError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveUnsupportedError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveUnsupportedError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">604</span></code></p>
 <p>Unsupported archive</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveExtractError">
-<em class="property">exception </em><code class="descname">ArchiveExtractError</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveExtractError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveExtractError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveExtractError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">605</span></code></p>
 <p>Archive extraction error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ArchiveExistError">
-<em class="property">exception </em><code class="descname">ArchiveExistError</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveExistError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ArchiveExistError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ArchiveExistError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">606</span></code></p>
 <p>Archive does not exist error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.NotAnArchiveError">
-<em class="property">exception </em><code class="descname">NotAnArchiveError</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.NotAnArchiveError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">NotAnArchiveError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.NotAnArchiveError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">607</span></code></p>
 <p>Not an archive</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.NetworkError">
-<em class="property">exception </em><code class="descname">NetworkError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.NetworkError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">NetworkError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.NetworkError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">700</span></code></p>
 <p>Base network exception, all network exceptions will derive from this</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DownloadError">
-<em class="property">exception </em><code class="descname">DownloadError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DownloadError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DownloadError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DownloadError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">750</span></code></p>
 <p>Base download exception, all download exceptions will derive from this</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.DownloadMoveError">
-<em class="property">exception </em><code class="descname">DownloadMoveError</code><span class="sig-paren">(</span><em>message</em>, <em>properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DownloadMoveError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">DownloadMoveError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.DownloadMoveError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">751</span></code></p>
 <p>Failed to move downloaded resource</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.ItemError">
-<em class="property">exception </em><code class="descname">ItemError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em>, <em>item=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ItemError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">ItemError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">item</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.ItemError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">800</span></code></p>
 <p>Base item exception, all item exceptions will derive from this</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.FailedToMoveError">
-<em class="property">exception </em><code class="descname">FailedToMoveError</code><span class="sig-paren">(</span><em>where</em>, <em>message</em>, <em>item=None</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.FailedToMoveError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">FailedToMoveError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">where</span></em>, <em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">item</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.FailedToMoveError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">801</span></code></p>
 <p>Failed to move item source error</p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="happypanda.common.exceptions.JSONParseError">
-<em class="property">exception </em><code class="descname">JSONParseError</code><span class="sig-paren">(</span><em>json_data</em>, <em>name</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.JSONParseError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-name descname">JSONParseError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">json_data</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#happypanda.common.exceptions.JSONParseError" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Code</strong>: <code class="docutils literal notranslate"><span class="pre">900</span></code></p>
 <p>JSON parse error.</p>
 </dd></dl>
@@ -1309,21 +1394,21 @@ msg: error message</dd>
 <h4>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h4>
 <p><strong>Collection</strong> -&gt; <strong>Grouping</strong> -&gt; <strong>Gallery</strong> -&gt; <strong>Page</strong></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last"><strong>Grouping</strong> is not actually a direct descendant of <strong>Collection</strong> as can be seen below,
+<p class="admonition-title">Note</p>
+<p><strong>Grouping</strong> is not actually a direct descendant of <strong>Collection</strong> as can be seen below,
 but it is sometimes helpful to think of it as such.</p>
 </div>
 </div>
 <div class="section" id="recommended-usage">
 <h4>Recommended Usage<a class="headerlink" href="#recommended-usage" title="Permalink to this headline">¶</a></h4>
 <ul>
-<li><p class="first"><strong>Collection</strong></p>
+<li><p><strong>Collection</strong></p>
 <blockquote>
 <div><p>Conventions (e.g. <code class="docutils literal notranslate"><span class="pre">C90</span></code>), magazine volumes (e.g. <code class="docutils literal notranslate"><span class="pre">Girls</span> <span class="pre">forM</span> <span class="pre">vol.14</span></code>),
 tankōbon’s or a compilation of related/personal galleries</p>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Grouping</strong></p>
+<li><p><strong>Grouping</strong></p>
 <blockquote>
 <div><p>Think of this as a namespace for related galleries. It is ideal for grouping
 multi-work galleries, so you use this as the series name. Since tankōbon’s also sometimes feature
@@ -1332,7 +1417,7 @@ a complete series, you can use this for that too. It is not recommended to put t
 <strong>Gallery</strong>’s <code class="docutils literal notranslate"><span class="pre">number</span></code> field is used in the context of a <strong>Grouping</strong>.</p>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>GalleryFilter</strong></p>
+<li><p><strong>GalleryFilter</strong></p>
 <blockquote>
 <div><p>Think of this as those <em>smart-playlists</em> in music applications. It’s a compilation of galleries put
 together by the user either manually or through automatic search filtering. If you’ve used the old
@@ -1341,7 +1426,7 @@ Recommended usage is “anything”. It could range from your favorite fetishes 
 search filter you’re tired of always typing in.</p>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Gallery</strong></p>
+<li><p><strong>Gallery</strong></p>
 <blockquote>
 <div><p>A single chapter, then you group these chapters under a <strong>Grouping</strong> to form a complete series.</p>
 </div></blockquote>
@@ -1351,17 +1436,17 @@ search filter you’re tired of always typing in.</p>
 <div class="section" id="special-notes">
 <h4>Special Notes<a class="headerlink" href="#special-notes" title="Permalink to this headline">¶</a></h4>
 <ul>
-<li><p class="first"><strong>Gallery</strong></p>
+<li><p><strong>Gallery</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li>A <strong>Gallery</strong> can have multiple <strong>Title</strong>, <strong>Artist</strong> and <strong>Parody</strong></li>
-<li>A <strong>Gallery</strong> can be in multiple <strong>Collection</strong> and <strong>GalleryFilter</strong></li>
-<li>A <strong>Gallery</strong> can only be in <strong>one</strong> <strong>Grouping</strong></li>
-<li>A <strong>Gallery</strong> will <em>always</em> be in a <strong>Grouping</strong></li>
+<li><p>A <strong>Gallery</strong> can have multiple <strong>Title</strong>, <strong>Artist</strong> and <strong>Parody</strong></p></li>
+<li><p>A <strong>Gallery</strong> can be in multiple <strong>Collection</strong> and <strong>GalleryFilter</strong></p></li>
+<li><p>A <strong>Gallery</strong> can only be in <strong>one</strong> <strong>Grouping</strong></p></li>
+<li><p>A <strong>Gallery</strong> will <em>always</em> be in a <strong>Grouping</strong></p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Tags</strong></p>
+<li><p><strong>Tags</strong></p>
 <blockquote>
 <div><p><strong>Gallery</strong> and <strong>Page</strong> are the only taggable items.
 <strong>Collection</strong> and <strong>Grouping</strong> are <em>not</em> taggable, but they can display, and are searchable through tags of their children <strong>Gallery</strong>.</p>
@@ -1371,15 +1456,17 @@ search filter you’re tired of always typing in.</p>
 <div class="section" id="alias">
 <h5>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h5>
 <blockquote>
-<div>…</div></blockquote>
+<div><p>…</p>
+</div></blockquote>
 </div>
 <div class="section" id="parent">
 <h5>Parent<a class="headerlink" href="#parent" title="Permalink to this headline">¶</a></h5>
 <blockquote>
-<div>…</div></blockquote>
+<div><p>…</p>
+</div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last"><em>You can right-click on the image and choose “Show image” to view it in its full dimensions</em></p>
+<p class="admonition-title">Note</p>
+<p><em>You can right-click on the image and choose “Show image” to view it in its full dimensions</em></p>
 </div>
 <img alt="_images/schema.png" src="_images/schema.png" />
 </div>
@@ -1391,6 +1478,16 @@ search filter you’re tired of always typing in.</p>
 
         </div>
           
+    </div>
+    <div class="row">
+        <script src="https://utteranc.es/client.js"
+                repo="happypandax/happypandax.github.io"
+                issue-term="pathname"
+                label="💬 docs"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
     </div>
 </div>
 
@@ -1406,7 +1503,7 @@ search filter you’re tired of always typing in.</p>
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

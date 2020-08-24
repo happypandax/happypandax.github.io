@@ -24,7 +24,7 @@ import sys
 import sphinx_bootstrap_theme
 import collections
 from sphinx.util import inspect as sinspect
-from sphinx_autodoc_napoleon_typehints import process_docstring
+from sphinx_autodoc_typehints import process_docstring
 from sphinx.ext.napoleon import Config, docstring
 from os.path import basename
 from io import StringIO
@@ -53,7 +53,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.autosectionlabel',
     'sphinxcontrib.documentedlist',
     'sphinx.ext.napoleon',
-    'sphinx_autodoc_napoleon_typehints',
+    'sphinx_autodoc_typehints',
     'sphinxcontrib.autoprogram'
     ]
 

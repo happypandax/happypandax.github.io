@@ -1,20 +1,21 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Command-Line Arguments &#8212; HappyPanda X 0.12.4#163 documentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Command-Line Arguments &#8212; HappyPanda X 0.13.0#166 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="_static/script.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="_static/script.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="FAQ" href="faq.html" />
@@ -41,7 +42,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/hpx_logo.svg"></span>
           HappyPanda X</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.12.4#163</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.13.0#166</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -167,8 +168,8 @@
         <div class="col-md-9 content">
             
   <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Command-Line arguments takes precedence over similar settings defined in the configuration file.</p>
+<p class="admonition-title">Note</p>
+<p>Command-Line arguments takes precedence over similar settings defined in the configuration file.</p>
 </div>
 <p>To use these command-line switches, open a terminal or command-prompt inside the installation folder of HPX and execute:</p>
 <p><code class="docutils literal notranslate"><span class="pre">happypandax.exe</span> <span class="pre">--help</span></code> (omit the <cite>.exe</cite> suffix if you’re not on Windows).</p>
@@ -184,117 +185,117 @@
 <span class="go">                              ACTION ...</span>
 </pre></div>
 </div>
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-h">
-<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-h" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-h">
+<span id="cmdoption-command-line-arguments-h"></span><span id="cmdoption-Command-Line-Arguments-help"></span><span id="cmdoption-command-line-arguments-help"></span><code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>show this help message and exit</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-p">
-<code class="descname">-p</code><code class="descclassname"> &lt;port&gt;</code><code class="descclassname">, </code><code class="descname">--port</code><code class="descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-p" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-p">
+<span id="cmdoption-command-line-arguments-p"></span><span id="cmdoption-Command-Line-Arguments-port"></span><span id="cmdoption-command-line-arguments-port"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"> &lt;port&gt;</code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--port</code><code class="sig-prename descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-p" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which port to start the server on (default: 7007)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-torrent-port">
-<code class="descname">--torrent-port</code><code class="descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-torrent-port" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-torrent-port">
+<span id="cmdoption-command-line-arguments-torrent-port"></span><code class="sig-name descname">--torrent-port</code><code class="sig-prename descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-torrent-port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which port to start the torrent client on (default: 7006)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-web-port">
-<code class="descname">--web-port</code><code class="descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-web-port" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-web-port">
+<span id="cmdoption-command-line-arguments-web-port"></span><code class="sig-name descname">--web-port</code><code class="sig-prename descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-web-port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which port to start the webserver on (default: 7008)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-host">
-<code class="descname">--host</code><code class="descclassname"> &lt;host&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-host" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-host">
+<span id="cmdoption-command-line-arguments-host"></span><code class="sig-name descname">--host</code><code class="sig-prename descclassname"> &lt;host&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which address the server should bind to (default: localhost)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-web-host">
-<code class="descname">--web-host</code><code class="descclassname"> &lt;host&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-web-host" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-web-host">
+<span id="cmdoption-command-line-arguments-web-host"></span><code class="sig-name descname">--web-host</code><code class="sig-prename descclassname"> &lt;host&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-web-host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which address the webserver should bind to (defualt: 0.0.0.0)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-gen-config">
-<code class="descname">--gen-config</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-gen-config" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-gen-config">
+<span id="cmdoption-command-line-arguments-gen-config"></span><code class="sig-name descname">--gen-config</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-gen-config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a skeleton example config file and quit</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-d">
-<code class="descname">-d</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--debug</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-d" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-d">
+<span id="cmdoption-command-line-arguments-d"></span><span id="cmdoption-Command-Line-Arguments-debug"></span><span id="cmdoption-command-line-arguments-debug"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start in debug mode (collects more information)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-i">
-<code class="descname">-i</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--interact</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-i" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-i">
+<span id="cmdoption-command-line-arguments-i"></span><span id="cmdoption-Command-Line-Arguments-interact"></span><span id="cmdoption-command-line-arguments-interact"></span><code class="sig-name descname">-i</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--interact</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-i" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start in interactive mode</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-v">
-<code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-v" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-v">
+<span id="cmdoption-command-line-arguments-v"></span><span id="cmdoption-Command-Line-Arguments-version"></span><span id="cmdoption-command-line-arguments-version"></span><code class="sig-name descname">-v</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--version</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>show program’s version number and exit</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-safe">
-<code class="descname">--safe</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-safe" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-safe">
+<span id="cmdoption-command-line-arguments-safe"></span><code class="sig-name descname">--safe</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-safe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start without plugins</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-x">
-<code class="descname">-x</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--dev</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-x" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-x">
+<span id="cmdoption-command-line-arguments-x"></span><span id="cmdoption-Command-Line-Arguments-dev"></span><span id="cmdoption-command-line-arguments-dev"></span><code class="sig-name descname">-x</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--dev</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start in development mode (redirects logging to stdout among other things)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-z">
-<code class="descname">-z</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--cdev</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-z" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-z">
+<span id="cmdoption-command-line-arguments-z"></span><span id="cmdoption-Command-Line-Arguments-cdev"></span><span id="cmdoption-command-line-arguments-cdev"></span><code class="sig-name descname">-z</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--cdev</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start in cdev mode (reserved, don’t use this)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-dev-db">
-<code class="descname">--dev-db</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-dev-db" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-dev-db">
+<span id="cmdoption-command-line-arguments-dev-db"></span><code class="sig-name descname">--dev-db</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-dev-db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and use a development database</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-only-web">
-<code class="descname">--only-web</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-only-web" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-only-web">
+<span id="cmdoption-command-line-arguments-only-web"></span><code class="sig-name descname">--only-web</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-only-web" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start only the webserver (useful for debugging)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-restore">
-<code class="descname">--restore</code><code class="descclassname"> &lt;path&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-restore" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-restore">
+<span id="cmdoption-command-line-arguments-restore"></span><code class="sig-name descname">--restore</code><code class="sig-prename descclassname"> &lt;path&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-restore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restore from a folder or archive file (omit path to restore from root folder)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-backup">
-<code class="descname">--backup</code><code class="descclassname"> &lt;path&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-backup" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-backup">
+<span id="cmdoption-command-line-arguments-backup"></span><code class="sig-name descname">--backup</code><code class="sig-prename descclassname"> &lt;path&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-backup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a backup into given folder (omit path to use the default folder)</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-dry-run">
-<code class="descname">--dry-run</code><code class="descclassname"> &lt;seconds&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-dry-run" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-dry-run">
+<span id="cmdoption-command-line-arguments-dry-run"></span><code class="sig-name descname">--dry-run</code><code class="sig-prename descclassname"> &lt;seconds&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-dry-run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run for X seconds and then quit</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-momo">
-<code class="descname">--momo</code><code class="descclassname"> &lt;momo&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-momo" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-momo">
+<span id="cmdoption-command-line-arguments-momo"></span><code class="sig-name descname">--momo</code><code class="sig-prename descclassname"> &lt;momo&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-momo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reserved for best girl Momo</p>
 </dd></dl>
 
@@ -303,9 +304,9 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: Command-Line Arguments user [-h] ACTION ...</span>
 </pre></div>
 </div>
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-h">
-<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-user-h" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-h">
+<span id="cmdoption-command-line-arguments-user-h"></span><span id="cmdoption-Command-Line-Arguments-user-help"></span><span id="cmdoption-command-line-arguments-user-help"></span><code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>show this help message and exit</p>
 </dd></dl>
 
@@ -316,27 +317,27 @@
 <span class="go">                                          [-p PASSWORD]</span>
 </pre></div>
 </div>
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-create-h">
-<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-user-create-h" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-create-h">
+<span id="cmdoption-command-line-arguments-user-create-h"></span><span id="cmdoption-Command-Line-Arguments-user-create-help"></span><span id="cmdoption-command-line-arguments-user-create-help"></span><code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-create-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>show this help message and exit</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-create-t">
-<code class="descname">-t</code><code class="descclassname"> {admin,guest,user}</code><a class="headerlink" href="#cmdoption-command-line-arguments-user-create-t" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-create-t">
+<span id="cmdoption-command-line-arguments-user-create-t"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"> {admin,guest,user}</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-create-t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of user, one of ‘admin’, ‘guest’, ‘user’</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-create-u">
-<code class="descname">-u</code><code class="descclassname"> &lt;username&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-user-create-u" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-create-u">
+<span id="cmdoption-command-line-arguments-user-create-u"></span><code class="sig-name descname">-u</code><code class="sig-prename descclassname"> &lt;username&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-create-u" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of user</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-create-p">
-<code class="descname">-p</code><code class="descclassname"> &lt;password&gt;</code><a class="headerlink" href="#cmdoption-command-line-arguments-user-create-p" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-create-p">
+<span id="cmdoption-command-line-arguments-user-create-p"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"> &lt;password&gt;</code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-create-p" title="Permalink to this definition">¶</a></dt>
 <dd><p>Password for user</p>
 </dd></dl>
 
@@ -346,15 +347,15 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: Command-Line Arguments user delete [-h] USERNAME</span>
 </pre></div>
 </div>
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-delete-arg-username">
-<code class="descname">username</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-user-delete-arg-username" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-delete-arg-username">
+<span id="cmdoption-command-line-arguments-user-delete-arg-username"></span><code class="sig-name descname">username</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-delete-arg-username" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of user</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-delete-h">
-<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-user-delete-h" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-delete-h">
+<span id="cmdoption-command-line-arguments-user-delete-h"></span><span id="cmdoption-Command-Line-Arguments-user-delete-help"></span><span id="cmdoption-command-line-arguments-user-delete-help"></span><code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-delete-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>show this help message and exit</p>
 </dd></dl>
 
@@ -364,15 +365,15 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: Command-Line Arguments user list [-h] PAGENUMBER</span>
 </pre></div>
 </div>
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-list-arg-pagenumber">
-<code class="descname">pagenumber</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-user-list-arg-pagenumber" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-list-arg-pagenumber">
+<span id="cmdoption-command-line-arguments-user-list-arg-pagenumber"></span><code class="sig-name descname">pagenumber</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-list-arg-pagenumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Page number</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-command-line-arguments-user-list-h">
-<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-command-line-arguments-user-list-h" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-Command-Line-Arguments-user-list-h">
+<span id="cmdoption-command-line-arguments-user-list-h"></span><span id="cmdoption-Command-Line-Arguments-user-list-help"></span><span id="cmdoption-command-line-arguments-user-list-help"></span><code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Command-Line-Arguments-user-list-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>show this help message and exit</p>
 </dd></dl>
 
@@ -382,6 +383,16 @@
 
         </div>
           
+    </div>
+    <div class="row">
+        <script src="https://utteranc.es/client.js"
+                repo="happypandax/happypandax.github.io"
+                issue-term="pathname"
+                label="💬 docs"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
     </div>
 </div>
 
@@ -397,7 +408,7 @@
     </p>
     <p>
         &copy; Copyright Twiddly.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>
